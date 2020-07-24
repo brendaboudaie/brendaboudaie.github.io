@@ -78,6 +78,54 @@ body{
       background-color: #c1b8ae;
     }
 
+    @keyframes moveCocoenDrag {
+      0% {
+        left: 50%;
+      }
+      25% {
+        left: 48%;
+      }
+      /* 50%{
+        left: 50%;
+      } */
+      75%{
+        left: 52%;
+      }
+      100%{
+        left: 50%;
+      }
+    }
+
+    @keyframes changeImageWidth {
+      0% {
+        width: 50%;
+      }
+      25% {
+        width: 48%;
+      }
+      /* 50%{
+        width: 50%;
+      } */
+      75%{
+        width: 52%;
+      }
+      100%{
+        width: 50%;
+      }
+    }
+
+  .cocoen-drag{
+    animation-delay: 1.5s;
+    animation-name: moveCocoenDrag;
+    animation-duration: 1.5s;
+  }
+
+  .cocoen div{
+    animation-delay: 1.5s;
+    animation-name: changeImageWidth;
+    animation-duration: 1.5s;
+  }
+
 /* When the browser window is 767px wide or less */
 @media screen and (max-width: 767px) {
   .tablet-view{

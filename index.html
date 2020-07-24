@@ -2,9 +2,10 @@
 <html>
 <head>
 
-    <!-- <link rel="stylesheet" href="node_modules/cocoen/dist/css/cocoen.min.css" /> -->
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/cocoen.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
     <title>Brenda Boudaie</title>
@@ -14,9 +15,14 @@
 
 <body>
   <div class="main">
-    <div class="cocoen">
-      <img src="assets/Designer_3.jpg" alt="">
-      <img src="assets/Developer_3.jpg" alt="">
+    <div class="cocoen tablet-view">
+      <img class = "tablet-view-img" src="assets/Designer_Large.jpg" alt="">
+      <img class = "tablet-view-img" src="assets/Developer_Large.jpg" alt="">
+    </div>
+
+    <div class="cocoen mobile-view">
+      <img src="assets/Designer_Mobile.jpg" alt="">
+      <img src="assets/Developer_Mobile.jpg" alt="">
     </div>
 
     <div class = "nav-menu">
@@ -34,7 +40,13 @@
 
 
   <script src="scripts/cocoen.js"></script>
-  <script> new Cocoen(document.querySelector('.cocoen')); </script>
+  <script> 
+    document.querySelectorAll('.cocoen').forEach(function(element){
+      new Cocoen(element);
+    });
+   </script>
+    <script src="scripts/main.js"></script>
+
 
 </body>
 

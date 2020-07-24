@@ -4,6 +4,10 @@ body{
     background-color: white;
 }
 
+.mobile-view{
+  display: none;
+}
+
 .nav-menu{
     position: absolute;
     top: 0em;
@@ -63,3 +67,13 @@ body{
   .dropdown:hover .dropbtn {
       background-color: #c1b8ae;
     }
+
+/* When the browser window is 767px wide or less */
+@media screen and (max-width: 767px) {
+  .tablet-view{
+    display: none !important;
+  }
+  .mobile-view{
+    display: block !important;
+  }
+}

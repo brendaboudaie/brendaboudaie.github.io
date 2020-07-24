@@ -18,11 +18,12 @@
 .cocoen ::after,.cocoen ::before{
     box-sizing:inherit;
 }
-.cocoen img,.cocoen picture>img{
+.cocoen img, .cocoen picture>img {
     max-width: 100vw;
     object-fit: cover;
     height: 100%;
 }
+
 .cocoen>img,.cocoen>picture>img{
     display:block;
     width:100%;

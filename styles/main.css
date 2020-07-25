@@ -85,9 +85,6 @@ body{
       25% {
         left: 48%;
       }
-      /* 50%{
-        left: 50%;
-      } */
       75%{
         left: 52%;
       }
@@ -103,11 +100,38 @@ body{
       25% {
         width: 48%;
       }
-      /* 50%{
-        width: 50%;
-      } */
       75%{
         width: 52%;
+      }
+      100%{
+        width: 50%;
+      }
+    }
+
+    @keyframes mobileMoveCocoenDrag {
+      0% {
+        left: 50%;
+      }
+      25% {
+        left: 44%;
+      }
+      75%{
+        left: 56%;
+      }
+      100%{
+        left: 50%;
+      }
+    }
+
+    @keyframes mobileChangeImageWidth {
+      0% {
+        width: 50%;
+      }
+      25% {
+        width: 44%;
+      }
+      75%{
+        width: 56%;
       }
       100%{
         width: 50%;
@@ -143,5 +167,16 @@ body{
   }
   .right-nav{
     right: 0em;
+  }
+
+  .cocoen-drag{
+    animation-delay: 1.5s;
+    animation-name: mobileMoveCocoenDrag;
+    animation-duration: 1.5s;
+  }
+  .cocoen div{
+    animation-delay: 1.5s;
+    animation-name: mobileChangeImageWidth;
+    animation-duration: 1.5s;
   }
 }

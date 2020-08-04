@@ -1,0 +1,15 @@
+.about-container{
+    position: relative;
+}
+
+#portrait{
+    width: 800px;
+}
+
+#board{
+    width: 800px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+

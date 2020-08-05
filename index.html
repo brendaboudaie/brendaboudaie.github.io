@@ -105,10 +105,11 @@ function handleTouchMove(evt) {
     } else {
         if ( yDiff > 0 ) {
             console.log("Swipe up"); 
-            window.scrollTo(0, document.body.scrollHeight, {duration: 1000});
+            $("html, body").animate({ scrollTop: document.body.scrollHeight }, "slow");
+
         } else { 
           console.log("Swipe down"); 
-          window.scrollTo(0,0);
+          $("html, body").animate({ scrollTop: 0 });
         }                                                                 
     }
     /* reset values */

@@ -295,6 +295,7 @@ body{
   }
   .mobile-view{
     display: block !important;
+    height: 93vh !important;
   }
   .cocoen-drag{
     top: 100px !important;

@@ -203,10 +203,18 @@ body{
   }
 
   .left-split-about .chat-button a{
+    color: #bfb8af;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     font-size: 18px;
+    text-decoration: none;
+  }
+
+  .left-split-about .chat-button a:visited{
+    color: #bfb8af;
+    text-decoration: none;
+
   }
 
   .left-split-about .chat-button a:hover{
@@ -346,7 +354,7 @@ body{
     font-size: 26px;
   }
   .about-text-container p{
-    font-size: 16px;
+    font-size: 12px;
   }
   .left-split-about .chat-button {
     width: 150px;

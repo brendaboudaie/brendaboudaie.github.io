@@ -14,6 +14,10 @@ body{
   display: none;
 }
 
+.position-relative{
+  display: none;
+}
+
 #button{
   display: none;
 }
@@ -54,10 +58,6 @@ body{
 
 .menu-title:hover{
     background-color: #c1b8ae;
-}
-
-#about{
-  margin-left:10px;
 }
   
   /* The container <div> - needed to position the dropdown content */
@@ -312,12 +312,13 @@ body{
   }
   .mobile-view{
     display: block !important;
-    height: 85vh !important;
+    height: 80vh !important;
     margin-bottom: 30px !important;
   }
 
   .position-relative{
     position: relative;
+    display: block;
   }
 
   #button{

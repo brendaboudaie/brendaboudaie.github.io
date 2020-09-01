@@ -241,7 +241,6 @@ body{
 
   .about-text-container p{
     font-size: 20px;
-
   }
 
   .about-text-container p a {
@@ -394,7 +393,7 @@ body{
     font-size: 30px;
   }
   .about-text-container p{
-    font-size: 18.6px;
+    font-size: 18px;
   }
   .left-split-about .chat-button {
     width: 150px;

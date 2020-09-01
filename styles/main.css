@@ -304,7 +304,8 @@ body{
 /* When the browser window is 767px wide or less */
 @media screen and (max-width: 767px) {
   html {
-    scroll-behavior: smooth /* For the scroll button */
+    scroll-behavior: smooth; /* For the scroll button */
+    -webkit-overflow-scrolling: touch;
   }
 
   .tablet-view{

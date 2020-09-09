@@ -90,7 +90,7 @@ body{
 }
 
 .menu-title:hover{
-    background-color: #c1b8ae;
+    background-color: #dbd3c9;
 }
   
   /* The container <div> - needed to position the dropdown content */
@@ -102,7 +102,7 @@ body{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #c1b8ae;
+    background-color: #f0e7dd;
     min-width: 165px;
     z-index: 1;
     /* width: 90%; */
@@ -123,7 +123,7 @@ body{
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
-      background-color: #dcd2c6;
+      background-color: #dbd3c9;
       transition-duration: 1s;
     }
 
@@ -135,7 +135,7 @@ body{
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-      background-color: #c1b8ae;
+      background-color: #f0e7dd;
     }
 
     @keyframes moveCocoenDrag {
@@ -212,17 +212,19 @@ body{
 
   .section-about{
     height: 600px;
-    width: 100vw;
+    width: 90vw;
     background: #3f4c66;
     position: relative;
     overflow: hidden;
+    margin: 0 auto;
+    border-radius: 85px;
   }
 
   .left-split-about{
     height: 100%;
     width: 100%;
     position: relative;
-    background: #bfb8af;
+    background: #f0e7dd;
     clip-path: polygon(0 0, 0 100%, 71% 100%, 69% 0);
     -webkit-clip-path: polygon(0 0, 0 100%, 71% 100%, 69% 0);
   }
@@ -377,11 +379,17 @@ body{
   }
   .top-nav{
     background: white;
-    height: 97px;
+    height: 80px;
 }
   .menu-title{
     padding: 16px;
     font-size: 14px;
+  }
+  .logoname{
+    font-size: 17px;
+  }
+  .lname {
+    margin-top: -4px;
   }
   .right-nav{
     right: 1em;
@@ -408,6 +416,11 @@ body{
   .about-photo{
     display: none;
   }
+  .section-about{
+    width: 100vw;
+    border-radius: 0px;
+  }
+
   .left-split-about{
     -webkit-clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);
     clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);

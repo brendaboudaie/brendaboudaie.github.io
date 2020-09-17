@@ -1,0 +1,22 @@
+.gif-container{
+    width: 100vw;
+    position: relative;
+    height: 100vh;
+}
+
+.gif-container img{
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+    width: 100vw;
+}
+
+.gif-container h2{
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}

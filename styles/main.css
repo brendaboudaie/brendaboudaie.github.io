@@ -24,12 +24,14 @@ body{
 
 .top-nav{
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 15px;
+  width: 95%;
   height: 97px;
   /* border: 2px solid; */
   background: transparent;
   border-radius: 35px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .left-nav{
@@ -40,11 +42,12 @@ body{
 
 .right-nav{
   position: absolute;
-  top: 1em;
   right: 3em;
+  height: 100%;
 }
 
 .name-logo{
+  color: black;
   text-decoration: none;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 25px;
@@ -74,15 +77,19 @@ body{
 }
 
 .menu-title{
-    color: black;
-    padding: 16px;
-    font-size: 18px;
-    border: none;
-    background: transparent;
-    text-decoration: none;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    margin: 0;
-    cursor: pointer;
+  color: black;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
 }
 
 .menu-title:hover{
@@ -102,8 +109,9 @@ body{
     min-width: 165px;
     z-index: 1;
     /* width: 90%; */
-    left: -71px;
+    left: -190px;
     text-align: left;
+    top: 70px;
 }
   
   /* Links inside the dropdown */
@@ -429,6 +437,15 @@ body{
 
   .dropdown-content {
     min-width: 40vw;
+    /* display: none;
+    position: absolute;
+    background-color: #f0e7dd;
+    min-width: 165px;
+    z-index: 1;
+    /* width: 70%; */
+    left: -224px;
+    text-align: left;
+    top: 60px; */
   }
 
   .cocoen-drag{

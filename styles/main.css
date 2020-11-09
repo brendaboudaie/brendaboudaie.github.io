@@ -722,4 +722,12 @@ footer{
 footer p{
   margin-top: 0px;
 }
+.left-nav{
+  top: 0;
+  left: 0;
+}
+.right-nav {
+  right: 0;
+  top: -10px;
+}
 }

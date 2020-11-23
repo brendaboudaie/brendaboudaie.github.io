@@ -730,4 +730,12 @@ footer p{
   right: 0;
   top: -10px;
 }
+.chat-button{
+  background-image: none;
+}
+
+
+.chat-button:hover{
+  color: white;
+}
 }

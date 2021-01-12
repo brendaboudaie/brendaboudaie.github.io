@@ -283,6 +283,33 @@ p{
     animation-duration: 1.5s;
   }
 
+  .main-carousel{
+    margin-top: 45px;
+  }
+  .flickity-viewport{
+    height: 25vh;
+  }
+
+  .flickity-slider{
+    left: -140px !important;
+  }
+
+  .carousel-cell{
+    margin: 0 25px;
+  }
+
+  .carousel-cell img{
+    width: 150px;
+  }
+
+  .flickity-page-dots{
+    display: none;
+  }
+
+  .flickity-button{
+    display: none;
+  }
+
   .page-work{
     height: 600px;
     width: 100vw;

@@ -4,10 +4,7 @@
 
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/cocoen.css" />
-    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
-
-    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 
     <title>Brenda Boudaie's Work</title>
     <meta name="author" content="Beenda Boudaie">
@@ -55,26 +52,26 @@
         <img src = "assets/New_About2.jpg" class = "about-photo">
     </div>
 
-    <div class="owl-carousel">
-      <div>
+    <div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "autoPlay": 2000, "pauseAutoPlayOnHover":false }'>
+      <div class="carousel-cell">
         <img src ="assets/Languages/HTML_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/CSS_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/Javascript_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/Liquid_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/C_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/C++_Logo.png" />
       </div>
-      <div>
+      <div class="carousel-cell">
         <img src ="assets/Languages/CSharp_Logo.png" />
       </div>
     </div>
@@ -148,15 +145,16 @@
       <p>
         Built By Brenda Boudaie 2021
       </p>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <script src="owlcarousel/docs/assets/vendors/jquery.min.js"></script>
-      <script src="owlcarousel/dist/owl.carousel.min.js"></script>
     </footer>
 
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </html>
+
+
 
 <script>
 var owl = $('.owl-carousel');

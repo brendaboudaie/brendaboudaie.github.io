@@ -167,6 +167,50 @@ p{
       background-color: #f0e7dd;
     }
 
+    .fade-in{
+      opacity: 0;
+      animation-name:fadeIn;
+      animation-duration:1s;
+      animation-delay:5s;
+      animation-fill-mode:forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-out{
+      position: absolute;
+      top: 0%;
+      animation-name:fadeOut;
+      animation-duration:1s;
+      animation-delay:4s;
+      animation-fill-mode:forwards;
+    }
+
+    .position-absolute-center{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+
     @keyframes moveCocoenDrag {
       0% {
         left: 50%;
@@ -228,13 +272,13 @@ p{
     }
 
   .cocoen-drag{
-    animation-delay: 1s;
+    animation-delay: 7s;
     animation-name: moveCocoenDrag;
     animation-duration: 1.5s;
   }
 
   .cocoen div{
-    animation-delay: 1s;
+    animation-delay: 7s;
     animation-name: changeImageWidth;
     animation-duration: 1.5s;
   }
@@ -369,33 +413,6 @@ p{
 
   footer span a:hover{
     opacity: 45%;
-  }
-
-  .main-carousel{
-    margin-top: 45px;
-  }
-  .flickity-viewport{
-    height: 25vh;
-  }
-
-  .flickity-slider{
-    left: -140px !important;
-  }
-
-  .carousel-cell{
-    margin: 0 25px;
-  }
-
-  .carousel-cell img{
-    width: 150px;
-  }
-
-  .flickity-page-dots{
-    display: none;
-  }
-
-  .flickity-button{
-    display: none;
   }
 
   .section-work h1{
@@ -552,6 +569,9 @@ p{
   .show-on-mobile{
     display: block;
   }
+  .fade-out img{
+    width: 15vw !important;
+  }
   .show-on-mobile img{
     width: 100%;
   }
@@ -614,12 +634,12 @@ p{
   }
 
   .cocoen-drag{
-    animation-delay: 1s;
+    animation-delay: 7s;
     animation-name: mobileMoveCocoenDrag;
     animation-duration: 1.5s;
   }
   .cocoen div{
-    animation-delay: 1s;
+    animation-delay: 7s;
     animation-name: mobileChangeImageWidth;
     animation-duration: 1.5s;
   }
@@ -733,7 +753,6 @@ footer p{
 .chat-button{
   background-image: none;
 }
-
 
 .chat-button:hover{
   color: white;

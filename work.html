@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+id: "Brenda-Boudaie-Work"
+title: "Work | Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
 <head>
-
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/cocoen.css" />
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-
-    <title>Brenda Boudaie's Work</title>
-    <meta name="author" content="Beenda Boudaie">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../assets/favicon.ico">
-
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
-
-<body>
-  <div >
-    <div class = "top-nav" style="position: relative;">
-      <div class = "left-nav">
-        <a href = "index.html" class = "name-logo">
-          <p class = "fname logoname">Brenda</p> 
-          <p class = "lname logoname">Boudaie</p>
-        </a>    
-      </div>
-
-      <div class = "right-nav">
-        <a href="work.html">Work</a>
-        <a class = "chat-button" href = "pages/contact.html">Contact</a>
-      </div>
-      </div>
+<div>
     <div class = "page-work">
         <div class = "left-split-about">
           <div class = "about-text-container">
@@ -49,7 +31,7 @@
 
         </div>
         <h2>WORK</h2>
-        <img src = "assets/New_About2.jpg" class = "about-photo">
+        <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
     </div>
 
     <div class="main-carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "autoPlay": 2000, "pauseAutoPlayOnHover":false }'>
@@ -133,51 +115,179 @@
         <h2>Peri.A</h2>
         <p> Artfully curated luxury boutique, curating a world of hot designers.</p>
       </div>
-    </div>  
-
-  </div>
-
-    <footer id = "footer">
-      <span>
-        <a href="https://www.linkedin.com/in/brendaboudaie/" target="_blank"> <img src ="assets/linkedin logo.png" width="42px"/></a>
-        <a href="https://github.com/brendaboudaie" target="_blank"> <img src ="assets/github logo.png" width="42px"/></a>
-      </span>
-      <p>
-        Built By Brenda Boudaie 2021
-      </p>
-    </footer>
-
-</body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
-</html>
-
-
-
-<script>
-var owl = $('.owl-carousel');
-owl.owlCarousel({
-    responsive : {
-    0 : {
-      items: 5,
-      loop: true,
-      margin:20,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause:false,
-      center: true
-    },
-    768 : {
-      items: 7,
-      loop: true,
-      margin:20,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      autoplayHoverPause:false,
-      center: true
-    }
+    </div>
+</div>
+<style>
+.Brenda-Boudaie-Work{
+    padding-top: 105px;
 }
-});
-</script>
+.page-work {
+  height: 600px;
+  width: 100vw;
+  background: #3f4c66;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.left-split-about {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: #f0e7dd;
+  background: white;
+  clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
+  -webkit-clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
+}
+.about-text-container {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #3f4c66;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  left: 5%;
+}
+.about-text-container h1 {
+  font-size: 50px;
+}
+.about-text-container p {
+  font-size: 20px;
+}
+.about-text-container p a {
+  color: #3f4c66;
+}
+.about-text-container p a:visited {
+  color: #3f4c66;
+}
+.about-text-container p a:hover {
+  color: black;
+}
+.about-photo {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  width: 350px;
+  border: 2px solid #bfb8af;
+  padding: 5px;
+}
+.page-work h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 160px;
+  color: #bfb8af;
+  position: absolute;
+  top: 199px;
+  right: -205px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  letter-spacing: 5px;
+  margin: 0;
+}
+.section-work h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #3f4c66;
+  margin-left: 70px;
+  font-size: 60px;
+}
+.work-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-family: "Optima";
+  margin-bottom: 85px;
+}
+.work-box {
+  position: relative;
+  height: 450px;
+  width: 315px;
+  background-color: #a4abbd;
+  padding: 10px;
+  font-family: "Optima";
+  font-size: 15px;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+}
+
+.work-box .screenshot {
+  width: 475px;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  transition: ease-in-out 0.5s;
+}
+
+.work-box:hover .screenshot {
+  opacity: 50%;
+}
+
+@media screen and (max-width: 940px) {
+  .about-photo {
+    width: 315px;
+  }
+  .about-text-container {
+    width: 30%;
+  }
+  .about-text-container h1 {
+    font-size: 25px;
+  }
+  .about-text-container p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .Brenda-Boudaie-Work{
+        padding-top: 75px;
+    }
+    .about-photo {
+    display: none;
+  }
+
+  .page-work {
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  .left-split-about {
+    -webkit-clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);
+  }
+  .page-work h2 {
+    font-size: 160px;
+    right: -215px;
+  }
+  .about-text-container {
+    left: 1em;
+    width: 60%;
+  }
+  .about-text-container h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .about-text-container p {
+    font-size: 18px;
+  }
+
+  .work-container {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 45px;
+    font-family: "Optima";
+    margin-bottom: 0px;
+  }
+
+  .work-container h2 {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .work-container p {
+    margin-top: 0;
+    font-size: 12px;
+  }
+}
+</style>

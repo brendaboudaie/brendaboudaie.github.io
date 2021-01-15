@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="{{page.description}}">
+    <meta name="keywords" content="Brenda, Boudaie, Brenda Boudaie, developer, web, web developer, web design, HTML, CSS, JavaScript, design, designer, web designer, web developer los angeles, los angeles, la, la developer, los angeles web">
+    <meta name="author" content="Brenda Boudaie">
+
+    <title>{{ page.title }}</title>
+    <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181409738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-181409738-1');
+    </script>
+</head>
+  <body>
+    <div class = "{{page.id}}">
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+    {% include navigation.html %}
+  </body>
+</html>

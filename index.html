@@ -1,124 +1,67 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+id: "Brenda-Boudaie"
+title: "Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
 <head>
-
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/cocoen.css" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="/assets/css/cocoen.css" />
     <title>Brenda Boudaie</title>
-    <meta name="author" content="Beenda Boudaie">
-    <meta name="description" content="Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had 
-    a passion for design.">
-    <meta name="keywords" content="Brenda, Boudaie, Brenda Boudaie, developer, web, web developer, web design, HTML, CSS, JavaScript, design, designer, web designer, web developer los angeles, los angeles, la, la developer, los angeles web">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/favicon.ico">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-181409738-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-181409738-1');
-</script>
-
-
+    <script src="assets/js/cocoen.js"></script>
 </head>
 
 <body>
   <div class="main">
-    <div class = "fade-in">
       <div class="cocoen tablet-view">
-        <img class = "tablet-view-img" src="assets/Designer_Large.jpg" alt="">
-        <img class = "tablet-view-img" src="assets/Developer_Large.jpg" alt="">
+        <img class = "tablet-view-img" src="assets/Designer_Portrait_Image.jpg" alt="Designer cartoon self portrait">
+        <img class = "tablet-view-img" src="assets/Developer_Portrait_Image.jpg" alt="Developer self portrait image">
       </div>
   
       <div class = "position-relative">
         <div class="cocoen mobile-view">
-          <img src="assets/Designer_Mobile2.jpg" alt="">
-          <img src="assets/Developer_Mobile2.jpg" alt="">
+          <img src="assets/Designer_Portrait_Image_Mobile.jpg" alt="Designer cartoon self portrait mobile">
+          <img src="assets/Developer_Portrait_Image_Mobile.jpg" alt="Developer self portrait image mobile">
         </div>
       </div>
-      
-      <div class = "top-nav">
-        <div class = "left-nav">
-          <a href = "index.html" class = "name-logo">
-            <p class = "fname logoname">Brenda</p> 
-            <p class = "lname logoname">Boudaie</p>
-          </a>    
-        </div>
-        
-        <div class = "right-nav">
-          <a href="work.html">Work</a>
-          <a class = "chat-button" href = "pages/contact.html">Contact</a>
-        </div>
-      </div>
-  
-  
-  
-      <footer id = "footer">
-        <span>
-          <a href="https://www.linkedin.com/in/brendaboudaie/" target="_blank"> <img src ="assets/linkedin logo.png" width="42px"/></a>
-          <a href="https://github.com/brendaboudaie" target="_blank"> <img src ="assets/github logo.png" width="42px"/></a>
-        </span>
-        <p>
-          Built By Brenda Boudaie 2021
-        </p>
-      </footer>
-    </div>
-    <div>
-      
-    </div>
-    <div class = "fade-out position-absolute-center">
-      <img src = "assets/source2.gif" style="width: 5vw;">
-    </div>
   </div>
+  
+  <div id = "overlay" class="loader"><img id = "loader-inner" class = "position-absolute-center" src="/assets/coffee-load-animation.gif"></div>
 
-
-  <script src="scripts/cocoen.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script> 
     document.querySelectorAll('.cocoen').forEach(function(element){
       new Cocoen(element);
     });
+
+    $(window).on('load', function() {
+      if (!('hasCodeRunBefore' in sessionStorage)) {
+        setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
+        console.log("running new min")
+        sessionStorage.setItem("hasCodeRunBefore", true);
+      }
+      else{
+        $('.loader').fadeOut(1000);
+        console.log("shouldn't show animation")
+      }
+    })
+
    </script>
-
-    <script src="scripts/main.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <script>
-    $(document).ready(function(){
-      // Add smooth scrolling to all links
-      $("a").on('click', function(event) {
-    
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
-    
-          // Store hash
-          var hash = this.hash;
-    
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top - 150
-          }, 800, function(){
-       
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-    });
-    </script>
-
-
 </body>
 
-</html>
+<style>
+    .loader{
+        position: absolute;
+        top: 0;
+        z-index: 999999;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+    .loader img{
+        width: 5%;
+    }
+</style>
 

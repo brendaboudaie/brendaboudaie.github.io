@@ -63,13 +63,13 @@ picture .cocoen > div {
 }
 
 .cocoen-drag {
-  animation-delay: 6s;
+  animation-delay: 4s;
   animation-name: moveCocoenDrag;
   animation-duration: 1.5s;
 }
 
 .cocoen div {
-  animation-delay: 6s;
+  animation-delay: 4s;
   animation-name: changeImageWidth;
   animation-duration: 1.5s;
 }
@@ -139,12 +139,12 @@ picture .cocoen > div {
     top: 100px !important;
   }
   .cocoen-drag {
-    animation-delay: 6s;
+    animation-delay: 4s;
     animation-name: mobileMoveCocoenDrag;
     animation-duration: 1.5s;
   }
   .cocoen div {
-    animation-delay: 6s;
+    animation-delay: 4s;
     animation-name: mobileChangeImageWidth;
     animation-duration: 1.5s;
   }

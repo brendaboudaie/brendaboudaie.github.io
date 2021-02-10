@@ -54,16 +54,20 @@
       new Cocoen(element);
     });
 
+    // $(window).on('load', function() {
+    //   if (!('hasCodeRunBefore' in sessionStorage)) {
+    //     setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
+    //     console.log("running new min")
+    //     sessionStorage.setItem("hasCodeRunBefore", true);
+    //   }
+    //   else{
+    //     $('.loader').fadeOut(1000);
+    //     console.log("shouldn't show animation")
+    //   }
+    // })
+
     $(window).on('load', function() {
-      if (!('hasCodeRunBefore' in sessionStorage)) {
         setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
-        console.log("running new min")
-        sessionStorage.setItem("hasCodeRunBefore", true);
-      }
-      else{
-        $('.loader').fadeOut(1000);
-        console.log("shouldn't show animation")
-      }
     })
 
    </script>

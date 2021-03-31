@@ -13,10 +13,10 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 </head>
 
 <body>
-  <div class="main">
+  <div class="main" id = "main">
       <div class="cocoen tablet-view">
-        <img class = "tablet-view-img" src="assets/Designer_Portrait_Image.jpg" alt="Designer cartoon self portrait">
-        <img class = "tablet-view-img" src="assets/Developer_Portrait_Image.jpg" alt="Developer self portrait image">
+        <img class = "tablet-view-img" id = "designer-portrait-image" src="assets/Designer_Portrait_Image.jpg" alt="Designer cartoon self portrait">
+        <img class = "tablet-view-img" id = "developer-portrait-image" src="assets/Developer_Portrait_Image.jpg" alt="Developer self portrait image">
       </div>
   
       <div class = "position-relative">
@@ -25,6 +25,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
           <img src="assets/Developer_Portrait_Image_Mobile.jpg" alt="Developer self portrait image mobile">
         </div>
       </div>
+
   </div>
   
   <!-- <div id = "overlay" class="loader"><img id = "loader-inner" class = "position-absolute-center" src="/assets/coffee-load-animation.gif"></div> -->
@@ -35,12 +36,13 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     document.querySelectorAll('.cocoen').forEach(function(element){
       new Cocoen(element);
     });
-
     // $(window).on('load', function() {
     //     setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
     // })
 
    </script>
+
+
 </body>
 
 

@@ -16,6 +16,16 @@ body {
   display: none;
 }
 
+#toggle{
+  position: fixed;
+  top: 89vh;
+  right: -5px;
+}
+
+#toggle:hover{
+  cursor: pointer;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -44,19 +54,20 @@ a:visited {
   height: 25vh;
 }
 
-.flickity-slider {
-  left: -140px !important;
-}
+// .flickity-slider {
+//   left: -7vw !important;
+// }
 .main-carousel{
-    margin-top: 25px
+    margin-top: 25px;
 }
 
 .carousel-cell {
-  margin: 0 25px;
+  margin: 0 55px;
+
 }
 
 .carousel-cell img {
-  width: 150px;
+  width: 100px;
 }
 
 .flickity-page-dots {
@@ -133,13 +144,10 @@ a:visited {
     display: block;
   }
   .carousel-cell {
-    margin: 0 5px;
+    margin: 0 35px;
   }
   .carousel-cell img {
     width: 85px;
-  }
-  .flickity-slider {
-    left: 0 !important;
   }
 
   .float-right {

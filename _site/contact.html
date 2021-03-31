@@ -10,6 +10,8 @@
     <title>Contact | Brenda Boudaie</title>
     <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
     <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,6 +22,9 @@
         gtag('js', new Date());
         gtag('config', 'UA-181409738-1');
     </script>
+
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+
 </head>
   <body>
     <div class = "Brenda-Boudaie-Contact">
@@ -33,6 +38,7 @@
 
 
 
+      
     </div>
 
     <footer id="footer">
@@ -202,3 +208,66 @@
 
   </body>
 </html>
+<script>
+  const chk = document.getElementById('toggle');
+  const designerImage = document.getElementById('designer-portrait-image');
+  const developerImage = document.getElementById('developer-portrait-image');
+
+  chk.addEventListener('click', () => {
+    chk.checked?document.body.classList.add("dark-mode"):document.body.classList.remove("dark-mode");
+    chk.checked?designerImage.src = "assets/Designer_Portrait_Image_dark.jpg":designerImage.src = "assets/Designer_Portrait_Image.jpg"
+    chk.checked?developerImage.src = "assets/Developer_Portrait_Image_dark.jpg":developerImage.src = "assets/Developer_Portrait_Image.jpg"
+    localStorage.setItem('darkModeStatus', chk.checked);
+  });
+
+  window.addEventListener('load', (event) => {
+    if(localStorage.getItem('darkModeStatus')=="true"){
+      document.body.classList.add("dark-mode"); 
+      document.getElementById('toggle').checked = true;
+      chk.checked?designerImage.src = "assets/Designer_Portrait_Image_dark.jpg":designerImage.src = "assets/Designer_Portrait_Image.jpg"
+    chk.checked?developerImage.src = "assets/Developer_Portrait_Image_dark.jpg":developerImage.src = "assets/Developer_Portrait_Image.jpg"
+    }
+  });
+</script>
+
+<style>
+    #toggle{
+      display: block;
+    }
+  .dark-mode{
+    background-color: #020024;
+  }
+  .dark-mode p, a, h1{
+    color: #c2bab0;
+  }
+  .dark-mode a:visited{
+    color: #c2bab0;
+  }
+  .dark-mode .chat-button{
+    color: white !important;
+  }
+  .dark-mode .page-work{
+    background: transparent;
+  }
+  .dark-mode .left-split-about{
+    background: #020024;
+  }
+  .dark-mode h2{
+    color: #3f4c66;
+  }
+  input{
+    content: url("assets/light-mode.jpg");
+    width: 100px;
+    height: 50px;
+  }
+  input:checked{
+    content: url("assets/dark-mode.jpg");
+    width: 100px;
+    height: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    #toggle{
+      display: none;
+    }
+  }
+</style>

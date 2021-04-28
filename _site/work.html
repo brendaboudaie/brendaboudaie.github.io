@@ -81,7 +81,7 @@
       </div>
     </div>
 
-
+    <!-- Project management, custom theme development, template builds, Shopify CMS -->
     <div class = "work-container">
       <div class = "float-left">
         <a href = "https://kinto-usa.com/" target = "_blank"><img class = "screenshot" src = "assets/KINTO_USA.png"/> </a>
@@ -89,6 +89,9 @@
       <div class = "float-right">
         <h2>KINTO USA</h2>
         <p> Official website of Japanese tableware & lifestyle brand KINTO in USA. Coffeeware, teaware, tableware and lifestyle accessories.</p>
+        <p class = "work-tag">project management</p>
+        <p class = "work-tag">custom theme development</p>
+        <p class = "work-tag">Shopify CMS</p>
       </div>
     </div>  
 
@@ -99,6 +102,9 @@
       <div class = "float-left">
         <h2>KINTO Europe</h2>
         <p> Official website of Japanese brand KINTO. Valuing usability and aesthetics to create products that stand by you in your everyday life.</p>
+        <p class = "work-tag">project management</p>
+        <p class = "work-tag">custom theme development</p>
+        <p class = "work-tag">Shopify CMS</p>
       </div>
       <div class = "float-right hide-on-mobile">
         <a href = "https://kinto-europe.com/" target = "_blank"> <img class = "screenshot" src = "assets/KINTO Europe.png"/>  </a>
@@ -112,6 +118,9 @@
       <div class = "float-right">
         <h2>Nature's Greatest Foods</h2>
         <p> Active participants in shaping the market by providing healthier options with organic and local products.</p>
+        <p class = "work-tag">project management</p>
+        <p class = "work-tag">custom theme development</p>
+        <p class = "work-tag">Shopify CMS</p>
       </div>
     </div>  
 
@@ -122,6 +131,8 @@
       <div class = "float-left">
         <h2>Dr. Daniel Boudaie Family Dentistry</h2>
         <p> Dr. Daniel Boudaie is a dentist in North Hollywood, California. He provides advice on proper brushing, flossing, cleaning, healthy gums, and other dental care.</p>
+        <p class = "work-tag">project management</p>
+        <p class = "work-tag">fully custom build</p>
       </div>
       <div class = "float-right hide-on-mobile">
         <a href = "https://drboudaie.com/" target = "_blank"> <img class = "screenshot" src = "assets/DBFD.png"/>  </a>
@@ -135,6 +146,9 @@
       <div class = "float-right">
         <h2>Peri.A</h2>
         <p> Artfully curated luxury boutique, curating a world of hot designers.</p>
+        <p class = "work-tag">project management</p>
+        <p class = "work-tag">custom theme development</p>
+        <p class = "work-tag">Shopify CMS</p>
       </div>
     </div>
 
@@ -145,6 +159,8 @@
       <div class = "float-left">
         <h2>Marissa Collections</h2>
         <p> A highly curated boutique for the world's most discerning shoppers of luxury clothing, accessories and fine jewelry.</p>
+        <p class = "work-tag">custom theme development</p>
+        <p class = "work-tag">Shopify CMS</p>
       </div>
       <div class = "float-right hide-on-mobile">
         <a href = "https://marissacollections.com/" target = "_blank"> <img class = "screenshot" src = "assets/Marrissa_Collections.png"/>  </a>
@@ -239,28 +255,19 @@
   font-family: "Optima";
   margin-bottom: 85px;
 }
-.work-box {
-  position: relative;
-  height: 450px;
-  width: 315px;
-  background-color: #a4abbd;
-  padding: 10px;
-  font-family: "Optima";
-  font-size: 15px;
-  overflow: hidden;
-  transition: ease-in-out 0.5s;
+.work-container img{
+  width: 60vw;
+  max-width: 840px;
 }
 
-.work-box .screenshot {
-  width: 475px;
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
-  transition: ease-in-out 0.5s;
-}
-
-.work-box:hover .screenshot {
-  opacity: 50%;
+.work-tag{
+  background-color: #d9d7d4;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  color: #3f4c66 !important;
+  margin: 2px 0px !important;
 }
 
 @media screen and (max-width: 940px) {
@@ -276,6 +283,7 @@
   .about-text-container p {
     font-size: 16px;
   }
+
 }
 
 @media screen and (max-width: 767px) {
@@ -318,6 +326,7 @@
     margin-top: 45px;
     font-family: "Optima";
     margin-bottom: 0px;
+    height: auto;
   }
 
   .work-container h2 {
@@ -329,6 +338,9 @@
   .work-container p {
     margin-top: 0;
     font-size: 12px;
+  }
+  .work-container img{
+    width: 100%
   }
 }
 </style>

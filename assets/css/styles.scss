@@ -160,11 +160,8 @@ a:visited {
 
   .float-left {
     display: block;
+    float: none;
     font-size: 14px;
-  }
-
-  .float-left p {
-    margin-bottom: 45px;
   }
 
   .float-right img {

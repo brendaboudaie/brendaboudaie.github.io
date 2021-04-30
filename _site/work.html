@@ -33,6 +33,11 @@
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <div>
+  <!-- <div class="scene">
+    <h1>Simple magic!</h1>
+    <div class="magic"></div>
+  </div> -->
+
     <div class = "page-work">
         <div  class = "left-split-about">
           <div class = "about-text-container">
@@ -54,7 +59,13 @@
 
         </div>
         <h2>WORK</h2>
-        <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
+        <div class = "about-photo">
+          <div class = "scene">
+            <div class = "magic"></div>
+          </div>
+        </div>
+
+        <!-- <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside"> -->
     </div>
 
     <div class="main-carousel" data-flickity='{ "cellAlign": "center", "wrapAround": true, "autoPlay": 2000, "pauseAutoPlayOnHover":false }'>
@@ -168,11 +179,6 @@
     </div>  
 </div>
 
-
-<!-- <script>
-  AOS.init();
-</script> -->
-
 <style>
 .Brenda-Boudaie-Work{
     padding-top: 105px;
@@ -225,8 +231,10 @@
   right: 20%;
   transform: translateY(-50%);
   width: 350px;
+  height: 455px;
   border: 2px solid #bfb8af;
   padding: 5px;
+  overflow: hidden;
 }
 .page-work h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -283,7 +291,6 @@
   .about-text-container p {
     font-size: 16px;
   }
-
 }
 
 @media screen and (max-width: 767px) {
@@ -318,7 +325,6 @@
   .about-text-container p {
     font-size: 18px;
   }
-
   .work-container {
     display: block;
     width: 90%;
@@ -344,6 +350,22 @@
   }
 }
 </style>
+
+<script>
+
+  $(document).on("mousemove", function(e) {
+    var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
+    var aboutWidth = $(".scene"), aboutWHalf = aboutWidth.width()/2.2;
+
+    var testing = window.innerWidth / 2 + aboutWHalf;
+    var testing2 = window.innerWidth / 1.8 + aboutWHalf;
+    var testingHeight = window.innerHeight / 5 + 100;
+    // console.log(window.innerWidth);
+    // $magic.css({"left": e.pageX - testing , "top": e.pageY - testingHeight,});
+    $magic.css({"left": e.pageX - testing2 , "top": e.pageY - testingHeight,});
+  });
+
+</script>
        <input type="checkbox" id = "toggle"/> 
     </div>
 

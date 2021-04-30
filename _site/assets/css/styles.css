@@ -1,5 +1,21 @@
 body { position: relative; background-color: white; cursor: default; margin: 0; }
 
+.scene { position: relative; background: url(../About_Portrait.jpg); padding: 227px 160px; text-align: center; background-size: cover; }
+
+.scene:hover { cursor: none; }
+
+.scene:hover .magic { visibility: visible; }
+
+.magic { z-index: 5; position: absolute; top: 0; left: 0; width: 150px; height: 150px; background: url("../About_Portrait.jpg") no-repeat fixed; background: url("../Hi.jpg") no-repeat fixed; background-size: cover; background-origin: 0; transition: border-radius 1s ease-out; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: morph 2s ease-in-out infinite both alternate; visibility: hidden; }
+
+@keyframes morph { 0% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; }
+  100% { border-radius: 40% 60%;
+    transform: rotate(10%); } }
+
+@keyframes spin { to { transform: rotate(1turn); } }
+
+@media screen and (min-width: 1500px) { .scene:hover { cursor: default; } .scene:hover .magic { visibility: hidden; } }
+
 .cocoen { cursor: default !important; }
 
 .mobile-view { display: none; }

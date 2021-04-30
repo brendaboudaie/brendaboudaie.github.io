@@ -59,13 +59,13 @@
 
         </div>
         <h2>WORK</h2>
-        <div class = "about-photo">
+        <!-- <div class = "about-photo">
           <div class = "scene">
             <div class = "magic"></div>
           </div>
-        </div>
+        </div> -->
 
-        <!-- <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside"> -->
+        <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
     </div>
 
     <div class="main-carousel" data-flickity='{ "cellAlign": "center", "wrapAround": true, "autoPlay": 2000, "pauseAutoPlayOnHover":false }'>
@@ -231,10 +231,10 @@
   right: 20%;
   transform: translateY(-50%);
   width: 350px;
-  height: 455px;
+  /* height: 455px; */
   border: 2px solid #bfb8af;
   padding: 5px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .page-work h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -353,17 +353,16 @@
 
 <script>
 
-  $(document).on("mousemove", function(e) {
-    var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
-    var aboutWidth = $(".scene"), aboutWHalf = aboutWidth.width()/2.2;
+  // $(document).on("mousemove", function(e) {
+  //   var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
+  //   var aboutWidth = $(".scene"), aboutWHalf = aboutWidth.width()/2.2;
 
-    var testing = window.innerWidth / 2 + aboutWHalf;
-    var testing2 = window.innerWidth / 1.8 + aboutWHalf;
-    var testingHeight = window.innerHeight / 5 + 100;
-    // console.log(window.innerWidth);
-    // $magic.css({"left": e.pageX - testing , "top": e.pageY - testingHeight,});
-    $magic.css({"left": e.pageX - testing2 , "top": e.pageY - testingHeight,});
-  });
+  //   var testing = window.innerWidth / 2 + aboutWHalf;
+  //   var testing2 = window.innerWidth / 1.8 + aboutWHalf;
+  //   var testingHeight = window.innerHeight / 5 + 100;
+
+  //   $magic.css({"left": e.pageX - testing2 , "top": e.pageY - testingHeight,});
+  // });
 
 </script>
        <input type="checkbox" id = "toggle"/> 

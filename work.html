@@ -10,10 +10,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 </head>
 <div>
-  <!-- <div class="scene">
-    <h1>Simple magic!</h1>
-    <div class="magic"></div>
-  </div> -->
 
     <div class = "page-work">
         <div  class = "left-split-about">
@@ -35,11 +31,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 
         </div>
         <h2>WORK</h2>
-        <!-- <div class = "about-photo">
-          <div class = "scene">
-            <div class = "magic"></div>
-          </div>
-        </div> -->
 
         <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
     </div>
@@ -68,105 +59,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
       </div>
     </div>
 
-    <!-- Project management, custom theme development, template builds, Shopify CMS -->
-    <div class = "work-container">
-      <div class = "float-left">
-        <a href = "https://kinto-usa.com/" target = "_blank"><img class = "screenshot" src = "assets/KINTO_USA.png"/> </a>
-      </div>
-      <div class = "float-right">
-        <h2>KINTO USA</h2>
-        <p> Official website of Japanese tableware & lifestyle brand KINTO in USA. Coffeeware, teaware, tableware and lifestyle accessories.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">custom theme development</p>
-        <p class = "work-tag">Shopify CMS</p>
-      </div>
-    </div>  
-
-    <div class = "work-container">
-      <div class = "show-on-mobile">
-        <a href = "https://kinto-europe.com/" target = "_blank"> <img class = "screenshot" src = "assets/KINTO Europe.png"/>  </a>
-      </div>
-      <div class = "float-left">
-        <h2>KINTO Europe</h2>
-        <p> Official website of Japanese brand KINTO. Valuing usability and aesthetics to create products that stand by you in your everyday life.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">custom theme development</p>
-        <p class = "work-tag">Shopify CMS</p>
-      </div>
-      <div class = "float-right hide-on-mobile">
-        <a href = "https://kinto-europe.com/" target = "_blank"> <img class = "screenshot" src = "assets/KINTO Europe.png"/>  </a>
-      </div>
-    </div>  
-
-    <div class = "work-container">
-      <div class = "float-left">
-        <a href = "https://www.safardesignstudio.com/" target = "_blank"><img class = "screenshot" src = "assets/SAFARDesignStudio.png"/> </a>
-      </div>
-      <div class = "float-right">
-        <h2>Sāfār Design Studio</h2>
-        <p> A boutique studio offering custom interior design services.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">custom design</p>
-        <p class = "work-tag">custom development</p>
-        <p class = "work-tag">Squarespace</p>
-      </div>
-    </div>  
-
-    <div class = "work-container">
-      <div class = "show-on-mobile">
-        <a href = "https://marissacollections.com/" target = "_blank"> <img class = "screenshot" src = "assets/Marrissa_Collections.png"/>  </a>
-      </div>
-      <div class = "float-left">
-        <h2>Marissa Collections</h2>
-        <p> A highly curated boutique for the world's most discerning shoppers of luxury clothing, accessories and fine jewelry.</p>
-        <p class = "work-tag">custom theme development</p>
-        <p class = "work-tag">Shopify CMS</p>
-      </div>
-      <div class = "float-right hide-on-mobile">
-        <a href = "https://marissacollections.com/" target = "_blank"> <img class = "screenshot" src = "assets/Marrissa_Collections.png"/>  </a>
-      </div>
-    </div>  
-
-    <div class = "work-container">
-      <div class = "float-left">
-        <a href = "https://naturesgreatestfoods.com/" target = "_blank"><img class = "screenshot" src = "assets/natures-greatest-foods.png"/> </a>
-      </div>
-      <div class = "float-right">
-        <h2>Nature's Greatest Foods</h2>
-        <p> Active participants in shaping the market by providing healthier options with organic and local products.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">custom theme development</p>
-        <p class = "work-tag">Shopify CMS</p>
-      </div>
-    </div>  
-
-    <div class = "work-container">
-      <div class = "show-on-mobile">
-        <a href = "https://drboudaie.com/" target = "_blank"> <img class = "screenshot" src = "assets/DBFD.png"/>  </a>
-      </div>
-      <div class = "float-left">
-        <h2>Dr. Daniel Boudaie Family Dentistry</h2>
-        <p> Dr. Daniel Boudaie is a dentist in North Hollywood, California. He provides advice on proper brushing, flossing, cleaning, healthy gums, and other dental care.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">fully custom build</p>
-      </div>
-      <div class = "float-right hide-on-mobile">
-        <a href = "https://drboudaie.com/" target = "_blank"> <img class = "screenshot" src = "assets/DBFD.png"/>  </a>
-      </div>
-    </div> 
-
-    <div class = "work-container">
-      <div class = "float-left">
-        <a href = "https://peri-a.com/" target = "_blank"><img class = "screenshot" src = "assets/Peri-A.png"/> </a>
-      </div>
-      <div class = "float-right">
-        <h2>Peri.A</h2>
-        <p> Artfully curated luxury boutique, curating a world of hot designers.</p>
-        <p class = "work-tag">project management</p>
-        <p class = "work-tag">custom theme development</p>
-        <p class = "work-tag">Shopify CMS</p>
-      </div>
-    </div>
+    {% include work.html %}
 </div>
 
 <style>
@@ -191,7 +84,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   -webkit-clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
 }
 .about-text-container {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   color: #3f4c66;
   position: absolute;
   top: 50%;
@@ -227,7 +119,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   /* overflow: hidden; */
 }
 .page-work h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 160px;
   color: #bfb8af;
   position: absolute;
@@ -239,8 +131,12 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   letter-spacing: 5px;
   margin: 0;
 }
+.Brenda-Boudaie-Work h3{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  font-size: 22px;
+}
 .section-work h1 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #3f4c66;
   margin-left: 70px;
   font-size: 60px;
@@ -250,14 +146,12 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   width: 90%;
   margin: 0 auto;
   margin-top: 45px;
-  font-family: "Optima";
   margin-bottom: 85px;
 }
 .work-container img{
   width: 60vw;
   max-width: 840px;
 }
-
 .work-tag{
   background-color: #d9d7d4;
   width: fit-content;
@@ -320,7 +214,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     width: 90%;
     margin: 0 auto;
     margin-top: 45px;
-    font-family: "Optima";
     margin-bottom: 0px;
     height: auto;
   }

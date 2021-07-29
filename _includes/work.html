@@ -1,0 +1,87 @@
+{% for item in site.data.work %}
+{%assign tags = item.tags%}
+{%assign platforms = item.platform%}
+    <div class = "work-background-container" id = "{{item.id}}" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+        <div class = "grid-item"> 
+            <h3> {{item.title}} </h3>
+            <p> {{item.description}} </p>
+            <p class = "work-detail" id = "work-platform">{{platforms}}</p>
+            <p class = "work-detail" id = "work-tags">{{tags}}</p>
+            <a href = "{{item.url}}" target="_blank" > <img  class = "external-link" src = "assets/work/external-link.png" style="display: inline-block; width: 25px; height: 25px; margin: 0; padding: 0"/></a>
+        </div>
+        <div class = "grid-item">
+            <img src = "{{item.image}}"/>
+        </div>
+    </div>
+{% endfor %}
+<style>
+.work-background-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #86a6ba;
+    width: 80%;
+    margin: 45px auto;
+    padding: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 2;
+}
+.work-background-container:nth-child(4){
+    padding-bottom: 0px;
+}
+.work-background-container:nth-child(4) img{
+    padding-top: 25px;
+}
+.work-background-container:nth-child(even){
+    direction: rtl;
+}
+.work-background-container .grid-item img{
+    display: block;
+    height: 300px;
+    margin: 0 auto;
+}
+.work-detail{
+    opacity: 0.5;
+}
+#work-platform{
+    margin-bottom: 0px;
+}
+#work-tags{
+    margin-top: 0px;
+}
+#safar{
+    background-color: #9c8873;
+}
+#marissa{
+    background-color: #743f50;
+}
+#NGF{
+    background-color: #a7b5be;
+}
+#DBFD{
+    background-color: #aa899a;
+}
+#peri{
+    background-color: #bcad9d;
+}
+
+@media screen and (max-width: 767px) {
+    .work-background-container{
+      display: block;
+      position: relative;
+    }
+    .work-background-container .grid-item img {
+        display: block;
+        margin: 0 auto;
+        height: 200px;
+    }
+    .work-background-container:nth-child(even){
+        direction: ltr;
+    }
+    .external-link{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+  }
+
+</style>

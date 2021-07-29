@@ -11,6 +11,7 @@
     <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,11 +30,15 @@
   <body>
     <div class = "{{page.id}}">
       {{ content }}
-      {%if page.id != "Brenda-Boudaie-Contact"%} <input type="checkbox" id = "toggle"/> {%endif%}
+      <!-- {%if page.id != "Brenda-Boudaie-Contact"%} <input type="checkbox" id = "toggle"/> {%endif%} -->
     </div>
 
     {% include footer.html %}
     {% include navigation.html %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
 <script>

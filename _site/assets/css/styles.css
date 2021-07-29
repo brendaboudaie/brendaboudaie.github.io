@@ -1,5 +1,9 @@
 body { position: relative; background-color: white; cursor: default; margin: 0; }
 
+h1, h2, h3, h4, h5 { font-family: Didot, serif; }
+
+p { font-family: Gill Sans, sans-serif; font-weight: 100; }
+
 .scene { position: relative; background: url(../About_Portrait.jpg); padding: 227px 160px; text-align: center; background-size: cover; }
 
 .scene:hover { cursor: none; }

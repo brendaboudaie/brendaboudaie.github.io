@@ -35,29 +35,24 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
     </div>
 
-    <div class="main-carousel" data-flickity='{ "cellAlign": "center", "wrapAround": true, "autoPlay": 2000, "pauseAutoPlayOnHover":false }'>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/HTML_Logo.png" />
+    <div class="slider">
+      <div class="slide-track">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
       </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/CSS_Logo.png" />
-      </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/Javascript_Logo.png" />
-      </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/Liquid_Logo.png" />
-      </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/C_Logo.png" />
-      </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/C++_Logo.png" />
-      </div>
-      <div class="carousel-cell">
-        <img src ="assets/Languages/CSharp_Logo.png" />
-      </div>
-    </div>
+  </div>
 
     {% include work.html %}
 </div>
@@ -78,7 +73,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   height: 100%;
   width: 100%;
   position: relative;
-  background: #f0e7dd;
   background: white;
   clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
   -webkit-clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
@@ -161,6 +155,64 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   color: #3f4c66 !important;
   margin: 2px 0px !important;
 }
+.slider {
+    height: 100px;
+    margin: auto;
+    margin-top: 45px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.slide:nth-child(1), .slide:nth-child(8) {
+    background-image: url("assets/Languages/HTML_Logo.png");
+}
+
+.slide:nth-child(2), .slide:nth-child(9) {
+  background-image: url("assets/Languages/CSS_Logo.png");
+}
+
+.slide:nth-child(3), .slide:nth-child(10) {
+  background-image: url("assets/Languages/Javascript_Logo.png");
+}
+
+.slide:nth-child(4), .slide:nth-child(11) {
+  background-image: url("assets/Languages/Liquid_Logo.png");
+}
+
+.slide:nth-child(5), .slide:nth-child(12) {
+  background-image: url("assets/Languages/C_Logo.png");
+}
+
+.slide:nth-child(6), .slide:nth-child(13) {
+  background-image: url("assets/Languages/C++_Logo.png");
+}
+
+.slide:nth-child(7), .slide:nth-child(14) {
+    background-image: url("assets/Languages/CSharp_Logo.png");
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
 
 @media screen and (max-width: 940px) {
   .about-photo {
@@ -231,6 +283,22 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   .work-container img{
     width: 100%
   }
+  .slider {
+    height: 80px;;
+}
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(100px * 14);
+}
+
+.slider .slide {
+    height: 80px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 }
 </style>
 

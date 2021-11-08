@@ -1,0 +1,212 @@
+---
+layout: boudaie
+id: "test-work"
+title: "Work | Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+<div class="main" id = "main">
+    <div class = "work-module" id = "work-module-1">
+        <div class="scene">
+            <h1>WORK</h1>
+            <div class="magic"></div>
+          </div>
+    </div>
+    <div class = "work-module" id = "work-module-2">
+        <div class="timeline">
+          <ul>
+            <span class="default-line"></span>
+            <span class="draw-line"></span>
+              <li>
+                <div>
+                  <p>1/3</p>
+                </div> 
+              </li>
+              <li>
+                <div>
+                  <p>2/3</p>
+                </div> 
+              </li>
+                  <li>
+                <div>
+                  <p>3/3</p>
+                </div> 
+              </li>
+          </ul>
+        </div>
+        <div class = "work-featured">
+          <div class = "featured-item" >
+            <img src = "assets/featured-work/DTF.png">
+            <div class = "featured-item-description">
+              <h2 style="font-weight: 600;">Din Tai fung</h2>
+              <p>A world-renowned Chinese restaurant originating in Taiwan 
+                that specializes in soup dumplings and noodles.</p>
+              <p>Project Manager</p>
+              <a href = "https://dintaifungusa.com/" target="_blank">Visit website</a>
+            </div>
+          </div>
+          <div class = "featured-item" >
+            <div class = "featured-item-description">
+              <h2 style="font-weight: 600;">KINTO</h2>
+              <p>The official website of Japanese tableware & lifestyle brand. 
+                Coffeeware, teaware, tableware and lifestyle accessories.</p>
+              <p>Shopify </br> Web development • Project Management</p>
+              <a href = "https://kinto-usa.com/" target="_blank">Visit website</a>
+            </div>
+            <img src = "assets/featured-work/KNTO.png">
+          </div>
+          <div class = "featured-item" >
+            <img src = "assets/featured-work/Peri-A.png">
+            <div class = "featured-item-description">
+              <h2 style="font-weight: 600;">Peri-A</h2>
+              <p>Artfully curated luxury boutique, curating a world of hot 
+                designers.</p>
+                <p>Shopify </br> Web development • Project Management</p>
+              <a href = "https://peri-a.com/" target="_blank">Visit website</a>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class = "work-module" id = "work-module-3">
+      <div class = "work-grid">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+</div>
+  
+
+<style>
+
+.scene {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  font-size: 8rem;
+  text-transform: uppercase;
+  color: #fff;
+  z-index: 10;
+}
+.magic {
+  z-index: 5;
+  position: absolute;
+  top: calc(50% - 10rem);
+  left: calc(50% - 10rem);
+  width: 20rem;
+  height: 20rem;
+  background: url('/assets/test-hover.jpg') 50% 50% no-repeat fixed;
+  background-size: cover;
+  border-radius: 50%;
+}
+.check-out {
+  z-index: 100;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #fff;
+}
+#work-module-2{
+  position: relative;
+  display: inline-block;
+}
+.work-featured{
+  height: 530px;
+}
+.work-featured .featured-item{
+  height: 530px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90vw;
+    margin-left: 150px;
+    align-items: center;
+}
+.featured-item img{
+  height: 25vw;
+}
+.featured-item-description{
+  width: 40vw;
+  color: white;
+}
+#work-module-3{
+  height: 100vh;
+  margin-top: 50px;
+}
+.work-grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.work-grid div{
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+}
+</style>
+
+<script>
+    $(document).ready(function() {
+  var $magic = $(".magic"),
+      magicWHalf = $magic.width() / 2;
+  $(document).on("mousemove", function(e) {
+    $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
+  });
+});
+
+// Timeline Scroll Section
+// --------------------------------------------------------------
+var items = $(".timeline li"),
+timelineHeight = $(".timeline ul").height(),
+greyLine = $('.default-line'),
+lineToDraw = $('.draw-line');
+
+// sets the height that the greyLine (.default-line) should be according to `.timeline ul` height
+
+// run this function only if draw line exists on the page
+if(lineToDraw.length) {
+  $(window).on('scroll', function () {
+
+    // Need to constantly get '.draw-line' height to compare against '.default-line'
+    var redLineHeight = lineToDraw.height(),
+    greyLineHeight = greyLine.height(),
+    windowDistance = $(window).scrollTop(),
+    windowHeight = $(window).height() / 2,
+    timelineDistance = $(".timeline").offset().top;
+
+    if(windowDistance >= timelineDistance - windowHeight) {
+      line = windowDistance - timelineDistance + windowHeight;
+
+      if(line <= greyLineHeight) {
+        lineToDraw.css({
+          'height' : line + 20 + 'px'
+        });
+      }
+    }
+
+    // This takes care of adding the class in-view to the li:before items
+    var bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
+    items.each(function(index){
+      var circlePosition = $(this).offset();
+
+      if(bottom > circlePosition.top) {				
+        $(this).addClass('in-view');
+      } else {
+        $(this).removeClass('in-view');
+      }
+    });	
+  });
+}
+
+</script>
+

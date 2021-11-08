@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="{{page.description}}">
+    <meta name="keywords" content="Boudaie, Brenda Boudaie, web developer, web designer, web developer los angeles, Shopify developer, Shopify designer, Squarespace developer, wordpress developer">
+    <meta name="author" content="Brenda Boudaie">
+
+    <title>{{ page.title }}</title>
+    <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
+    <link rel="stylesheet" href="/assets/css/site-styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181409738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-181409738-1');
+    </script>
+</head>
+
+  <body>
+    <div class = "{{page.id}}">
+      {{ content }}
+    </div>
+
+    {% include nav.html %}
+  </body>
+</html>

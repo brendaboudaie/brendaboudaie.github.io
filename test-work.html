@@ -35,53 +35,56 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
           </ul>
         </div>
         <div class = "work-featured">
-          <div class = "featured-item" >
-            <img src = "assets/featured-work/DTF.png">
+          {% for item in site.data.featured-brands %}
+          <div class = "featured-item">
+            <img src = "{{item.image}}">
             <div class = "featured-item-description">
-              <h2 style="font-weight: 600;">Din Tai fung</h2>
-              <p>A world-renowned Chinese restaurant originating in Taiwan 
-                that specializes in soup dumplings and noodles.</p>
-              <p>Project Manager</p>
-              <a href = "https://dintaifungusa.com/" target="_blank">Visit website</a>
+              <h2 style="font-weight: 600;">{{item.title}}</h2>
+              <p>{{item.description}}</p>
+              <p>{{item.position}}</p>
+              <a href = "{{item.url}}" target="_blank">Visit website</a>
             </div>
           </div>
-          <div class = "featured-item" >
-            <div class = "featured-item-description">
-              <h2 style="font-weight: 600;">KINTO</h2>
-              <p>The official website of Japanese tableware & lifestyle brand. 
-                Coffeeware, teaware, tableware and lifestyle accessories.</p>
-              <p>Shopify </br> Web development • Project Management</p>
-              <a href = "https://kinto-usa.com/" target="_blank">Visit website</a>
-            </div>
-            <img src = "assets/featured-work/KNTO.png">
-          </div>
-          <div class = "featured-item" >
-            <img src = "assets/featured-work/Peri-A.png">
-            <div class = "featured-item-description">
-              <h2 style="font-weight: 600;">Peri-A</h2>
-              <p>Artfully curated luxury boutique, curating a world of hot 
-                designers.</p>
-                <p>Shopify </br> Web development • Project Management</p>
-              <a href = "https://peri-a.com/" target="_blank">Visit website</a>
-            </div>
-          </div>
+          {%endfor%}
         </div>
     </div>
     <div class = "work-module" id = "work-module-3">
-      <div class = "work-grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <h2>Other brands I've worked with</h2>
+
+        <div class="brands-filter">
+          <button class="btn current" data-filter="item">All</button>
+          <button class="btn" data-filter="shopify">SHOPIFY</button>
+          <button class="btn" data-filter="squarespace">SQUARESPACE</button>
+          <!-- <button class="btn" data-filter="webflow">WEBFLOW</button> -->
+          <button class="btn" data-filter="custom">CUSTOM BUILD</button>
+        </div>
+        <div class="work-grid">
+          {% for item in site.data.brands %}
+          <div class="item work-grid-item {{item.platform}} ">
+            <img src = "{{item.image}}">
+            <div>
+              <h3>{{item.title}}</h3>
+              <p>{{item.description}}</p>
+              <a href = "{{item.url}}" target="_blank">Visit website</a>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+
+      <div class = "work-module" id = "work-module-4">
+        {% include contact-component.html %}
       </div>
     </div>
+
 </div>
   
 
 <style>
-
+#work-module-4{
+  position: relative;
+  height: 100vh;
+}
 .scene {
     position: relative;
     height: 100vh;
@@ -105,7 +108,7 @@ h1 {
   left: calc(50% - 10rem);
   width: 20rem;
   height: 20rem;
-  background: url('/assets/test-hover.jpg') 50% 50% no-repeat fixed;
+  background: url('/assets/work-hover.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
   border-radius: 50%;
 }
@@ -133,6 +136,12 @@ h1 {
     margin-left: 150px;
     align-items: center;
 }
+.work-featured .featured-item:nth-child(even){
+  direction: rtl;
+  text-align: left;
+  margin-left: 100px;
+}
+
 .featured-item img{
   height: 25vw;
 }
@@ -141,18 +150,47 @@ h1 {
   color: white;
 }
 #work-module-3{
-  height: 100vh;
-  margin-top: 50px;
+  /* height: 100vh; */
+  margin-top: 150px;
+}
+#work-module-3 h2{
+  color: white;
+  font-size: 35px;
+  margin-left: 60px;
+}
+.brands-filter{
+  text-align: center;
+  margin: 75px 0px;
 }
 .work-grid{
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
 }
-.work-grid div{
-  background-color: pink;
-  width: 50px;
-  height: 50px;
+.work-grid .work-grid-item{
+  background-color: white;
+  width: 330px;
+  height: 475px;
 }
+
+.work-grid .work-grid-item img{
+  width: 100%;
+}
+.work-grid .work-grid-item div{
+  padding: 5px 10px;
+}
+.work-grid h3{
+  font-size: 25px;
+  color: #242424;
+  font-weight: 600;
+  margin: 0;
+}
+.work-grid p, .work-grid a{
+  font-size: 14px;
+}
+
 </style>
 
 <script>
@@ -207,6 +245,23 @@ if(lineToDraw.length) {
     });	
   });
 }
+
+
+jQuery(function ($) {
+  var $items = $(".work-grid .item");
+  var $btns = $(".brands-filter .btn").on("click", function () {
+    var active = $btns
+      .removeClass("current")
+      .filter(this)
+      .addClass("current")
+      .data("filter");
+    $items
+      .hide()
+      .filter("." + active)
+      .fadeIn(450);
+  });
+});
+
 
 </script>
 

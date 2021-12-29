@@ -18,10 +18,17 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
             </div>
         </h1>
         <h1 id = "last"> websites.</h1>
+        <a data-scroll href="#homepage-module-2">
+            <img class = "absolute-center" src="/assets/mouse_scroll.png" style="width: 50px;">
+        </a>
     </div>
-
-    <div class = "homepage-module" id = "homepage-module-2" style="background-color: #abbbd8;">
+    <!-- style="background-color: #abbbd8;" -->
+    <div class = "homepage-module" id = "homepage-module-2" >
         <h2>What I'm good at</h2>
+        <p>Between design, development, and strategy,  I offer full stack services 
+            to help your brand and business grow. Whether you’re looking for a 
+            website build, redesign, or maintenance, I focus on executing tailored 
+            solutions for each project.</p>
         <div class="cursor"></div>
         <div class="text-and-images">
             <div class="single-image">
@@ -31,7 +38,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
                 <div class="image--inner">CUSTOM BUILDS</div>
             </div>
             <div class="single-image">
-                <div class="image--inner">WEB MAINTENCE</div>
+                <div class="image--inner">WEB MAINTENANCE</div>
             </div>
             <div class="single-image">
                 <div class="image--inner">DIGITAL STRATEGY</div>
@@ -40,25 +47,12 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     </div>
 
     <div class = "homepage-module" id = "homepage-module-3">
-        <h2>What helps me do it</h2>
-
-        <!-- {% for item in site.data.platforms %}
-        {%assign tags = item.tags%}
-        {%assign platforms = item.platform%}
-            <div class = "work-background-container" id = "{{item.id}}">
-                <div class = "grid-item"> 
-                    <h3> {{item.title}} </h3>
-                    <p> {{item.description}} </p>
-                    <p class = "work-detail" id = "work-platform">{{platforms}}</p>
-                    <p class = "work-detail" id = "work-tags">{{tags}}</p>
-                    <a href = "{{item.url}}" target="_blank" > <img  class = "external-link" src = "assets/work/external-link.png" style="display: inline-block; width: 25px; height: 25px; margin: 0; padding: 0"/></a>
-                </div>
-                <div class = "grid-item">
-                    <img src = "{{item.image}}"/>
-                </div>
-            </div>
-        {% endfor %} -->
-
+        <div class = "module-header-right">
+            <h2>What helps me do it</h2>
+            <p>Every project is unique, so the website’s approach should be too. 
+                I offer fully custom </br>solutions, but when it makes sense, using these 
+                CMS platforms help tailor websites </br> to my client’s needs. </p>
+        </div>
 
         <div class="platforms-container absolute-center">
             {% for item in site.data.platforms %}
@@ -86,6 +80,43 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     justify-content: center;
     height: 100vh;
 }
+#homepage-module-1 a{
+    transition: all 0.5s;    
+}
+#homepage-module-1 img{
+    width: 50px;
+    /* position: absolute; */
+    top: auto;
+    bottom: 25px !important;
+    /* -moz-animation: bounce 12s infinite 3s;
+    -webkit-animation: bounce 12s infinite 3s;
+    animation: bounce 12s infinite 3s; */
+}
+
+@keyframes bounce {
+  0%{
+    transform: translateY(0);
+  }
+  4%{ 
+    transform: translateY(0);
+  }
+  8%{
+    transform: translateY(-30px);
+  }
+  10%{
+    transform: translateY(0);
+  }
+  12%{
+    transform: translateY(-15px);
+  }
+  16%{
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .wordCarousel {
     font-size: 36px;
     color: #eee;
@@ -128,13 +159,19 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 
 .homepage-module h2{
     color: #242424;
-    margin: 0;
-    padding: 25px 60px 0 0;
-    font-size: 35px;
-    text-align: right;
-}
-#homepage-module-3 h2{
     color: white;
+    margin: 0;
+    padding: 25px 0px 0 60px;
+    font-size: 35px;
+    text-align: left;
+}
+#homepage-module-2{
+    height: auto;
+}
+#homepage-module-2 p{
+    padding: 25px 0px 0 60px;
+    color: white;
+    width: 620px;
 }
 
 .single-image {
@@ -145,7 +182,9 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     font-size: 45px;
     font-family: 'Montserrat', sans-serif;
     color: #242424;
-    padding-left: 60px;
+    color: white;
+    padding-left: 100px;
+    text-align: left;
 }
 
 .cursor {
@@ -170,20 +209,34 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #242424;
+    -webkit-text-stroke-color: white;
 }
 .text-and-images{
     display: flex;
-    height: calc(95vh - 67px);
+    height: calc(100vh - 67px);
     flex-direction: column;
     justify-content: space-around;
+}
+#homepage-module-3{
+    margin: 150px 0px 50px 0px;
+    height: 100vh;
+}
+#homepage-module-3 .module-header-right h2{
+    color: white;
+    text-align: right;
+    padding: 0 60px 0 0 !important;
+}
+#homepage-module-3 .module-header-right p{
+    text-align: right;
+    padding: 0 60px 0 0 !important;
+    color: white;
 }
 
 .platforms-container {
   display: grid;
   grid-template-columns: auto auto;
   width: 90vw;
-  top: 52%;
-
+  top: 53%;
 }
 .platform-item {
   background-color: white;
@@ -233,152 +286,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 }
 
 
-.contact-container{
-    width: 100%;
-    height: 50vh;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #181818;
-}
-
-.circles{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.circles li{
-    position: absolute;
-    display: block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background: #242424;
-    animation: animate 25s linear infinite;
-    bottom: -150px;
-    
-}
-
-.circles li:nth-child(1){
-    left: 25%;
-    width: 80px;
-    height: 80px;
-    animation-delay: 0s;
-}
-
-.circles li:nth-child(2){
-    left: 10%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 2s;
-    animation-duration: 12s;
-}
-
-.circles li:nth-child(3){
-    left: 70%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 4s;
-}
-
-.circles li:nth-child(4){
-    left: 40%;
-    width: 60px;
-    height: 60px;
-    animation-delay: 0s;
-    animation-duration: 18s;
-}
-
-.circles li:nth-child(5){
-    left: 65%;
-    width: 20px;
-    height: 20px;
-    animation-delay: 0s;
-}
-
-.circles li:nth-child(6){
-    left: 75%;
-    width: 110px;
-    height: 110px;
-    animation-delay: 3s;
-}
-
-.circles li:nth-child(7){
-    left: 35%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 7s;
-}
-
-.circles li:nth-child(8){
-    left: 50%;
-    width: 25px;
-    height: 25px;
-    animation-delay: 15s;
-    animation-duration: 45s;
-}
-
-.circles li:nth-child(9){
-    left: 20%;
-    width: 15px;
-    height: 15px;
-    animation-delay: 2s;
-    animation-duration: 35s;
-}
-
-.circles li:nth-child(10){
-    left: 85%;
-    width: 150px;
-    height: 150px;
-    animation-delay: 0s;
-    animation-duration: 11s;
-}
-
-@keyframes animate {
-    0%{
-        transform: translateY(0) rotate(0deg);
-        /* opacity: 1; */
-    }
-
-    100%{
-        transform: translateY(-1000px) rotate(720deg);
-        /* opacity: 0; */
-    }
-}
-#homepage-module-4 h2{
-    text-align: center;
-    color: white;
-    padding: 0;
-}
-.contact-text-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.contact-button{
-    background-color: #3c4c68;
-    display: block;
-    text-align: center;
-    padding: 15px;
-    font-size: 15px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 100;
-    width: 150px;
-    margin: 15px auto;
-    color: white;
-}
-.contact-button:hover{
-    color: white;
-    opacity: 0.8;
-    /* background-image: url(/assets/NGF-Hover-Frame.png); */
-}
 </style>
 
 <script>

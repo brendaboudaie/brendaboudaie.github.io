@@ -1,6 +1,10 @@
 ---
 ---
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
     background-color: #242424;
     margin: 0;
@@ -16,11 +20,35 @@ p, a{
   font-weight: 100;
 }
 
-a{
-  text-decoration: none;
+strong{
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
 }
 
-.featured-item-description a{
+button{
+  background: none;
+  stroke: none;
+  border: none;
+  color: white;
+  margin: 0px 25px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  &.current{
+    font-weight: 600;
+  }
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-item-description a, .work-grid a{
     text-decoration: none;
     text-decoration: underline;
 }
@@ -130,3 +158,4 @@ a:visited{
         top: -5px;
     }
   }
+

@@ -3,9 +3,9 @@
         <p>B</p>
     </a>
     <ul class = "nav-items">
-        <li><a href = "#">About</a></li>
-        <li><a href = "/test-work.html">Work</a></li>
-        <li><a href = "#">Contact</a></li>
+        <li><a {%if page.title contains "Work"%} style = "font-weight: 600;"{%endif%} href = "/test-work.html">Work</a></li>
+        <li><a {%if page.title contains "About"%} style = "font-weight: 600;"{%endif%} href = "/test-about.html">About</a></li>
+        <li><a {%if page.title contains "Contact"%} style = "font-weight: 600;"{%endif%} href = "/test-contact.html">Contact</a></li>
     </ul>
 </div>
 
@@ -49,8 +49,7 @@
         color: white;
         transition: all 0.2s ease-in-out;
     }
-    .nav-items li a:hover{
+    /* .nav-items li a:hover{
         color: #4c6082;
-        /* text-decoration: underline; */
-    }
+    } */
 </style>

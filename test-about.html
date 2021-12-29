@@ -1,0 +1,225 @@
+---
+layout: boudaie
+id: "about=brenda-boudaie"
+title: "About | Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+
+<div>
+    <div class = "about-module" id = "about-module-1">
+        <div class="about-hero-container absolute-center">
+            <div class="item1">
+                <h1>A design obsessed </br> Website Developer.</h1>
+            </div>
+          </div> 
+    </div>
+    <div class = "about-module" id = "about-module-2">
+        <div class="about-container">
+                <img src="/assets/Portrait.png" style="height: 69vh;">
+                <div class = "about-copy-container">
+                    <p>Hey 👋🏼</p>
+                    <p> To keep it simple, I’m a Computer Science graduate with a great passion for 
+                        design. After college, I spent a couple of years as a Front End Developer, where 
+                        I was able to utilize those skillsets. It was in those years that I quickly 
+                        learned how my ambition for solving client problems didn’t stop with writing 
+                        clean code, but motivated me to manage these projects as well. Having worked with 
+                        dozens of amazing brands, I’ve been able to do what I do best: </p>
+                    <strong>To Inspire and to be inspired.</strong>
+                    <p style="margin-bottom: 0;"> When not online, you can find me trying new local cafes, hiking with my chocolate lab, 
+                        or rewatching Pixar movies. I always appreciate a good coffee recommndation, so if you 
+                        have any that come to mind, <a href = "#" style="text-decoration: underline;"> let me know. </a>
+                    </p>
+                </div>
+        </div> 
+    </div>
+    <div class = "about-module" id = "about-module-3" style="height: auto;">
+        <h2 >My capabilities</h2>
+            <div class="capabilities-container">
+                <img src="/assets/strategy.png" alt="strategy" class="image">
+                <div class="capabilities-overlay">
+                  <div class="capabilities-text">                
+                      <strong style="font-size: 50px;">Strategy</strong>
+                    <p>I’m here to to map out the best plan for improving your business. With discovery exercises and implementing 
+                        digital tools, I focus on how to create the finest online presence for each brand.  </p>
+                    <li>Email newsletters</li>
+                    <li>Google Analytics</li>
+                    <li>Search Engine Optimization</li>
+                </div>
+                </div>
+            </div>
+            <div class="capabilities-container" style="display: flex; justify-content: end; margin: 100px 0px 0px calc(40vw - 150px);">
+                <img src="/assets/DESIGN.png" alt="design" class="image">
+                <div class="capabilities-overlay" id = "from-right">
+                  <div class="capabilities-text">                
+                      <strong style="font-size: 50px;">Design</strong>
+                    <p>Good design intrigues users. Great design keeps them on the page. Whether it’s focusing on your brand 
+                        guidelines or designing an individual website page, I strive to bring the brand’s vision to life.   </p>
+                    <li>Branding</li>
+                    <li>Logo creation</li>
+                    <li>Web User Experience and User Interface design</li>
+                </div>
+                </div>
+            </div>
+            <div class="capabilities-container">
+                <img src="/assets/development.png" alt="development" class="image">
+                <div class="capabilities-overlay">
+                  <div class="capabilities-text">                
+                      <strong style="font-size: 50px;">Development</strong>
+                    <p>Using up to date and best practices, I build static designs to life. I focus on optimizing builds between 
+                        browsers and devices, implementing the best solutions for each brand.</p>
+                    <li> Mobile, tablet, desktop responsive</li>
+                    <li> Front End performance</li>
+                    <li> Quality assurance testing</li>
+                </div>
+                </div>
+            </div>
+    </div>
+    <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; padding: 25px 0px 0 60px; margin-top: 100px;">
+        <h2 style="margin-bottom: 50px;" >What I'm Listening To</h2>
+        <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. <a href = "test-contact.html"> Have recommendations for me?</a></p>
+        <iframe src="https://open.spotify.com/embed/playlist/41QiwxPUcVvtkcsifLe9Wp?utm_source=generator" width="90%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <h2 style="color: white; font-size: 35px; margin-bottom: 50px; margin: 100px 0 0 0; padding: 25px 0px 0 60px;" >What I'm Reading</h2>
+    <p style="    color: white; width: 620px; text-align: left; margin: 50px 0px; padding: 25px 0px 0 60px;">Web development is all about staying up to date with the latest trends and best practices. These are some articles I’ve read that I found useful in this industry. </p>
+    <div class = "about-module" id = "article-container">
+        {% for article in site.data.articles %}
+        <a href = "{{article.url}}" target="_blank"> 
+            <div class = "article-container">
+                <img style= "width: 250px;" src="{{article.image}}">
+                <h3>{{article.title}}</h3>
+                <p>{{article.description}}</p>
+            </div>
+        </a>
+        {%endfor%}
+    </div>
+</div>
+
+<style>
+
+.image {
+  display: block;
+  width: 25vw;
+  height: auto;
+}
+
+.capabilities-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #424242;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.capabilities-container:hover .capabilities-overlay {
+  width: 100%;
+}
+
+#from-right{
+    left: 100%;
+}
+
+.capabilities-container:hover #from-right {
+  left: 0;
+}
+
+.capabilities-text {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+
+}
+.capabilities-text:hover{
+    cursor: pointer;
+}
+.about-module{
+    position: relative;
+    height: 100vh;
+}
+#spotify-embed p{
+    color: white;
+    width: 620px;
+    text-align: left;
+    margin: 50px 0px;
+}
+#spotify-embed a {
+    text-decoration: underline;
+}
+.about-hero-container{
+    top: calc(50%);
+}
+.item1{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+#about-module-2{
+    height: auto;
+    margin-bottom: 145px;
+}
+.about-container{
+    width: 65vw;
+    height: 69vh;
+    margin: 0 auto;
+    margin-top: -17vh;
+    /* background-color: #3c4c68; */
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.about-copy-container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 100px;
+}
+.about-module h2, .capabilities-container h2{
+    color: white;
+    margin: 0;
+
+    font-size: 35px;
+    text-align: left;
+}
+#about-module-3 h2{
+    padding: 25px 0px 0 60px !important;
+}
+.capabilities-container{
+    position: relative;
+    width: 60vw;
+    margin: 100px 0px 0px 150px;
+    color: white;
+}
+#article-container{
+    color: white;
+    height: auto; 
+    margin: 100px auto; 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+}
+.article-container{
+    border: 1px solid;
+    border: 1px solid #a3a3a3;
+    height: 500px;
+    display: flex;
+    margin: 0px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background: #3e3e3e;
+}
+.article-container h3{
+    font-size: 25px;
+    /* padding: 0 25px; */
+}
+</style>
+

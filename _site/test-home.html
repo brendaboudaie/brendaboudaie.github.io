@@ -34,9 +34,9 @@
             <span>I make</span>
             <div>
                 <ul class="flip3">
-                    <li>BEAUTIFUL</li>
-                    <li>POWERFUL</li>
-                    <li>EFFECIENT</li>
+                    <li>beautiful</li>
+                    <li>powerful</li>
+                    <li>effecient</li>
                 </ul>
             </div>
         </h1>
@@ -47,11 +47,13 @@
     </div>
     <!-- style="background-color: #abbbd8;" -->
     <div class = "homepage-module" id = "homepage-module-2" >
-        <h2>What I'm good at</h2>
-        <p>Between design, development, and strategy,  I offer full stack services 
-            to help your brand and business grow. Whether you’re looking for a 
-            website build, redesign, or maintenance, I focus on executing tailored 
-            solutions for each project.</p>
+        <div class = "module-header-left">
+            <h2>What I'm good at</h2>
+            <p>Between design, development, and strategy,  I offer full stack services 
+                to help your brand and business grow. Whether you’re looking for a 
+                website build, redesign, or maintenance, I focus on executing tailored 
+                solutions for each project.</p>
+        </div>
         <div class="cursor"></div>
         <div class="text-and-images">
             <div class="single-image">
@@ -143,6 +145,7 @@
 .contact-container{
     width: 100%;
     height: 50vh;
+    height: 400px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -282,18 +285,15 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    margin-top: 0px !important;
 }
 #homepage-module-1 a{
     transition: all 0.5s;    
 }
 #homepage-module-1 img{
     width: 50px;
-    /* position: absolute; */
     top: auto;
     bottom: 25px !important;
-    /* -moz-animation: bounce 12s infinite 3s;
-    -webkit-animation: bounce 12s infinite 3s;
-    animation: bounce 12s infinite 3s; */
 }
 
 @keyframes bounce {
@@ -336,7 +336,8 @@
 }
 .wordCarousel div li {
     color: #4c6082;
-    font-weight: 600;
+    color: #546a8f;
+    font-weight: 100;
     padding: 0 5px;
     height: 45px;
     margin-bottom: 45px;
@@ -360,21 +361,8 @@
     100% { margin-top: -270px; }
 }
 
-.homepage-module h2{
-    color: #242424;
-    color: white;
-    margin: 0;
-    padding: 25px 0px 0 60px;
-    font-size: 35px;
-    text-align: left;
-}
 #homepage-module-2{
     height: auto;
-}
-#homepage-module-2 p{
-    padding: 25px 0px 0 60px;
-    color: white;
-    width: 620px;
 }
 
 .single-image {
@@ -421,25 +409,15 @@
     justify-content: space-around;
 }
 #homepage-module-3{
-    margin: 150px 0px 50px 0px;
     height: 100vh;
-}
-#homepage-module-3 .module-header-right h2{
-    color: white;
-    text-align: right;
-    padding: 0 60px 0 0 !important;
-}
-#homepage-module-3 .module-header-right p{
-    text-align: right;
-    padding: 0 60px 0 0 !important;
-    color: white;
 }
 
 .platforms-container {
   display: grid;
   grid-template-columns: auto auto;
-  width: 90vw;
-  top: 53%;
+  width: calc(100% - 120px);   /* 60px on each side */
+  /* top: 53%; */
+  margin-top: 50px;
 }
 .platform-item {
   background-color: white;
@@ -467,6 +445,7 @@
     margin-bottom: 0px;
 }
 .platform-item:nth-child(1), .platform-item:nth-child(3) {
+
   margin-right: 25px;
 }
 .platform-item:nth-child(1), .platform-item:nth-child(2) {
@@ -475,6 +454,8 @@
 
 #homepage-module-4{
     height: 60vh;
+    height: 400px;
+    margin-top: 0px !important;
 }
 .context {
     width: 100%;
@@ -522,18 +503,19 @@ images.forEach((image, i) => {
 </script>
     </div>
 
-    <footer id="footer">
+    <footer id="footer" >
     <p style="margin-bottom: 0">Built By Brenda Boudaie</p>
-    <p style="margin-top: 2px">&copy 2021 all rights reserved</p>
+    <p style="margin-top: 2px">&copy 2022 all rights reserved</p>
   </footer>
   
   <style>
     footer {
-      bottom: 0;
-      left: 0;
+      /* bottom: 0;
+      left: 0; */
       width: 100%;
       color: #818181;
       text-align: center;
+      margin-top: 125px;
     }
   </style>
   

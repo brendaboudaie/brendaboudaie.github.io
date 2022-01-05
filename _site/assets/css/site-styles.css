@@ -20,9 +20,21 @@ a { text-decoration: none; color: inherit; }
 
 a:visited { color: inherit; text-decoration: none; }
 
-.homepage-module { position: relative; display: block; height: 100vh; width: 100vw; height: 95vh; }
+.homepage-module { position: relative; display: block; height: 100vh; width: 100vw; height: 95vh; margin-top: 100px; }
 
 .absolute-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.module-header-left { margin: 0px; margin-left: 60px; text-align: left; color: white; }
+
+.module-header-left h2 { font-size: 35px; }
+
+.module-header-left p { width: 620px; margin-top: 50px; margin-bottom: 0px; }
+
+.module-header-right { margin: 0px; margin-right: 60px; text-align: right; color: white; }
+
+.module-header-right h2 { font-size: 35px; }
+
+.module-header-right p { margin-top: 50px; margin-bottom: 0px; }
 
 .timeline { position: absolute; }
 
@@ -46,6 +58,8 @@ a:visited { color: inherit; text-decoration: none; }
 
 .timeline ul li::before { content: ''; position: absolute; left: 40px; top: 0; transform: translateX(-45%); width: 12px; height: 12px; background: inherit; background: #494949; transition: all .4s ease-in-out; }
 
-.timeline li div p { position: absolute; left: 32px; top: -5px; }
+.timeline li div p { display: none; position: absolute; font-weight: 600; left: 30px; top: -5px; }
+
+.timeline .in-view div p { display: block; }
 
 /*# sourceMappingURL=site-styles.css.map */

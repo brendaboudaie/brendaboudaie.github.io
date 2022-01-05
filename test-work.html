@@ -49,7 +49,9 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         </div>
     </div>
     <div class = "work-module" id = "work-module-3">
-      <h2>Other brands I've worked with</h2>
+      <div class = "module-header-left">
+        <h2>Other brands I've worked with</h2>
+      </div>
 
         <div class="brands-filter">
           <button class="btn current" data-filter="item">All</button>
@@ -83,7 +85,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 <style>
 #work-module-4{
   position: relative;
-  height: 100vh;
+  height: 85vh;
 }
 .scene {
     position: relative;
@@ -150,13 +152,7 @@ h1 {
   color: white;
 }
 #work-module-3{
-  /* height: 100vh; */
   margin-top: 150px;
-}
-#work-module-3 h2{
-  color: white;
-  font-size: 35px;
-  margin-left: 60px;
 }
 .brands-filter{
   text-align: center;
@@ -194,9 +190,10 @@ h1 {
 </style>
 
 <script>
-    $(document).ready(function() {
-  var $magic = $(".magic"),
-      magicWHalf = $magic.width() / 2;
+// Hero Hover Reveal
+// --------------------------------------------------------------
+  $(document).ready(function() {
+  var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
   $(document).on("mousemove", function(e) {
     $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
   });
@@ -246,7 +243,8 @@ if(lineToDraw.length) {
   });
 }
 
-
+// Work Filtering
+// --------------------------------------------------------------
 jQuery(function ($) {
   var $items = $(".work-grid .item");
   var $btns = $(".brands-filter .btn").on("click", function () {
@@ -261,7 +259,6 @@ jQuery(function ($) {
       .fadeIn(450);
   });
 });
-
 
 </script>
 

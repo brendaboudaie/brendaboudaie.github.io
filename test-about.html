@@ -23,9 +23,9 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
                         design. After college, I spent a couple of years as a Front End Developer, where 
                         I was able to utilize those skillsets. It was in those years that I quickly 
                         learned how my ambition for solving client problems didn’t stop with writing 
-                        clean code, but motivated me to manage these projects as well. Having worked with 
+                        clean code, but motivated me to become a project manger as well. Having worked with 
                         dozens of amazing brands, I’ve been able to do what I do best: </p>
-                    <strong>To Inspire and to be inspired.</strong>
+                    <strong>to Inspire and to be inspired.</strong>
                     <p style="margin-bottom: 0;"> When not online, you can find me trying new local cafes, hiking with my chocolate lab, 
                         or rewatching Pixar movies. I always appreciate a good coffee recommndation, so if you 
                         have any that come to mind, <a href = "#" style="text-decoration: underline;"> let me know. </a>
@@ -34,7 +34,9 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         </div> 
     </div>
     <div class = "about-module" id = "about-module-3" style="height: auto;">
-        <h2 >My capabilities</h2>
+        <div class = "module-header-left">
+            <h2 >My capabilities</h2>
+        </div>
             <div class="capabilities-container">
                 <img src="/assets/strategy.png" alt="strategy" class="image">
                 <div class="capabilities-overlay">
@@ -75,13 +77,17 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
                 </div>
             </div>
     </div>
-    <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; padding: 25px 0px 0 60px; margin-top: 100px;">
-        <h2 style="margin-bottom: 50px;" >What I'm Listening To</h2>
-        <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. <a href = "test-contact.html"> Have recommendations for me?</a></p>
+    <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; margin-top: 100px;">
+        <div class = "module-header-left">
+            <h2 >What I'm Listening To</h2>
+            <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. <a href = "test-contact.html"> Have recommendations for me?</a></p>
+        </div>
         <iframe src="https://open.spotify.com/embed/playlist/41QiwxPUcVvtkcsifLe9Wp?utm_source=generator" width="90%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-    </div>
-    <h2 style="color: white; font-size: 35px; margin-bottom: 50px; margin: 100px 0 0 0; padding: 25px 0px 0 60px;" >What I'm Reading</h2>
-    <p style="    color: white; width: 620px; text-align: left; margin: 50px 0px; padding: 25px 0px 0 60px;">Web development is all about staying up to date with the latest trends and best practices. These are some articles I’ve read that I found useful in this industry. </p>
+        </div>
+        <div class = "module-header-left">
+            <h2 >What I'm Reading</h2>
+            <p>Web development is all about staying up to date with the latest trends and best practices. These are some articles I’ve read that I found useful in this industry. </p>
+        </div>
     <div class = "about-module" id = "article-container">
         {% for article in site.data.articles %}
         <a href = "{{article.url}}" target="_blank"> 
@@ -181,16 +187,16 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     justify-content: center;
     margin-left: 100px;
 }
-.about-module h2, .capabilities-container h2{
+/* .about-module h2, .capabilities-container h2{
     color: white;
     margin: 0;
 
     font-size: 35px;
     text-align: left;
-}
-#about-module-3 h2{
+} */
+/* #about-module-3 h2{
     padding: 25px 0px 0 60px !important;
-}
+} */
 .capabilities-container{
     position: relative;
     width: 60vw;

@@ -61,8 +61,10 @@ a:visited{
 .homepage-module{
     position: relative;
     display: block;
-    height: 100vh; width: 100vw;
+    height: 100vh; 
+    width: 100vw;
     height: 95vh;
+    margin-top: 100px;
 }
 
 .absolute-center{
@@ -70,6 +72,35 @@ a:visited{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.module-header-left{
+  margin: 0px;
+  margin-left: 60px;
+  text-align: left;
+  color: white;
+  h2{
+    font-size: 35px;
+    // padding: 25px 0px;
+  }
+  p{
+    width: 620px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+}
+.module-header-right{
+  margin: 0px;
+  margin-right: 60px;
+  text-align: right;
+  color: white;
+  h2{
+    font-size: 35px;
+  }
+  p{
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
 }
 
 
@@ -153,9 +184,14 @@ a:visited{
       }
     }
     li div p{
+        display: none;
         position: absolute;
-        left: 32px;
+        font-weight: 600;
+        left: 30px;
         top: -5px;
+    }
+    .in-view div p{
+      display: block;
     }
   }
 

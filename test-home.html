@@ -195,7 +195,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 .image--inner:hover{
     color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #242424;
     -webkit-text-stroke-color: white;
 }
 .text-and-images{
@@ -241,7 +240,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     margin-bottom: 0px;
 }
 .platform-item:nth-child(1), .platform-item:nth-child(3) {
-
   margin-right: 25px;
 }
 .platform-item:nth-child(1), .platform-item:nth-child(2) {
@@ -263,6 +261,55 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     text-align: center;
     color: #fff;
     font-size: 50px;
+}
+
+/**************************** TABLET ****************************/
+@media screen and (max-width: 942px) {
+    .platform-item{
+        height: 200px !important;
+    }
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 767px) {
+    #homepage-module-1{
+        flex-direction: column !important;
+    }
+    .wordCarousel {
+        margin: 0px !important
+    }
+    #last {
+        margin: 0px !important;
+    }
+    .wordCarousel span{
+        display: block !important;
+    }
+    #homepage-module-3 {
+        height: auto !important;
+    }       
+    .platforms-container{
+        display: block !important;
+        grid-template-columns: none !important;
+        position: relative !important;
+        width: 90vw !important;
+        transform: none !important; 
+        top: auto !important;
+        left: auto !important;
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(3) {
+        margin: 0px !important;
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(2) {
+        margin: 0px !important;
+    }
+    #homepage-module-4 {
+        height: auto !important;
+        margin-top: 100px !important;
+    }  
+    .contact-container{
+        position: relative !important;
+        transform: none !important;
+        top: auto !important;
+    }
 }
 
 

@@ -34,15 +34,19 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         <div class="cursor"></div>
         <div class="text-and-images">
             <div class="single-image">
+                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
                 <div class="image--inner">ECOMMERCE</div>
             </div>
             <div class="single-image">
+                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
                 <div class="image--inner">CUSTOM BUILDS</div>
             </div>
             <div class="single-image">
+                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
                 <div class="image--inner">WEB MAINTENANCE</div>
             </div>
             <div class="single-image">
+                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
                 <div class="image--inner">DIGITAL STRATEGY</div>
             </div>
         </div>
@@ -173,6 +177,11 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     padding-left: 100px;
     text-align: left;
 }
+
+.single-image img{
+    display: none;
+}
+
 
 .cursor {
     position: fixed;
@@ -309,6 +318,28 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         position: relative !important;
         transform: none !important;
         top: auto !important;
+    }
+    .text-and-images{
+        display: block;
+        height: auto;
+    }
+    .single-image{
+        padding-left: 0;
+        line-height: 1;
+        margin-top: 75px;
+    }
+    .image--inner{
+        color: blue;
+        position: absolute;
+        bottom: -25px;
+        right: 20px;
+        font-size: 60px;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: white;
+    }
+    .text-and-images img{
+        display: block;
+        width: 90vw;
     }
 }
 

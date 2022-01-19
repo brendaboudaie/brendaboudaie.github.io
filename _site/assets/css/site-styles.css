@@ -62,4 +62,6 @@ a:visited { color: inherit; text-decoration: none; }
 
 .timeline .in-view div p { display: block; }
 
+@media screen and (max-width: 768px) { .module-header-left { margin-left: 15px; } .module-header-left h2 { font-size: 30px; } .module-header-left p { width: 95vw; } .module-header-right { margin-right: 15px; } .module-header-right h2 { font-size: 30px; } }
+
 /*# sourceMappingURL=site-styles.css.map */

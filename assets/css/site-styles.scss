@@ -195,3 +195,20 @@ a:visited{
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .module-header-left{
+      margin-left: 15px;
+      h2{
+        font-size: 30px;
+      }
+      p{
+        width: 95vw;
+      }
+    }
+    .module-header-right{
+      margin-right: 15px;
+      h2{
+        font-size: 30px;
+      }
+    }
+  }

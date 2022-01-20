@@ -531,14 +531,20 @@
         padding-left: 0;
         line-height: 1;
         margin-top: 75px;
+        font-family: san-serif;
+        font-weight: 900;
+    }
+    .single-image img{
+        filter: opacity(0.8);
     }
     .image--inner{
-        color: blue;
+        color: rgb(104, 104, 104);
         position: absolute;
+        text-align: right;
         bottom: -25px;
         right: 20px;
-        font-size: 60px;
-        -webkit-text-stroke-width: 3px;
+        font-size: 45px;
+        -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
     }
     .text-and-images img{
@@ -675,7 +681,8 @@ images.forEach((image, i) => {
 
 
 @media screen and (max-width: 768px) {
-body{
+body, html{
+  position: relative;
     overflow-x: hidden;
 }
 .boudaie-navigation{

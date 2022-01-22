@@ -100,6 +100,8 @@ a:visited{
   p{
     margin-top: 50px;
     margin-bottom: 0px;
+    display: inline-block;
+    width: 620px;
   }
 }
 
@@ -203,6 +205,7 @@ a:visited{
       }
       p{
         width: 95vw;
+        margin-top: 25px;
       }
     }
     .module-header-right{
@@ -210,5 +213,10 @@ a:visited{
       h2{
         font-size: 30px;
       }
+      p{
+        width: 95vw;
+        margin-top: 25px;
+      }
     }
+    
   }

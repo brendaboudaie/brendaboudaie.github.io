@@ -7,17 +7,22 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 
 <div class="main" id = "main">
     <div class = "homepage-module" id = "homepage-module-1">
-        <h1 class="wordCarousel">
-            <span>I make</span>
-            <div>
-                <ul class="flip3">
-                    <li>beautiful</li>
-                    <li>powerful</li>
-                    <li>effecient</li>
-                </ul>
-            </div>
-        </h1>
-        <h1 id = "last"> websites.</h1>
+        <div class = "carousel-container">
+            <h1 class="wordCarousel">
+                <span>I make</span>
+                <div class = "adjectives-container">
+                    <ul class="flip3">
+                        <li>beautiful</li>
+                        <li>powerful</li>
+                        <li>effecient</li>
+                    </ul>
+                </div>
+            </h1>
+            <h1 id = "last"> websites.</h1>
+        </div>
+        <p class = "mobile-only"> It's pretty simple: I'm a design driven web developer constantly inspired to create and build
+            amazing digital products. </p>
+
         <a data-scroll href="#homepage-module-2">
             <img class = "absolute-center" src="/assets/mouse_scroll.png" style="width: 50px;">
         </a>
@@ -38,15 +43,15 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
                 <div class="image--inner">ECOMMERCE</div>
             </div>
             <div class="single-image">
-                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
+                <img src="/assets/hover-shots/DBFD-Hover-Frame.png">
                 <div class="image--inner">CUSTOM BUILDS</div>
             </div>
             <div class="single-image">
-                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
+                <img src="/assets/hover-shots/Peri-Hover-Frame.png">
                 <div class="image--inner">WEB MAINTENANCE</div>
             </div>
             <div class="single-image">
-                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
+                <img src="/assets/hover-shots/Pearl-Hover-Frame.png">
                 <div class="image--inner">DIGITAL STRATEGY</div>
             </div>
         </div>
@@ -87,6 +92,9 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     height: 100vh;
     margin-top: 0px !important;
 }
+.carousel-container{
+    display: flex;
+}
 #homepage-module-1 a{
     transition: all 0.5s;    
 }
@@ -124,7 +132,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     font-size: 36px;
     color: #eee;
 }
-.wordCarousel div {
+.wordCarousel .adjectives-container {
     overflow: hidden;
     position: relative;
     float: right;
@@ -134,7 +142,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
     margin: 0;
     padding: 0px;
 }
-.wordCarousel div li {
+.wordCarousel .adjectives-container li {
     color: #4c6082;
     color: #546a8f;
     font-weight: 100;
@@ -282,11 +290,33 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 
 /**************************** MOBILE ****************************/
 @media screen and (max-width: 767px) {
+    #homepage-module-1 img {
+        bottom: 85px !important;
+        display: none;
+    }
+    #homepage-module-1 h1{
+        font-size: 45px;
+    }
     #homepage-module-1{
         flex-direction: column !important;
+        align-items: flex-start;
+    }
+    .carousel-container p{
+        color: white ;
+    }
+    .wordCarousel .adjectives-container li {
+        padding: 0px;
     }
     .wordCarousel {
         margin: 0px !important
+    }
+    .wordCarousel .adjectives-container{
+        height: 62px;
+        float: none;
+    }
+    .carousel-container{
+        margin-left: 15px;
+        flex-direction: column;
     }
     #last {
         margin: 0px !important;

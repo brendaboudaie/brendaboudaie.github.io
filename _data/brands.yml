@@ -3,6 +3,16 @@
   image: assets/all-work/SAFAR_Screenshot.jpg
   platform: squarespace
   url: https://safardesignstudio.com/
+- title: Sartori Cheese
+  description: A four generational lead artisan cheese company.
+  image: assets/all-work/Sartori_Screenshot.jpg
+  platform: custom build
+  url: https://sartoricheese.com/
+- title: Shop Sartori Cheese
+  description: The official shop for Sartori Cheese, a four generational lead artisan cheese company.
+  image: assets/all-work/Sartori_Shop_Screenshot.jpg
+  platform: shopify
+  url: https://shop.sartoricheese.com/
 - title: Marissa Collections
   description: A highly curated boutique for the world's most discerning shoppers.
   image: assets/all-work/Marissa_Screenshot.png

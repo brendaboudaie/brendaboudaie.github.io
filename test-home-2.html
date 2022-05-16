@@ -1,0 +1,520 @@
+---
+layout: boudaie
+id: "test-Brenda-Boudaie"
+title: "Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+<div class="main" id = "main">
+    <div class = "homepage-module" id = "homepage-module-1">
+        <div id="wrapper" style="height: 100%; position: relative; overflow: hidden; ">
+            <video autoplay muted loop id="myVideo" class = "hide-on-mobile">
+                <source src="/assets/Brenda_Brand_Loop.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop id="myVideo" class = "show-on-mobile">
+                <source src="/assets/Brenda_Brand_Loop_Mobile.mp4" type="video/mp4">
+            </video>
+            <div class = "hero-container" style="height: 100%;">
+                <h1 class = "sentence"> I make 
+                    <div class ="slidingVertical">
+                        <span>beautiful</span>
+                        <span>powerful</span>
+                        <span>effecient</span>
+                    </div>
+                </h1>
+                <h1 id = "last"> websites.</h1>
+            </div>
+          </div>  
+    </div>
+    <div class = "homepage-module" id = "homepage-module-2" >
+        <div class = "module-header-left">
+            <h2>What I'm good at</h2>
+            <p>Between design, development, and strategy,  I offer full stack services 
+                to help your brand and business grow. Whether you’re looking for a 
+                website build, redesign, or maintenance, I focus on executing tailored 
+                solutions for each project.</p>
+        </div>
+        <div class="cursor"></div>
+        <div class="text-and-images">
+            <div class="single-image">
+                <img src="/assets/hover-shots/NGF-Hover-Frame.png">
+                <div class="image--inner">ECOMMERCE</div>
+            </div>
+            <div class="single-image">
+                <img src="/assets/hover-shots/DBFD-Hover-Frame.png">
+                <div class="image--inner">CUSTOM BUILDS</div>
+            </div>
+            <div class="single-image">
+                <img src="/assets/hover-shots/Peri-Hover-Frame.png">
+                <div class="image--inner">WEB MAINTENANCE</div>
+            </div>
+            <div class="single-image">
+                <img src="/assets/hover-shots/Pearl-Hover-Frame.png">
+                <div class="image--inner">DIGITAL STRATEGY</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "homepage-module" id = "homepage-module-3">
+        <div class = "module-header-right">
+            <h2>What helps me do it</h2>
+            <p>Every project is unique, so the website’s approach should be too. 
+                I offer fully custom solutions, but when it makes sense, using these 
+                CMS platforms help tailor websites to my client’s needs. </p>
+        </div>
+
+        <div class="platforms-container absolute-center">
+            {% for item in site.data.platforms %}
+            <div class="platform-item" id = "{{item.platform}}-item">
+                <img src = {{item.logo}}>
+                <h3>{{item.platform}}</h3>
+                <p>{{item.description}}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+
+    <div class = "homepage-module" id = "homepage-module-4">
+        {% include contact-component.html %}
+    </div>
+</div>
+  
+
+<style>
+
+#homepage-module-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 0px !important;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+#homepage-module-1 h1 {
+    font-weight: 600; 
+    font-size: 175px; 
+    background-color: #6d6d6d;
+    display: inline-block;
+    margin: 0;
+    padding: 110px 0 0 60px;
+    /* height: calc(100% - 125px); */
+    /* background-color: #ffffff; */
+    mix-blend-mode: overlay;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+#last{
+    padding: 205px 60px!important;
+}
+#homepage-module-1 li{
+    font-family: 'Raleway', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; 
+    font-size: 175px; 
+    display: inline-block;
+}
+/*Vertical Sliding*/
+.slidingVertical{
+	display: inline;
+	/* text-indent: 8px; */
+    display: block;
+}
+
+.slidingVertical span{
+	animation: topToBottom 15s linear infinite 0s;
+	-ms-animation: topToBottom 15s linear infinite 0s;
+	-webkit-animation: topToBottom 15s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
+
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+.wordCarousel .adjectives-container {
+    overflow: hidden;
+    position: relative;
+    float: right;
+    height: 175px;
+}
+.wordCarousel .flip3{
+    margin: 0;
+    padding: 0px;
+}
+.wordCarousel .adjectives-container li {
+    padding: 0 5px;
+    height: 45px;
+    margin-bottom: 45px;
+    display: block;
+}
+
+/* .flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; } */
+
+#spin:after {
+  content:"";
+  animation: spin 8s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { content:"beautiful"; }
+  50% { content: "powerful"; }
+  100% { content: "effecient"; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+
+#homepage-module-2{
+    height: auto;
+}
+
+.single-image {
+    position: relative;
+    display: block;
+    width: auto;
+    line-height: 2.5;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #242424;
+    color: white;
+    padding-left: 100px;
+    text-align: left;
+}
+
+.single-image img{
+    display: none;
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    transition: all 0.1s linear, top 0ms linear, left 0ms ease-in-out;
+    z-index: 15;
+}
+
+.cursor-image-show {
+    width: 500px;
+    height: 265px;
+    top: auto;
+    left: auto;
+    background-size: cover;
+    transition: all 0.2s linear, top 0ms linear, left 0ms ease-in-out;
+    border: none;
+    mix-blend-mode: normal;
+    background-size: 100;
+}
+.image--inner:hover{
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+.text-and-images{
+    display: flex;
+    height: calc(100vh - 67px);
+    flex-direction: column;
+    justify-content: space-around;
+}
+#homepage-module-3{
+    height: 100vh;
+}
+
+.platforms-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: calc(100% - 120px);   /* 60px on each side */
+  /* top: 53%; */
+  margin-top: 50px;
+}
+.platform-item {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  height: 175px;
+  padding: 20px;
+  padding-bottom: 0px;
+  transition: ease-in-out 0.4s;
+  box-shadow: 0 0 5px 3px rgb(97, 97, 97);
+  -webkit-box-shadow:  0 0 5px 3px rgb(97, 97, 97);
+  -moz-box-shadow:  0 0 5px 3px rgb(97, 97, 97);
+}
+.platform-item:hover{
+    transform: translateY(-10px);
+}
+.platform-item h3{
+    margin-top: 0px;
+}
+.platform-item img{
+    width: 30px;
+}
+.platform-item p{
+    text-align: left;
+    margin-bottom: 0px;
+}
+.platform-item:nth-child(1), .platform-item:nth-child(3) {
+  margin-right: 25px;
+}
+.platform-item:nth-child(1), .platform-item:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+#homepage-module-4{
+    height: 60vh;
+    height: 400px;
+    margin-top: 0px !important;
+}
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+/**************************** TABLET ****************************/
+@media screen and (max-width: 942px) {
+    .platform-item{
+        height: 200px !important;
+    }
+    .transparent-text{
+        font-size: 115px; 
+        padding: 125px 0 0 45px;
+    }
+    #homepage-module-1 h1 {
+        background-color: transparent;
+        font-size: 100px; 
+    }
+    #last {
+        padding: 125px 60px!important;
+    }
+}
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 767px) {
+    #homepage-module-1 img {
+        bottom: 55px !important;
+        display: none;
+    }
+    .transparent-text{
+        font-size: 55px; 
+        padding: 90px 0 0 15px;
+        height: calc(100% - 90px);
+    }
+    #homepage-module-1 h1{
+        font-size: 65px;
+        background-color: transparent;
+        padding: 125px 0 0 20px;
+    }
+    #last {
+        margin: 0px !important;
+        padding: 75px 20px !important;
+    }
+    #homepage-module-1{
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+    .carousel-container p{
+        color: white ;
+    }
+    .wordCarousel .adjectives-container li {
+        padding: 0px;
+    }
+    .wordCarousel {
+        margin: 0px !important
+    }
+    .wordCarousel .adjectives-container{
+        height: 62px;
+        float: none;
+    }
+    .carousel-container{
+        margin-left: 15px;
+        flex-direction: column;
+    }
+
+    .wordCarousel span{
+        display: block !important;
+    }
+    #homepage-module-3 {
+        height: auto !important;
+    }       
+    .platforms-container{
+        display: block !important;
+        grid-template-columns: none !important;
+        position: relative !important;
+        width: 90vw !important;
+        transform: none !important; 
+        top: auto !important;
+        left: auto !important;
+        margin: 50px auto;
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(3) {
+        margin: 0px !important;
+        margin-bottom: 20px !important;
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(2) {
+        margin: 0px !important;
+        margin-bottom: 20px !important;
+    }
+
+    #homepage-module-4 {
+        height: auto !important;
+        margin-top: 100px !important;
+    }  
+    .contact-container{
+        position: relative !important;
+        transform: none !important;
+        top: auto !important;
+    }
+    .cursor{
+        display: none;
+    }
+    .image--inner:hover{
+        color: rgb(104, 104, 104);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+    }
+    .text-and-images{
+        display: block;
+        height: auto;
+
+    }
+    .single-image{
+        padding-left: 0;
+        line-height: 1;
+        margin-top: 135px;
+        margin-left: 15px;
+    }
+    .single-image:nth-child(1){
+        margin-top: 75px;
+    }
+    .single-image:nth-child(even) .image--inner{
+        text-align: left;
+        left: -15vw;
+    }
+    .single-image:nth-child(even){
+        margin-left: calc(25vw - 15px);
+    }
+    .single-image img{
+        filter: opacity(0.8);
+        width: 75vw !important;
+    }
+    .image--inner{
+        color: rgb(104, 104, 104);
+        position: absolute;
+        text-align: right;
+        bottom: -25px;
+        right: 20px;
+        font-size: 40px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+    }
+    .text-and-images img{
+        display: block;
+        width: 90vw;
+    }
+    #homepage-module-3 {
+        margin-top: 135px;
+    }
+}
+
+
+</style>
+
+<script>
+    let curs = document.querySelector(".cursor");
+document.addEventListener("mousemove", (e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+    curs.style.left = x - 250 + "px";
+    curs.style.top = y - 150 + "px";
+});
+
+let images = document.querySelectorAll(".text-and-images .image--inner");
+let servicesImages = [
+    "url(/assets/hover-shots/NGF-Hover-Frame.png)",
+    "url(/assets/hover-shots/DBFD-Hover-Frame.png)",
+    "url(/assets/hover-shots/Peri-Hover-Frame.png)",
+    "url(/assets/hover-shots/Pearl-Hover-Frame.png)"
+];
+
+images.forEach((image, i) => {
+    image.addEventListener("mouseover", (e) => {
+        curs.classList.add("cursor-image-show");
+        curs.style.backgroundImage = servicesImages[i];
+    });
+    image.addEventListener("mouseleave", (e) => {
+        curs.classList.remove("cursor-image-show");
+        curs.style.backgroundImage = "none";
+    });
+});
+
+</script>

@@ -28,10 +28,10 @@
 
   <body>
     <div class = "test-work">
-      <div class="main" id = "main">
+      <div class="main" id = "work">
     <div class = "work-module" id = "work-module-1">
         <div class="scene">
-            <h1>WORK</h1>
+            <h1>Browse my work</h1>
             <div class="magic"></div>
           </div>
     </div>
@@ -111,6 +111,24 @@
               <h3>SAFAR Design Studio</h3>
               <p>A boutique studio offering custom interior design services.</p>
               <a href = "https://safardesignstudio.com/" target="_blank">Visit website</a>
+            </div>
+          </div>
+          
+          <div class="item work-grid-item custom build ">
+            <img src = "assets/all-work/Sartori_Screenshot.jpg">
+            <div>
+              <h3>Sartori Cheese</h3>
+              <p>A four generational lead artisan cheese company.</p>
+              <a href = "https://sartoricheese.com/" target="_blank">Visit website</a>
+            </div>
+          </div>
+          
+          <div class="item work-grid-item shopify ">
+            <img src = "assets/all-work/Sartori_Shop_Screenshot.jpg">
+            <div>
+              <h3>Shop Sartori Cheese</h3>
+              <p>The official shop for Sartori Cheese, a four generational lead artisan cheese company.</p>
+              <a href = "https://shop.sartoricheese.com/" target="_blank">Visit website</a>
             </div>
           </div>
           
@@ -235,6 +253,7 @@
     padding: 15px;
     font-size: 15px;
     font-family: 'Work Sans', sans-serif;
+    font-family: 'Raleway', sans-serif; 
     font-weight: 100;
     width: 150px;
     margin: 15px auto;
@@ -386,18 +405,22 @@
 .scene {
     position: relative;
     height: 100vh;
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
     overflow: hidden;
 }
-h1 {
+#work h1 {
   font-family: 'Montserrat', sans-serif;
   position: relative;
-  font-size: 8rem;
-  text-transform: uppercase;
   color: #fff;
   z-index: 10;
+  font-weight: 600; 
+    font-size: 175px; 
+    display: inline-block;
+    margin: 0;
+    padding: 110px 0 0 60px;
+    width: 70%;
 }
 .magic {
   z-index: 5;
@@ -483,18 +506,95 @@ h1 {
   font-size: 14px;
 }
 
+/**************************** TABLET ****************************/
+@media screen and (max-width: 942px) {
+body{
+  overflow-x: hidden;
+}
+#work h1{
+  font-size: 100px;
+}
+.work-featured .featured-item {
+    width: 90vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 120px;
+    width: auto;
+}
+.featured-item-description{
+    width: 85vw;
+  }
+
+}
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 767px) {
+  .magic {
+    background: none;
+  }
+
+  .featured-item img {
+    /* height: 40vw; */
+  }  
+  .work-featured .featured-item,  .work-featured .featured-item:nth-child(even){
+    /* margin-left: 100px; */
+    display: block;
+    text-align: center;
+    direction: ltr;
+  }
+
+  .featured-item-description{
+    /* width: 260px; */
+    text-align: left;
+  }
+  .work-grid{
+    display: block;
+  }
+  .work-grid .work-grid-item{
+    margin: 25px auto;
+  }
+  button{
+    margin: 10px 0px;
+  }
+  #work h1{
+    z-index: 1; 
+    font-size: 65px;
+    padding: 125px 0 0 20px;
+  }
+}
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 500px) {
+  .featured-item img {
+    height: 40vw;
+  }  
+  .work-featured .featured-item {
+    margin-left: 100px;
+  }
+  .featured-item-description{
+    width: 260px;
+  }
+  #work-module-3 {
+    margin-top: 220px;
+}
+}
+
+
 </style>
 
 <script>
 // Hero Hover Reveal
 // --------------------------------------------------------------
+if (window.innerWidth > 767){
   $(document).ready(function() {
   var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
   $(document).on("mousemove", function(e) {
     $magic.css({"left": e.pageX - magicWHalf, "top": e.pageY - magicWHalf});
   });
 });
-
+}
 // Timeline Scroll Section
 // --------------------------------------------------------------
 var items = $(".timeline li"),
@@ -578,7 +678,7 @@ jQuery(function ($) {
   </style>
   
     <div class = "boudaie-navigation">
-    <a href="/test-home.html" class="logo">
+    <a href="/test-home-2.html" class="logo">
         <p>B</p>
     </a>
     <ul class = "nav-items">
@@ -598,7 +698,7 @@ jQuery(function ($) {
       <span></span>
       
       <ul id="menu">
-        <a href="/test-home.html"><li>Home</li></a>
+        <a href="/test-home-2.html"><li>Home</li></a>
         <a href="/test-work.html"><li>Work</li></a>
         <a href="/test-about.html"><li>About</li></a>
         <a href="/test-contact.html"><li>Contact</li></a>
@@ -629,6 +729,7 @@ jQuery(function ($) {
         padding: 0;
         margin: 0;
         font-family: 'Work Sans', sans-serif;    
+        font-family: 'Raleway', sans-serif; 
         font-weight: 600;
         color: white;
     }

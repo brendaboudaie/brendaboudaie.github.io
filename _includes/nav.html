@@ -1,16 +1,16 @@
 <div class = "boudaie-navigation">
-    <a href="/test-home-2.html" class="logo">
-        <p>B</p>
+    <a href="/new-home.html" class="logo">
+        <img src="../assets/Boudaie_Logo_1.png">
     </a>
     <ul class = "nav-items">
-        <li><a {%if page.title contains "Work"%} style = "font-weight: 600;"{%endif%} href = "/test-work.html">Work</a></li>
+        <li><a {%if page.title contains "Work"%} style = "font-weight: 600;"{%endif%} href = "/new-work.html">Work</a></li>
         <li><a {%if page.title contains "About"%} style = "font-weight: 600;"{%endif%} href = "/test-about.html">About</a></li>
         <li><a {%if page.title contains "Contact"%} style = "font-weight: 600;"{%endif%} href = "/test-contact.html">Contact</a></li>
     </ul>
 </div>
 
 
-<nav role='navigation'>
+<nav role='navigation' class = "boudaie-mobile-navigation">
     <div id="menuToggle">
       <input type="checkbox" />
       
@@ -19,10 +19,10 @@
       <span></span>
       
       <ul id="menu">
-        <a href="/test-home-2.html"><li>Home</li></a>
-        <a href="/test-work.html"><li>Work</li></a>
-        <a href="/test-about.html"><li>About</li></a>
-        <a href="/test-contact.html"><li>Contact</li></a>
+        <a href="/new-home.html"><li>Home</li></a>
+        <a href="/new-work.html"><li>Work</li></a>
+        <a href="/new-about.html"><li>About</li></a>
+        <a href="/new-contact.html"><li>Contact</li></a>
       </ul>
     </div>
   </nav>
@@ -32,19 +32,27 @@
     display: none;
   }
     .boudaie-navigation{
-        position: absolute;
+        position: fixed;
         top: 0;
-        width: calc(100vw - 90px);
+        width: 100%;
         z-index: 99;
-        padding: 15px 45px;
+        height: 90px;
+        background-color: transparent;
+        transition: background-color 200ms linear;
+
+    }
+    .boudaie-navigation.scrolled{
+      background-color: #242424;      
+      transition: background-color 200ms linear;
     }
     .boudaie-navigation .logo{
-        /* position: absolute; */
         float: left;
         top: 25px;
-        left: 45px;
-        font-size: 45px;
-        
+        left: 45px;  
+        margin: 25px 0 25px 45px;
+    }
+    .logo img{
+      width: 100px;
     }
     .logo p{
         padding: 0;
@@ -55,10 +63,13 @@
         color: white;
     }
     .nav-items{
-        float: right;
-        float: right;
-        list-style: none;
-        color: white;
+      float: right;
+      height: 100%;
+      list-style: none;
+      color: white;
+      display: flex;
+      align-items: center;
+      margin: 0px 45px 0px 0px;
     }
     .nav-items li{
         display: inline-block;
@@ -72,39 +83,42 @@
         transition: all 0.2s ease-in-out;
     }
 
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
 body, html{
   position: relative;
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 .boudaie-navigation{
     display: none;
 }
+.boudaie-mobile-navigation{
+  background-color: transparent;
+}
+.boudaie-mobile-navigation.scrolled{
+      background-color: #242424;      
+      transition: background-color 200ms linear;
+    }
 nav{
   display: block;
+  display: inline-block;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 82px;
+    /* background-color: #242424; */
+    z-index: 1000;
 }
-
 nav a, nav li{
   text-decoration: none;
   color: white;
   transition: color 0.3s ease;
   margin-right: 50px;
 }
-
-nav a, nav li:hover
-{
+nav a, nav li:hover {
   color: #4c6082;
 }
-
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: absolute;
   top: 35px;
@@ -114,7 +128,9 @@ nav a, nav li:hover
   
   -webkit-user-select: none;
   user-select: none;
-}
+
+  position: fixed;
+  }
 
 #menuToggle input
 {
@@ -139,6 +155,7 @@ nav a, nav li:hover
   width: 33px;
   height: 2px;
   margin-bottom: 5px;
+  margin-right: 10px;
   position: relative;
   
   background: white;
@@ -236,3 +253,20 @@ nav a, nav li:hover
   } */
 }
 </style>
+
+
+<script>
+  $(function () {
+  $(document).scroll(function () {
+    var $nav = $(".boudaie-navigation");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".boudaie-mobile-navigation");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+</script>

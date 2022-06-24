@@ -13,6 +13,11 @@
   image: assets/all-work/Sartori_Shop_Screenshot.jpg
   platform: shopify
   url: https://shop.sartoricheese.com/
+- title: GD Realty
+  description: Real estate that resonates.
+  image: assets/all-work/GD_Screenshot.jpeg
+  platform: squarespace
+  url: https://safardesignstudio.com/
 - title: Marissa Collections
   description: A highly curated boutique for the world's most discerning shoppers.
   image: assets/all-work/Marissa_Screenshot.png
@@ -28,11 +33,11 @@
   image: assets/all-work/BNN_Screenshot.png
   platform: custom build
   url: https://bnind.com/
-- title: Game Over Talent
-  description: An LA-based 360 Talent Management & Marketing Agency connecting the music industry with the digital gaming community.
-  image: assets/all-work/GOT_Screenshot.png
-  platform: shopify
-  url: https://gameovertalent.com/
+- title: Rona Lalezary
+  description: Rona is a life transformative coach, dedicated to empowering her clients. 
+  image: assets/all-work/Rona_Screenshot.jpg
+  platform: custom build
+  url: https://ronalalezary.com/
 - title: Pearl Dental 
   description: A team of caring, experienced dental professionals with multiple offices in Los Angeles, CA.
   image: assets/all-work/PDC_Screenshot.png

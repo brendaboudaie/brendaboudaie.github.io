@@ -1,21 +1,20 @@
 ---
 layout: boudaie
-id: "test-Brenda-Boudaie"
+id: "Brenda-Boudaie"
 title: "Brenda Boudaie"
-description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+description: Brenda Boudaie is a web designer and developer. With a degree in computer science and great passion for design, she makes beautiful, powerful, and effecient websites. Based in Los Angeles.
 ---
 
 <div class="main" id = "main">
     <div class = "homepage-module" id = "homepage-module-1">
-        <div id="wrapper" style="height: 100%; position: relative; overflow: hidden; ">
-            <video autoplay muted loop id="myVideo" class = "hide-on-mobile">
+            <video autoplay muted loop defaultMuted class = "hide-on-mobile">
                 <source src="/assets/Brenda_Brand_Loop.mp4" type="video/mp4">
             </video>
-            <video autoplay muted loop defaultMuted id="myVideo" class = "show-on-mobile">
+            <video autoplay muted loop defaultMuted playsinline class = "show-on-mobile">
                 <source src="/assets/Brenda_Brand_Loop_Mobile.mp4" type="video/mp4">
             </video>
-            <div class = "hero-container" style="height: 100%;">
-                <h1 class = "sentence"> I make 
+            <div>
+                <h1> I make 
                     <div class ="slidingVertical">
                         <span>beautiful</span>
                         <span>powerful</span>
@@ -24,12 +23,11 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
                 </h1>
                 <h1 id = "last"> websites.</h1>
             </div>
-          </div>  
     </div>
     <div class = "homepage-module" id = "homepage-module-2" >
         <div class = "module-header-left">
-            <h2 style = "font-family: 'Montserrat', sans-serif; font-weight: 100;">What I'm good at</h2>
-            <p style = "font-family: 'Montserrat', sans-serif; font-weight: 100;">Between design, development, and strategy,  I offer full stack services 
+            <h2>What I'm good at</h2>
+            <p >Between design, development, and strategy,  I offer full stack services 
                 to help your brand and business grow. Whether you’re looking for a 
                 website build, redesign, or maintenance, I focus on executing tailored 
                 solutions for each project.</p>
@@ -72,7 +70,6 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
             </div>
             {% endfor %}
         </div>
-
     </div>
 
     <div class = "homepage-module" id = "homepage-module-4">
@@ -84,18 +81,12 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
 <style>
 
 #homepage-module-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin-top: 0px !important;
-}
+    position: relative;
+    width: 100%;
+    overflow: hidden;
 
-#wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
 }
 video {
     position: absolute;
@@ -108,36 +99,19 @@ video {
   }
   
 #homepage-module-1 h1 {
-    font-weight: 800; 
-    font-size: 175px; 
     background-color: #6d6d6d;
     display: inline-block;
     margin: 0;
     padding: 110px 0 0 60px;
-    /* height: calc(100% - 125px); */
-    /* background-color: #ffffff; */
     mix-blend-mode: overlay;
     color: rgba(255, 255, 255, 0.8);
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
 }
 #last{
     padding: 205px 60px!important;
 }
-#homepage-module-1 li{
-    /* font-family: 'Raleway', sans-serif;  */
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600; 
-    font-size: 175px; 
-    display: inline-block;
-}
-/*Vertical Sliding*/
-.slidingVertical{
-	display: inline;
-	/* text-indent: 8px; */
-    display: block;
-}
 
+/*Vertical Sliding*/
 .slidingVertical span{
 	animation: topToBottom 15s linear infinite 0s;
 	-ms-animation: topToBottom 15s linear infinite 0s;
@@ -186,49 +160,6 @@ video {
 	100% { opacity: 0; }
 }
 
-.wordCarousel .adjectives-container {
-    overflow: hidden;
-    position: relative;
-    float: right;
-    height: 175px;
-}
-.wordCarousel .flip3{
-    margin: 0;
-    padding: 0px;
-}
-.wordCarousel .adjectives-container li {
-    padding: 0 5px;
-    height: 45px;
-    margin-bottom: 45px;
-    display: block;
-}
-
-/* .flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; } */
-
-#spin:after {
-  content:"";
-  animation: spin 8s linear infinite;
-}
-
-
-@keyframes spin {
-  0% { content:"beautiful"; }
-  50% { content: "powerful"; }
-  100% { content: "effecient"; }
-}
-
-@keyframes flip3 {
-    0% { margin-top: -270px; }
-    5% { margin-top: -180px; }
-    33% { margin-top: -180px; }
-    38% { margin-top: -90px; }
-    66% { margin-top: -90px; }
-    71% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
-}
-
-
 #homepage-module-2{
     height: auto;
 }
@@ -239,7 +170,6 @@ video {
     width: auto;
     line-height: 2.5;
     font-size: 45px;
-    font-family: 'Montserrat', sans-serif;
     font-family: 'Verdana';
     font-weight: 600;
     color: #242424;
@@ -289,7 +219,6 @@ video {
   display: grid;
   grid-template-columns: auto auto;
   width: calc(100% - 120px);   /* 60px on each side */
-  /* top: 53%; */
   margin-top: 50px;
 }
 .platform-item {
@@ -329,22 +258,12 @@ video {
     height: 400px;
     margin-top: 0px !important;
 }
-.context {
-    width: 100%;
-    position: absolute;
-    top:50vh;
-}
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
 
 /**************************** TABLET ****************************/
 @media screen and (max-width: 942px) {
     .platform-item{
-        height: 200px !important;
+        height: 230px !important;
     }
     .transparent-text{
         font-size: 115px; 
@@ -361,10 +280,10 @@ video {
 
 /**************************** MOBILE ****************************/
 @media screen and (max-width: 767px) {
-    #homepage-module-1 img {
+    /* #homepage-module-1 img {
         bottom: 55px !important;
         display: none;
-    }
+    } */
     .transparent-text{
         font-size: 55px; 
         padding: 90px 0 0 15px;
@@ -379,31 +298,17 @@ video {
         margin: 0px !important;
         padding: 75px 20px !important;
     }
-    #homepage-module-1{
+    /* #homepage-module-1{
         flex-direction: column !important;
         align-items: flex-start;
-    }
-    .carousel-container p{
+    } */
+    /* .carousel-container p{
         color: white ;
-    }
-    .wordCarousel .adjectives-container li {
-        padding: 0px;
-    }
-    .wordCarousel {
-        margin: 0px !important
-    }
-    .wordCarousel .adjectives-container{
-        height: 62px;
-        float: none;
     }
     .carousel-container{
         margin-left: 15px;
         flex-direction: column;
-    }
-
-    .wordCarousel span{
-        display: block !important;
-    }
+    } */
     #homepage-module-3 {
         height: auto !important;
     }       
@@ -425,7 +330,6 @@ video {
         margin: 0px !important;
         margin-bottom: 20px !important;
     }
-
     #homepage-module-4 {
         height: auto !important;
         margin-top: 100px !important;
@@ -439,7 +343,7 @@ video {
         display: none;
     }
     .image--inner:hover{
-        color: rgb(104, 104, 104);
+        color: #242424;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
     }
@@ -469,7 +373,7 @@ video {
         width: 75vw !important;
     }
     .image--inner{
-        color: rgb(104, 104, 104);
+        color: #242424;
         position: absolute;
         text-align: right;
         bottom: -25px;

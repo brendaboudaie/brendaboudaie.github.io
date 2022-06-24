@@ -10,21 +10,34 @@ body{
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, li{
-    font-family: 'Work Sans', sans-serif;
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 100;
+h1{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 800;
+  font-size: 175px;
 }
 
-p, a{
-  font-family: 'Work Sans', sans-serif;
-  font-family: 'Raleway', sans-serif; 
+h2, h3{
+  font-family: 'Montserrat', sans-serif; 
   font-weight: 100;
+  font-size: 35px;
 }
 
-strong{
-  font-family: 'Work Sans', sans-serif;
+h3{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 300;
+  font-size: 25px;
+}
+
+h4{
+  font-family: 'Montserrat', sans-serif; 
   font-weight: 600;
+  font-size: 50px;
+  margin: 0;
+}
+
+p, a, li{
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 100;
 }
 
 button{
@@ -97,10 +110,6 @@ a:visited{
   margin-left: 60px;
   text-align: left;
   color: white;
-  h2{
-    font-size: 35px;
-    // padding: 25px 0px;
-  }
   p{
     width: 620px;
     margin-top: 50px;
@@ -112,15 +121,40 @@ a:visited{
   margin-right: 60px;
   text-align: right;
   color: white;
-  h2{
-    font-size: 35px;
-  }
   p{
     margin-top: 50px;
     margin-bottom: 0px;
     display: inline-block;
     width: 620px;
   }
+}
+
+.three-column-grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+.three-column-grid .three-column-grid-item{
+  background-color: white;
+  width: 330px;
+  height: 475px;
+}
+.three-column-grid .three-column-grid-item img{
+  width: 100%;
+}
+.three-column-grid .three-column-grid-item div{
+  padding: 5px 10px;
+}
+.three-column-grid h3{
+  margin: 0;
+}
+.three-column-grid a{
+  text-decoration: underline;
+}
+.three-column-grid p, .three-column-grid a{
+  font-size: 14px;
 }
 
 
@@ -216,6 +250,13 @@ a:visited{
   }
 
   @media screen and (max-width: 768px) {
+    p{
+      font-size: 16px;
+    }
+    h1{
+      font-size: 65px;
+      padding: 125px 0 0 20px;
+    }
     .mobile-only{
       display: block;
     }
@@ -231,7 +272,7 @@ a:visited{
         font-size: 30px;
       }
       p{
-        width: 95vw;
+        width: 90vw;
         margin-top: 25px;
       }
     }
@@ -241,9 +282,17 @@ a:visited{
         font-size: 30px;
       }
       p{
-        width: 95vw;
+        width: 90vw;
         margin-top: 25px;
       }
     }
-    
+    h4{
+      font-size: 25px;
+    }
+    .three-column-grid{
+      display: block;
+    }
+    .three-column-grid .three-column-grid-item{
+      margin: 25px auto;
+    }
   }

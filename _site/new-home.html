@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.">
+    <meta name="description" content="Brenda Boudaie is a web designer and developer. With a degree in computer science and great passion for design, she makes beautiful, powerful, and effecient websites. Based in Los Angeles.">
     <meta name="keywords" content="Boudaie, Brenda Boudaie, web developer, web designer, web developer los angeles, Shopify developer, Shopify designer, Squarespace developer, wordpress developer">
     <meta name="author" content="Brenda Boudaie">
 
@@ -27,34 +27,30 @@
 </head>
 
   <body>
-      <div class = "test-Brenda-Boudaie" >
+      <div class = "Brenda-Boudaie" >
         <div class="main" id = "main">
     <div class = "homepage-module" id = "homepage-module-1">
-        <div class = "carousel-container">
-            <h1 class="wordCarousel">
-                <span>I make</span>
-                <div class = "adjectives-container">
-                    <ul class="flip3">
-                        <li>beautiful</li>
-                        <li>powerful</li>
-                        <li>effecient</li>
-                    </ul>
-                </div>
-            </h1>
-            <h1 id = "last"> websites.</h1>
-        </div>
-        <p class = "mobile-only"> It's pretty simple: I'm a design driven web developer constantly inspired to create and build
-            amazing digital products. </p>
-
-        <a data-scroll href="#homepage-module-2">
-            <img class = "absolute-center" src="/assets/mouse_scroll.png" style="width: 50px;">
-        </a>
+            <video autoplay muted loop defaultMuted class = "hide-on-mobile">
+                <source src="/assets/Brenda_Brand_Loop.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop defaultMuted playsinline class = "show-on-mobile">
+                <source src="/assets/Brenda_Brand_Loop_Mobile.mp4" type="video/mp4">
+            </video>
+            <div>
+                <h1> I make 
+                    <div class ="slidingVertical">
+                        <span>beautiful</span>
+                        <span>powerful</span>
+                        <span>effecient</span>
+                    </div>
+                </h1>
+                <h1 id = "last"> websites.</h1>
+            </div>
     </div>
-    <!-- style="background-color: #abbbd8;" -->
     <div class = "homepage-module" id = "homepage-module-2" >
         <div class = "module-header-left">
             <h2>What I'm good at</h2>
-            <p>Between design, development, and strategy,  I offer full stack services 
+            <p >Between design, development, and strategy,  I offer full stack services 
                 to help your brand and business grow. Whether you’re looking for a 
                 website build, redesign, or maintenance, I focus on executing tailored 
                 solutions for each project.</p>
@@ -115,7 +111,6 @@
             </div>
             
         </div>
-
     </div>
 
     <div class = "homepage-module" id = "homepage-module-4">
@@ -291,87 +286,83 @@
 <style>
 
 #homepage-module-1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin-top: 0px !important;
-}
-.carousel-container{
-    display: flex;
-}
-#homepage-module-1 a{
-    transition: all 0.5s;    
-}
-#homepage-module-1 img{
-    width: 50px;
-    top: auto;
-    bottom: 25px !important;
-}
-
-@keyframes bounce {
-  0%{
-    transform: translateY(0);
-  }
-  4%{ 
-    transform: translateY(0);
-  }
-  8%{
-    transform: translateY(-30px);
-  }
-  10%{
-    transform: translateY(0);
-  }
-  12%{
-    transform: translateY(-15px);
-  }
-  16%{
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.wordCarousel {
-    font-size: 36px;
-    color: #eee;
-}
-.wordCarousel .adjectives-container {
-    overflow: hidden;
     position: relative;
-    float: right;
-    height: 44px;
+    width: 100%;
+    overflow: hidden;
+
 }
-.wordCarousel .flip3{
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+  
+#homepage-module-1 h1 {
+    background-color: #6d6d6d;
+    display: inline-block;
     margin: 0;
-    padding: 0px;
+    padding: 110px 0 0 60px;
+    mix-blend-mode: overlay;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
 }
-.wordCarousel .adjectives-container li {
-    color: #4c6082;
-    color: #546a8f;
-    font-weight: 100;
-    padding: 0 5px;
-    height: 45px;
-    margin-bottom: 45px;
-    display: block;
-}
-#homepage-module-1 h1{
-    color: white;
-    font-size: 36px;
+#last{
+    padding: 205px 60px!important;
 }
 
-.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+/*Vertical Sliding*/
+.slidingVertical span{
+	animation: topToBottom 15s linear infinite 0s;
+	-ms-animation: topToBottom 15s linear infinite 0s;
+	-webkit-animation: topToBottom 15s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 5s;
+	-ms-animation-delay: 5s;
+	-webkit-animation-delay: 5s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 10s;
+	-ms-animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+}
 
-@keyframes flip3 {
-    0% { margin-top: -270px; }
-    5% { margin-top: -180px; }
-    33% { margin-top: -180px; }
-    38% { margin-top: -90px; }
-    66% { margin-top: -90px; }
-    71% { margin-top: 0px; }
-    99.99% { margin-top: 0px; }
-    100% { margin-top: -270px; }
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -moz-transform: translateY(-50px); }
+	10% { opacity: 1; -moz-transform: translateY(0px); }
+	25% { opacity: 1; -moz-transform: translateY(0px); }
+	30% { opacity: 0; -moz-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
 }
 
 #homepage-module-2{
@@ -384,7 +375,6 @@
     width: auto;
     line-height: 2.5;
     font-size: 45px;
-    font-family: 'Montserrat', sans-serif;
     font-family: 'Verdana';
     font-weight: 600;
     color: #242424;
@@ -396,7 +386,6 @@
 .single-image img{
     display: none;
 }
-
 
 .cursor {
     position: fixed;
@@ -435,7 +424,6 @@
   display: grid;
   grid-template-columns: auto auto;
   width: calc(100% - 120px);   /* 60px on each side */
-  /* top: 53%; */
   margin-top: 50px;
 }
 .platform-item {
@@ -475,60 +463,57 @@
     height: 400px;
     margin-top: 0px !important;
 }
-.context {
-    width: 100%;
-    position: absolute;
-    top:50vh;
-}
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
 
 /**************************** TABLET ****************************/
 @media screen and (max-width: 942px) {
     .platform-item{
-        height: 200px !important;
+        height: 230px !important;
     }
+    .transparent-text{
+        font-size: 115px; 
+        padding: 125px 0 0 45px;
+    }
+    #homepage-module-1 h1 {
+        background-color: transparent;
+        font-size: 100px; 
+    }
+    #last {
+        padding: 125px 60px!important;
+    }
+}
 
 /**************************** MOBILE ****************************/
 @media screen and (max-width: 767px) {
-    #homepage-module-1 img {
-        bottom: 85px !important;
+    /* #homepage-module-1 img {
+        bottom: 55px !important;
         display: none;
+    } */
+    .transparent-text{
+        font-size: 55px; 
+        padding: 90px 0 0 15px;
+        height: calc(100% - 90px);
     }
     #homepage-module-1 h1{
-        font-size: 45px;
+        font-size: 65px;
+        background-color: transparent;
+        padding: 125px 0 0 20px;
     }
-    #homepage-module-1{
+    #last {
+        margin: 0px !important;
+        padding: 75px 20px !important;
+    }
+    /* #homepage-module-1{
         flex-direction: column !important;
         align-items: flex-start;
-    }
-    .carousel-container p{
+    } */
+    /* .carousel-container p{
         color: white ;
-    }
-    .wordCarousel .adjectives-container li {
-        padding: 0px;
-    }
-    .wordCarousel {
-        margin: 0px !important
-    }
-    .wordCarousel .adjectives-container{
-        height: 62px;
-        float: none;
     }
     .carousel-container{
         margin-left: 15px;
         flex-direction: column;
-    }
-    #last {
-        margin: 0px !important;
-    }
-    .wordCarousel span{
-        display: block !important;
-    }
+    } */
     #homepage-module-3 {
         height: auto !important;
     }       
@@ -550,7 +535,6 @@
         margin: 0px !important;
         margin-bottom: 20px !important;
     }
-
     #homepage-module-4 {
         height: auto !important;
         margin-top: 100px !important;
@@ -564,7 +548,7 @@
         display: none;
     }
     .image--inner:hover{
-        color: rgb(104, 104, 104);
+        color: #242424;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: white;
     }
@@ -594,7 +578,7 @@
         width: 75vw !important;
     }
     .image--inner{
-        color: rgb(104, 104, 104);
+        color: #242424;
         position: absolute;
         text-align: right;
         bottom: -25px;

@@ -32,7 +32,7 @@
     <div class = "about-module" id = "about-module-1">
         <div class="about-hero-container">
             <h1>A design obsessed developer.</h1>
-            <img src="/assets/Portrait.png" style="height: 69vh;">
+            <img src="/assets/Portrait.png" >
         </div> 
     </div>
     <div class = "about-module" id = "about-module-2">
@@ -61,7 +61,7 @@
                 <img src="/assets/strategy.png" alt="strategy" class="image">
                 <div class="capabilities-overlay">
                   <div class="capabilities-text">                
-                      <strong style="font-size: 50px;">Strategy</strong>
+                    <h4>Strategy</h4>
                     <p>I’m here to promote and improve your business. With discovery exercises and implementing 
                         digital tools, I can help elevate your online presence.  </p>
                     <li>Email newsletters</li>
@@ -74,7 +74,7 @@
                 <img src="/assets/DESIGN.png" alt="design" class="image">
                 <div class="capabilities-overlay" id = "from-right">
                   <div class="capabilities-text">                
-                      <strong style="font-size: 50px;">Design</strong>
+                      <h4>Design</h4>
                     <p>Good design intrigues users; Great design keeps them on the page. Whether it’s focusing on your brand 
                         guidelines or designing an individual website page, I strive to bring your brand’s vision to life.   </p>
                     <li>Branding and logo creation</li>
@@ -87,7 +87,7 @@
                 <img src="/assets/development.png" alt="development" class="image">
                 <div class="capabilities-overlay">
                   <div class="capabilities-text">                
-                      <strong style="font-size: 50px;">Development</strong>
+                    <h4>Development</h4>
                     <p> With my degree in Computer Science, I specialize in using up to date and best practices in order to bring designs to 
                         life. I focus on optimizing builds between browsers and devices, while implementing the best solutions for 
                         your brand.</p>
@@ -110,43 +110,41 @@
             <h2 >What I'm Reading</h2>
             <p>Web development is all about staying up to date with the latest trends and best practices. These are some articles that caught my eye. </p>
         </div>
-        <div id = "article-container">
-        
-        <a href = "https://web.dev/compat2021/" target="_blank"> 
-            <div class = "article-container">
-                <img style= "width: 250px;" src="/assets/articles/article_1_thumbnail.jpg">
-                <h3>Eliminating pain points on the web</h3>
-                <p>Google is working with browser vendors and industry partners to fix the top five browser compatibility pain points for web developers.</p>
+
+        <div class="three-column-grid">
+          
+          <div class="item three-column-grid-item">
+            <img src = "/assets/articles/article_1_thumbnail.jpg">
+            <div>
+              <h3 style="margin-bottom: 40px;">Eliminating pain points on the web</h3>
+              <a href = "https://web.dev/compat2021/" target="_blank">Read More</a>
             </div>
-        </a>
-        
-        <a href = "https://webflow.com/blog/web-design-trends-2022" target="_blank"> 
-            <div class = "article-container">
-                <img style= "width: 250px;" src="/assets/articles/article_2_thumbnail.jpg">
-                <h3>Inspiring web design trends for 2022</h3>
-                <p>These 22 web design trends for 2022 will help inform and inspire what people build for the web. Dive on in.</p>
+          </div>
+          
+          <div class="item three-column-grid-item">
+            <img src = "/assets/articles/article_2_thumbnail.jpg">
+            <div>
+              <h3 style="margin-bottom: 40px;">Inspiring web design trends for 2022</h3>
+              <a href = "https://webflow.com/blog/web-design-trends-2022" target="_blank">Read More</a>
             </div>
-        </a>
-        
-        <a href = "https://www.shopify.com/blog/marketing-tools" target="_blank"> 
-            <div class = "article-container">
-                <img style= "width: 250px;" src="/assets/articles/article_3_thumbnail.jpg">
-                <h3>65 Best Marketing Tools for Online Businesses</h3>
-                <p>We put together a curated list of the types of marketing tools you’ll need by marketing category.</p>
+          </div>
+          
+          <div class="item three-column-grid-item">
+            <img src = "/assets/articles/article_3_thumbnail.jpg">
+            <div>
+              <h3 style="margin-bottom: 40px;">65 Best Marketing Tools for Online Businesses</h3>
+              <a href = "https://www.shopify.com/blog/marketing-tools" target="_blank">Read More</a>
             </div>
-        </a>
-        
+          </div>
+          
         </div>
     </div>
 </div>
 
 <style>
 #about-module-1 h1 {
-  font-family: 'Montserrat', sans-serif;
   position: relative;
   color: #fff;
-  font-weight: 600; 
-    font-size: 175px; 
     display: inline-block;
     margin: 0;
     padding: 110px 0 0 60px;
@@ -165,7 +163,6 @@
   width: 25vw;
   height: auto;
 }
-
 .capabilities-overlay {
   position: absolute;
   bottom: 0;
@@ -177,19 +174,15 @@
   height: 100%;
   transition: .5s ease;
 }
-
 .capabilities-container:hover .capabilities-overlay {
   width: 100%;
 }
-
 #from-right{
     left: 100%;
 }
-
 .capabilities-container:hover #from-right {
   left: 0;
 }
-
 .capabilities-text {
   color: white;
   font-size: 18px;

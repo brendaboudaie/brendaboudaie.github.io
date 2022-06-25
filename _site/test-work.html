@@ -154,7 +154,7 @@
             <img src = "assets/all-work/NGF_Screenshot.png">
             <div>
               <h3>Nature's Greatest Foods</h3>
-              <p>Active participants in shaping the market by providing healthier options with organic and local products.</p>
+              <p>Shaping the market by providing healthier options with organic and local products.</p>
               <a href = "https://naturesgreatestfoods.com/" target="_blank">Visit website</a>
             </div>
           </div>
@@ -181,7 +181,7 @@
             <img src = "assets/all-work/PDC_Screenshot.png">
             <div>
               <h3>Pearl Dental</h3>
-              <p>A team of caring, experienced dental professionals with multiple offices in Los Angeles, CA.</p>
+              <p>A caring, experienced dental team in Culver City and El Sugundo, CA.</p>
               <a href = "https://pearldentalla.com/" target="_blank">Visit website</a>
             </div>
           </div>
@@ -217,7 +217,7 @@
             <img src = "assets/all-work/DBFD_Screenshot.png">
             <div>
               <h3>DBFD</h3>
-              <p>A dentist in North Hollywood, California, providing advice on proper brushing, flossing, cleaning, healthy gums, and other dental care.</p>
+              <p>Over 35 years of focusing on the patient's oral health, comfort, and overall well-being.</p>
               <a href = "https://drboudaie.com/" target="_blank">Visit website</a>
             </div>
           </div>
@@ -691,13 +691,13 @@ jQuery(function ($) {
     </a>
     <ul class = "nav-items">
         <li><a  style = "font-weight: 600;" href = "/new-work.html">Work</a></li>
-        <li><a  href = "/test-about.html">About</a></li>
-        <li><a  href = "/test-contact.html">Contact</a></li>
+        <li><a  href = "/new-about.html">About</a></li>
+        <li><a  href = "/new-contact.html">Contact</a></li>
     </ul>
 </div>
 
 
-<nav role='navigation' class = "boudaie-mobile-navigation">
+<!-- <nav role='navigation' class = "boudaie-mobile-navigation">
     <div id="menuToggle">
       <input type="checkbox" />
       
@@ -709,10 +709,20 @@ jQuery(function ($) {
         <a href="/new-home.html"><li>Home</li></a>
         <a href="/new-work.html"><li>Work</li></a>
         <a href="/new-about.html"><li>About</li></a>
-        <a href="/new-contact.html"><li>Contact</li></a>
+        <a href="/test-contact.html"><li>Contact</li></a>
       </ul>
     </div>
-  </nav>
+  </nav> -->
+
+  <label>
+    <input type="checkbox">
+    <span class="menu"> <span class="hamburger"></span> </span>
+    <ul>
+      <li> <a href="#">Home</a> </li>
+      <li> <a href="#">About</a> </li>
+      <li> <a href="#">Contact</a> </li>
+    </ul>
+    </label>
 
 <style>
   nav{
@@ -855,6 +865,11 @@ nav a, nav li:hover {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
+  
+
+  -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
 }
 
 #menuToggle span:first-child
@@ -875,6 +890,7 @@ nav a, nav li:hover {
 {
   opacity: 1;
   transform: rotate(45deg) translate(-5px, -3px);
+  -webkit-transform: rotate(45deg) translate(-5px, -3px);
   /* HAMBURGER CLOSED COLOR */
 }
 
@@ -885,6 +901,7 @@ nav a, nav li:hover {
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
 }
 
 /*
@@ -894,6 +911,7 @@ nav a, nav li:hover {
 {
   opacity: 1;
   transform: rotate(-45deg) translate(0, 0px);
+  -webkit-transform: rotate(-45deg) translate(0, 0px);
 }
 
 #menu
@@ -914,8 +932,10 @@ nav a, nav li:hover {
   
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
+  -webkit-transform: translate(100%, 0);
   
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  -webkit-transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 #menu li
@@ -930,6 +950,7 @@ nav a, nav li:hover {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+  -webkit-transform: none;
   opacity: 1;
 }
   /* #menu {
@@ -939,6 +960,107 @@ nav a, nav li:hover {
     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   } */
 }
+
+
+
+
+
+
+
+
+label .menu {
+  position: fixed;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  
+}
+
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: #242424;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #242424;
+}
+
+label .hamburger:before { top: -10px; }
+
+label .hamburger:after { bottom: -10px; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+  
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+  
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+  
+}
+
+label input:checked + .menu + ul { 
+  opacity: 1; 
+  }
+
+label ul {
+  opacity: 0;
+  z-index: 200;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    text-align: right;
+    list-style: none;
+    font-size: 35px;
+}
+
+
+
+
+
+
+
 </style>
 
 

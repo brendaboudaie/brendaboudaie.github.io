@@ -84,6 +84,6 @@ a:visited { color: inherit; text-decoration: none; }
 
 .timeline .in-view div p { display: block; }
 
-@media screen and (max-width: 768px) { p { font-size: 16px; } h1 { font-size: 65px; padding: 125px 0 0 20px; } .mobile-only { display: block; } .show-on-mobile { display: block; } .hide-on-mobile { display: none; } .module-header-left { margin-left: 15px; } .module-header-left h2 { font-size: 30px; } .module-header-left p { width: 90vw; margin-top: 25px; } .module-header-right { margin-right: 15px; } .module-header-right h2 { font-size: 30px; } .module-header-right p { width: 90vw; margin-top: 25px; } h4 { font-size: 25px; } .three-column-grid { display: block; } .three-column-grid .three-column-grid-item { margin: 25px auto; } }
+@media screen and (max-width: 768px) { p { font-size: 16px; } h1 { font-size: 65px; padding: 125px 0 0 20px; } .mobile-only { display: block; } .show-on-mobile { display: block; } .hide-on-mobile { display: none; } .module-header-left { margin-left: 15px; } .module-header-left h2 { font-size: 30px; } .module-header-left p { width: 90vw; margin-top: 25px; } .module-header-right { margin-right: 15px; } .module-header-right h2 { font-size: 30px; } .module-header-right p { width: 90vw; margin-top: 25px; } h4 { font-size: 25px; } .three-column-grid { display: block; } .three-column-grid .three-column-grid-item { margin: 25px auto; width: 90vw; height: 495px; } }
 
 /*# sourceMappingURL=site-styles.css.map */

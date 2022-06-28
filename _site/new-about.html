@@ -101,7 +101,7 @@
     <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; margin-top: 100px;">
         <div class = "module-header-left">
             <h2 >What I'm Listening To</h2>
-            <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. Have recommendations for me? <a href = "#" style="text-decoration: underline;"> let me know. </a>
+            <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. Have recommendations for me? <a href = "#" style="text-decoration: underline;"> Let me know. </a>
         </div>
         <iframe src="https://open.spotify.com/embed/playlist/41QiwxPUcVvtkcsifLe9Wp?utm_source=generator" width="90%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
@@ -351,7 +351,7 @@
         margin: 0;
     }
     #spotify-embed p{
-        width: auto;
+        width: 98%;
     }
 }
 </style>
@@ -403,18 +403,22 @@
     </div>
   </nav> -->
 
-  <label>
+  <label id = "mobile-nav">
     <input type="checkbox">
     <span class="menu"> <span class="hamburger"></span> </span>
     <ul>
-      <li> <a href="#">Home</a> </li>
-      <li> <a href="#">About</a> </li>
-      <li> <a href="#">Contact</a> </li>
+      <li><a href = "/new-work.html">Work</a></li>
+      <li><a href = "/new-about.html">About</a></li>
+      <li><a href = "/new-contact.html">Contact</a></li>
     </ul>
+    <a href="/new-home.html" id = "mobile-logo"> <img src="../assets/Boudaie_Logo_Dark.png"> </a>
     </label>
 
 <style>
   nav{
+    display: none;
+  }
+  #mobile-nav{
     display: none;
   }
     .boudaie-navigation{
@@ -474,6 +478,9 @@ body, html{
   position: relative;
   overflow-x: hidden;
 }
+#mobile-nav{
+    display: block;
+  }
 .boudaie-navigation{
     display: none;
 }
@@ -655,8 +662,15 @@ nav a, nav li:hover {
 
 
 
-
-
+#mobile-logo{
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 150;
+}
+#mobile-logo img{
+  width: 105px;
+}
 label .menu {
   position: fixed;
   right: -100px;
@@ -671,7 +685,9 @@ label .menu {
   cursor: pointer;
   
 }
-
+#mobile-nav li{
+  margin-bottom: 15px;
+}
 label .hamburger {
   position: absolute;
   top: 135px;
@@ -728,8 +744,12 @@ label input:checked + .menu .hamburger:before {
   top: 0;
   
 }
-
-label input:checked + .menu + ul { 
+#mobile-logo{
+  opacity: 0;
+}
+label input:checked + .menu + ul, label input:checked ~ #mobile-logo{ 
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
   opacity: 1; 
   }
 
@@ -737,17 +757,16 @@ label ul {
   opacity: 0;
   z-index: 200;
     position: fixed;
-    top: 100px;
-    right: 30px;
-    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
     list-style: none;
     font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
-
-
-
-
-
 
 
 </style>

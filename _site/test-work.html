@@ -267,6 +267,7 @@
     width: 150px;
     margin: 15px auto;
     color: white !important;
+    border-radius: 25px;
 }
 .contact-container{
     width: 100%;
@@ -991,8 +992,8 @@ label .menu {
   height: 200px;
   background: #FFF;
   border-radius: 50% 50% 50% 50%;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   cursor: pointer;
   
 }
@@ -1059,13 +1060,15 @@ label input:checked + .menu .hamburger:before {
   opacity: 0;
 }
 label input:checked + .menu + ul, label input:checked ~ #mobile-logo{ 
+  opacity: 1; 
+  display: block;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  opacity: 1; 
   }
 
 label ul {
   opacity: 0;
+  display: none;
   z-index: 200;
     position: fixed;
     top: 50%;

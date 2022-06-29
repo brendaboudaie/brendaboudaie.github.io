@@ -180,27 +180,29 @@ video {
 
 .single-image img{
     display: none;
+    border-radius: 25px;
 }
 
 .cursor {
     position: fixed;
     pointer-events: none;
-    transition: all 0.1s linear, top 0ms linear, left 0ms ease-in-out;
+    transition: all 0.5s linear, top 0ms linear, left 0ms ease-in-out;
     z-index: 15;
 }
 
 .cursor-image-show {
     width: 500px;
     height: 265px;
+    border-radius: 25px;
     top: auto;
     left: auto;
     background-size: cover;
-    transition: all 0.2s linear, top 0ms linear, left 0ms ease-in-out;
     border: none;
     mix-blend-mode: normal;
     background-size: 100;
 }
 .image--inner:hover{
+    transition: all 0.3s linear, top 0ms linear, left 0ms ease-in-out;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -223,6 +225,7 @@ video {
 }
 .platform-item {
   background-color: white;
+  border-radius: 25px;
   border: 1px solid rgba(0, 0, 0, 0.8);
   text-align: center;
   height: 175px;

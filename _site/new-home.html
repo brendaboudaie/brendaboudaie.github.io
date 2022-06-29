@@ -146,6 +146,7 @@
     width: 150px;
     margin: 15px auto;
     color: white !important;
+    border-radius: 25px;
 }
 .contact-container{
     width: 100%;
@@ -385,27 +386,29 @@ video {
 
 .single-image img{
     display: none;
+    border-radius: 25px;
 }
 
 .cursor {
     position: fixed;
     pointer-events: none;
-    transition: all 0.1s linear, top 0ms linear, left 0ms ease-in-out;
+    transition: all 0.5s linear, top 0ms linear, left 0ms ease-in-out;
     z-index: 15;
 }
 
 .cursor-image-show {
     width: 500px;
     height: 265px;
+    border-radius: 25px;
     top: auto;
     left: auto;
     background-size: cover;
-    transition: all 0.2s linear, top 0ms linear, left 0ms ease-in-out;
     border: none;
     mix-blend-mode: normal;
     background-size: 100;
 }
 .image--inner:hover{
+    transition: all 0.3s linear, top 0ms linear, left 0ms ease-in-out;
     color: transparent;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
@@ -428,6 +431,7 @@ video {
 }
 .platform-item {
   background-color: white;
+  border-radius: 25px;
   border: 1px solid rgba(0, 0, 0, 0.8);
   text-align: center;
   height: 175px;
@@ -951,8 +955,8 @@ label .menu {
   height: 200px;
   background: #FFF;
   border-radius: 50% 50% 50% 50%;
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
   cursor: pointer;
   
 }
@@ -1019,13 +1023,15 @@ label input:checked + .menu .hamburger:before {
   opacity: 0;
 }
 label input:checked + .menu + ul, label input:checked ~ #mobile-logo{ 
+  opacity: 1; 
+  display: block;
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  opacity: 1; 
   }
 
 label ul {
   opacity: 0;
+  display: none;
   z-index: 200;
     position: fixed;
     top: 50%;

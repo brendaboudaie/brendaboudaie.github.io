@@ -135,6 +135,7 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
   width: 0;
   height: 100%;
   transition: .5s ease;
+  border-radius: 25px;
 }
 .capabilities-container:hover .capabilities-overlay {
   width: 100%;
@@ -292,7 +293,13 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
         margin: 55px 20px !important; 
     }
     .capabilities-text {
-        top: 5%;
+        top: 0;
+        height: 100%;
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
     }
     .capabilities-text strong{
         font-size: 35px !important;

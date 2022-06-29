@@ -143,9 +143,11 @@ a:visited{
   background-color: white;
   width: 330px;
   height: 475px;
+  border-radius: 25px;
 }
 .three-column-grid .three-column-grid-item img{
   width: 100%;
+  border-radius: 25px 25px 0px 0px;
 }
 .three-column-grid .three-column-grid-item div{
   padding: 5px 10px;
@@ -238,6 +240,7 @@ a:visited{
         background: inherit;
         background: #494949;
         transition: all .4s ease-in-out;
+        border-radius: 12px;
       }
     }
     li div p{

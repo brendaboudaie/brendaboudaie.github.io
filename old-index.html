@@ -1,0 +1,48 @@
+---
+layout: default
+id: "Brenda-Boudaie"
+title: "Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+<head>
+    <link rel="stylesheet" href="/assets/css/cocoen.css" />
+    <title>Brenda Boudaie</title>
+
+    <script src="assets/js/cocoen.js"></script>
+</head>
+
+<body>
+  <div class="main" id = "main">
+      <div class="cocoen tablet-view">
+        <img class = "tablet-view-img" id = "designer-portrait-image" src="assets/Designer_Portrait_Image.jpg" alt="Designer cartoon self portrait">
+        <img class = "tablet-view-img" id = "developer-portrait-image" src="assets/Developer_Portrait_Image.jpg" alt="Developer self portrait image">
+      </div>
+  
+      <div class = "position-relative">
+        <div class="cocoen mobile-view">
+          <img src="assets/Designer_Portrait_Image_Mobile.jpg" alt="Designer cartoon self portrait mobile">
+          <img src="assets/Developer_Portrait_Image_Mobile.jpg" alt="Developer self portrait image mobile">
+        </div>
+      </div>
+
+  </div>
+  
+  <!-- <div id = "overlay" class="loader"><img id = "loader-inner" class = "position-absolute-center" src="/assets/coffee-load-animation.gif"></div> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script> 
+    document.querySelectorAll('.cocoen').forEach(function(element){
+      new Cocoen(element);
+    });
+    // $(window).on('load', function() {
+    //     setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
+    // })
+
+   </script>
+
+
+</body>
+
+

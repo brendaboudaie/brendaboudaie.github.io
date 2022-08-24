@@ -1,0 +1,318 @@
+---
+layout: default
+id: "Brenda-Boudaie-Work"
+title: "Work | Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+<div>
+
+    <div class = "page-work">
+        <div  class = "left-split-about">
+          <div class = "about-text-container">
+            <h1 >Hi! I'm Brenda.</h1>
+            <p> Front End Developer and Project Lead based in Los Angeles. </p>
+  
+            <p>I graduated with a degree in Computer Science and have always had 
+              a passion for design. Currently, I’m working as a Project Lead 
+              at <a href = "https://hellodesign.com/" target="_blank">Hello Design</a>, where
+              I oversee digital projects and manage internal teams.
+            </p>
+  
+            <p>When not online, you can find me hopping between local cafes 
+              and hiking spots, or rewatching Pixar movies with my 
+              Chocolate Lab. </p>
+  
+          </div>
+
+        </div>
+        <h2>WORK</h2>
+
+        <img src = "assets/About_Portrait.jpg" class = "about-photo" alt="Portrait sitting on rock outside">
+    </div>
+
+    <div class="slider">
+      <div class="slide-track">
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+          <div class="slide"></div>
+      </div>
+  </div>
+
+    {% include work.html %}
+</div>
+
+<style>
+.Brenda-Boudaie-Work{
+    padding-top: 105px;
+}
+.page-work {
+  height: 600px;
+  width: 100vw;
+  background: #3f4c66;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.left-split-about {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: white;
+  clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
+  -webkit-clip-path: polygon(0 0, 0 100%, 65% 100%, 65% 0);
+}
+.about-text-container {
+  color: #3f4c66;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  left: 5%;
+}
+.about-text-container h1 {
+  font-size: 50px;
+  color: #3f4c66;
+}
+.about-text-container p {
+  font-size: 20px;
+}
+.about-text-container p a {
+  color: #3f4c66;
+}
+.about-text-container p a:visited {
+  color: #3f4c66;
+}
+.about-text-container p a:hover {
+  color: black;
+}
+.about-photo {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  transform: translateY(-50%);
+  width: 350px;
+  /* height: 455px; */
+  border: 2px solid #bfb8af;
+  padding: 5px;
+  /* overflow: hidden; */
+}
+.page-work h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 160px;
+  color: #bfb8af;
+  position: absolute;
+  top: 199px;
+  right: -205px;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  letter-spacing: 5px;
+  margin: 0;
+}
+.Brenda-Boudaie-Work h3{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 400;
+  font-size: 22px;
+}
+.section-work h1 {
+  color: #3f4c66;
+  margin-left: 70px;
+  font-size: 60px;
+}
+.work-container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 45px;
+  margin-bottom: 85px;
+}
+.work-container img{
+  width: 60vw;
+  max-width: 840px;
+}
+.work-tag{
+  background-color: #d9d7d4;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  color: #3f4c66 !important;
+  margin: 2px 0px !important;
+}
+.slider {
+    height: 100px;
+    margin: auto;
+    margin-top: 45px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.slide:nth-child(1), .slide:nth-child(8) {
+    background-image: url("assets/Languages/HTML_Logo.png");
+}
+
+.slide:nth-child(2), .slide:nth-child(9) {
+  background-image: url("assets/Languages/CSS_Logo.png");
+}
+
+.slide:nth-child(3), .slide:nth-child(10) {
+  background-image: url("assets/Languages/Javascript_Logo.png");
+}
+
+.slide:nth-child(4), .slide:nth-child(11) {
+  background-image: url("assets/Languages/Liquid_Logo.png");
+}
+
+.slide:nth-child(5), .slide:nth-child(12) {
+  background-image: url("assets/Languages/C_Logo.png");
+}
+
+.slide:nth-child(6), .slide:nth-child(13) {
+  background-image: url("assets/Languages/C++_Logo.png");
+}
+
+.slide:nth-child(7), .slide:nth-child(14) {
+    background-image: url("assets/Languages/CSharp_Logo.png");
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@media screen and (max-width: 940px) {
+  .about-photo {
+    width: 315px;
+  }
+  .about-text-container {
+    width: 30%;
+  }
+  .about-text-container h1 {
+    font-size: 25px;
+  }
+  .about-text-container p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+    .Brenda-Boudaie-Work{
+        padding-top: 75px;
+    }
+    .about-photo {
+    display: none;
+  }
+
+  .page-work {
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  .left-split-about {
+    -webkit-clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);
+    clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 0);
+  }
+  .page-work h2 {
+    font-size: 160px;
+    right: -215px;
+  }
+  .about-text-container {
+    left: 1em;
+    width: 60%;
+  }
+  .about-text-container h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  .about-text-container p {
+    font-size: 18px;
+  }
+  .work-container {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 0px;
+    height: auto;
+  }
+
+  .work-container h2 {
+    margin: 0;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .work-container p {
+    margin-top: 0;
+    font-size: 12px;
+  }
+  .work-container img{
+    width: 100%
+  }
+  .slider {
+    height: 80px;;
+}
+.slider .slide-track {
+    animation: scroll 50s linear infinite;
+    display: flex;
+    width: calc(100px * 14);
+}
+
+.slider .slide {
+    height: 80px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+}
+</style>
+
+<script>
+
+  // $(document).on("mousemove", function(e) {
+  //   var $magic = $(".magic"), magicWHalf = $magic.width() / 2;
+  //   var aboutWidth = $(".scene"), aboutWHalf = aboutWidth.width()/2.2;
+
+  //   var testing = window.innerWidth / 2 + aboutWHalf;
+  //   var testing2 = window.innerWidth / 1.8 + aboutWHalf;
+  //   var testingHeight = window.innerHeight / 5 + 100;
+
+  //   $magic.css({"left": e.pageX - testing2 , "top": e.pageY - testingHeight,});
+  // });
+
+</script>

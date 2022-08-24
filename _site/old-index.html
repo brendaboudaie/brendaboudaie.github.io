@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="description" content="">
+    <meta name="description" content="Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.">
     <meta name="keywords" content="Brenda, Boudaie, Brenda Boudaie, developer, web, web developer, web design, HTML, CSS, JavaScript, design, designer, web designer, web developer los angeles, los angeles, la, la developer, los angeles web">
     <meta name="author" content="Brenda Boudaie">
 
-    <title></title>
+    <title>Brenda Boudaie</title>
     <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
@@ -28,27 +28,48 @@
 
 </head>
   <body>
-    <div class = "">
-      <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+    <div class = "Brenda-Boudaie">
+      <head>
+    <link rel="stylesheet" href="/assets/css/cocoen.css" />
+    <title>Brenda Boudaie</title>
 
-<div class="container">
-  <h1>404</h1>
+    <script src="assets/js/cocoen.js"></script>
+</head>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<body>
+  <div class="main" id = "main">
+      <div class="cocoen tablet-view">
+        <img class = "tablet-view-img" id = "designer-portrait-image" src="assets/Designer_Portrait_Image.jpg" alt="Designer cartoon self portrait">
+        <img class = "tablet-view-img" id = "developer-portrait-image" src="assets/Developer_Portrait_Image.jpg" alt="Developer self portrait image">
+      </div>
+  
+      <div class = "position-relative">
+        <div class="cocoen mobile-view">
+          <img src="assets/Designer_Portrait_Image_Mobile.jpg" alt="Designer cartoon self portrait mobile">
+          <img src="assets/Developer_Portrait_Image_Mobile.jpg" alt="Developer self portrait image mobile">
+        </div>
+      </div>
+
+  </div>
+  
+  <!-- <div id = "overlay" class="loader"><img id = "loader-inner" class = "position-absolute-center" src="/assets/coffee-load-animation.gif"></div> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script> 
+    document.querySelectorAll('.cocoen').forEach(function(element){
+      new Cocoen(element);
+    });
+    // $(window).on('load', function() {
+    //     setTimeout(function(){ $('.loader').fadeOut('slow');}, 3500);
+    // })
+
+   </script>
+
+
+</body>
+
+
 
       <!--  <input type="checkbox" id = "toggle"/>  -->
     </div>

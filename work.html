@@ -60,19 +60,33 @@ description: Brenda Boudaie's personal website. Brenda graduated with a degree i
           <button class="btn" data-filter="squarespace">SQUARESPACE</button>
           <button class="btn" data-filter="custom">CUSTOM BUILD</button>
         </div>
-        <div class="work-grid">
+
+        <div class="all-work-grid three-column-grid">
           {% for item in site.data.brands %}
-          <div class="item work-grid-item {{item.platform}} ">
+          <div class="item three-column-grid-item {{item.platform}} ">
             <img src = "{{item.image}}">
             <div>
               <h3>{{item.title}}</h3>
-              <!-- <p>{{item.description}}</p> -->
               <p>{{item.role}}</p>
               <a href = "{{item.url}}" target="_blank">Visit website</a>
             </div>
           </div>
           {%endfor%}
         </div>
+
+
+        <!-- <div class="work-grid">
+          {% for item in site.data.brands %}
+          <div class="item work-grid-item {{item.platform}} ">
+            <img src = "{{item.image}}">
+            <div>
+              <h3>{{item.title}}</h3>
+              <p>{{item.role}}</p>
+              <a href = "{{item.url}}" target="_blank">Visit website</a>
+            </div>
+          </div>
+          {%endfor%}
+        </div> -->
       </div>
 
       <div class = "work-module" id = "work-module-4">
@@ -326,7 +340,7 @@ if(lineToDraw.length) {
 // Work Filtering
 // --------------------------------------------------------------
 jQuery(function ($) {
-  var $items = $(".work-grid .item");
+  var $items = $(".all-work-grid .item");
   var $btns = $(".brands-filter .btn").on("click", function () {
     var active = $btns
       .removeClass("current")

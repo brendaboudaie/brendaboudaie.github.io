@@ -139,11 +139,14 @@ a:visited{
   justify-content: center;
   gap: 50px;
   margin-top: 50px;
+  width: calc(100vw - 120px);
+  margin: 45px auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .three-column-grid .three-column-grid-item{
   background-color: white;
-  width: 330px;
-  height: 475px;
+  // width: 330px;
+  // height: 475px;
   border-radius: 25px;
 }
 .three-column-grid .three-column-grid-item img{
@@ -151,7 +154,7 @@ a:visited{
   border-radius: 25px 25px 0px 0px;
 }
 .three-column-grid .three-column-grid-item div{
-  padding: 5px 10px;
+  padding: 5px 10px 15px 10px;
 }
 .three-column-grid h3{
   margin: 0;
@@ -274,7 +277,7 @@ a:visited{
       display: none;
     }
     .module-header-left{
-      margin-left: 15px;
+      margin-left: 20px;
       h2{
         font-size: 30px;
       }
@@ -284,7 +287,7 @@ a:visited{
       }
     }
     .module-header-right{
-      margin-right: 15px;
+      margin-right: 20px;
       h2{
         font-size: 30px;
       }
@@ -298,10 +301,11 @@ a:visited{
     }
     .three-column-grid{
       display: block;
+      width: auto;
     }
     .three-column-grid .three-column-grid-item{
       margin: 25px auto;
-      width: 90vw;
-      height: 495px;
+      width: calc(100vw - 40px);
+      // height: 495px;
     }
   }

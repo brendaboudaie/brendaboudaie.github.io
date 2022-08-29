@@ -48,7 +48,7 @@
                         dozens of amazing brands, I’ve been able to do what I do best: <strong>to Inspire and to be inspired.</strong></p>
                     <p style="margin-bottom: 0;"> When not online, you can find me trying new local cafes, hiking with my chocolate lab, 
                         or rewatching Pixar movies. I always appreciate a good coffee recommndation, so if you 
-                        have any that come to mind, <a href = "#" style="text-decoration: underline;"> let me know. </a>
+                        have any that come to mind, <a href = "/contact.html" style="text-decoration: underline;"> let me know. </a>
                     </p>
                 </div>
         </div> 
@@ -57,7 +57,38 @@
         <div class = "module-header-left">
             <h2 >My capabilities</h2>
         </div>
-            <div class="capabilities-container">
+        <div class = "cap-container">
+            <h2>STRATEGY</h2>
+            <h2>DESIGN</h2>
+            <h2>DEVELOPMENT</h2>
+            <div class = "bg"></div>
+            <div class = "bg-container bg-container-strategy">
+                <div class = "mobile-only"><h2>STRATEGY</h2></div>
+                <p>I’m here to promote and improve your business. With discovery exercises and implementing 
+                    digital tools, I can help elevate your online presence.  </p>
+                <li>Email newsletters</li>
+                <li>Google Analytics</li>
+                <li>Search Engine Optimization</li>
+            </div>
+            <div class = "bg-container bg-container-design">
+                <div class = "mobile-only"><h2>DESIGN</h2></div>
+                <p>Good design intrigues users; Great design keeps them on the page. Whether it’s focusing on your brand 
+                    guidelines or designing an individual website page, I strive to bring your brand’s vision to life.   </p>
+                <li>Branding and logo creation</li>
+                <li>Web User Experience and User Interface design</li>
+                <li>Full web redesigns</li>
+            </div>
+            <div class = "bg-container bg-container-dev">
+                <div class = "mobile-only"><h2>DEVELOPMENT</h2></div>
+                <p> With my degree in Computer Science, I specialize in using up to date and best practices in order to bring designs to 
+                    life. I focus on optimizing builds between browsers and devices, while implementing the best solutions for 
+                    your brand.</p>
+                <li> Responsive builds between mobile, tablet, and desktop</li>
+                <li> Front End performance</li>
+                <li> Quality assurance testing</li>
+            </div>
+        </div>
+            <!-- <div class="capabilities-container">
                 <img src="/assets/strategy.png" alt="strategy" class="image">
                 <div class="capabilities-overlay">
                   <div class="capabilities-text">                
@@ -96,7 +127,7 @@
                     <li> Quality assurance testing</li>
                 </div>
                 </div>
-            </div>
+            </div> -->
     </div>
     <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; margin-top: 100px;">
         <div class = "module-header-left">
@@ -158,6 +189,66 @@
     right: 85px;
     z-index: 1;
 }
+.cap-container h2{
+    position: relative;
+    display: block;
+    width: auto;
+    line-height: 3.5;
+    font-size: 45px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #242424;
+    color: white;
+    padding-left: 100px;
+    text-align: left;
+}
+.cap-container h2:hover{
+    transition: all 0.3s linear, top 0ms linear, left 0ms ease-in-out;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+.bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .25s;
+  pointer-events: none;
+}
+.bg-container{
+    position: fixed;
+    color: white;
+    bottom: 60px;
+    right: 55px;
+    width: 25vw;
+    opacity: 0;
+}
+.bg-container li{
+    line-height: 1.5;
+    list-style: square;
+}
+.cap-container h2:first-child:hover ~.bg{
+    background-color: #6e788d;
+}
+.cap-container h2:first-child:hover ~.bg-container-strategy{
+    opacity: 1;
+}
+.cap-container h2:nth-child(2):hover ~.bg{
+    background-color: #716579;
+}
+.cap-container h2:nth-child(2):hover ~.bg-container-design{
+    opacity: 1;
+}
+.cap-container h2:nth-child(3):hover ~.bg{
+    background-color: #424F44;
+}
+.cap-container h2:nth-child(3):hover ~.bg-container-dev{
+    opacity: 1;
+}
+
 .capabilities-container .image {
   display: block;
   width: 25vw;
@@ -327,6 +418,43 @@
     .about-container {
         padding: 50px 20px;
     }
+    .cap-container h2{
+        display: none;
+    }
+    .cap-container .bg-container{
+        display: block;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: calc(100vw - 60px);
+        opacity: 1;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    .cap-container .bg-container .mobile-only h2{
+        position: relative;
+        display: block;
+        width: auto;
+        line-height: 1;
+        font-size: 20px;
+        font-family: 'Verdana';
+        font-weight: 600;
+        color: #242424;
+        color: white;
+        padding-left: 0;
+        text-align: center;
+    }
+    .bg-container-strategy{
+        background-color: #6e788d;
+    }
+    .bg-container-design{
+        background-color: #716579;
+    }
+    .bg-container-dev{
+        background-color: #424F44;
+    }
+
     .capabilities-container {
         margin: 55px 20px !important; 
     }

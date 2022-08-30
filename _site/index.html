@@ -37,13 +37,23 @@
                 <source src="/assets/Mobile_Hero_Final.mp4" type="video/mp4">
             </video>
             <!-- <h1> I make beautiful websites. </h1> -->
-            <h1>I make <span id="spin"></span> websites.</h1>
+            <!-- <h1>I make <span id="spin"></span> websites.</h1> -->
+            <div>
+                <h1> I make 
+                    <div class ="slidingVertical">
+                        <span>beautiful</span>
+                        <span>powerful</span>
+                        <span>effecient</span>
+                    </div>
+                </h1>
+                <h1 id = "last"> websites.</h1>
+            </div>
     </div>
     <div class = "homepage-module" id = "homepage-module-2" >
         <div class = "module-header-left">
             <h2>My skill sets</h2>
-            <p >Between design, development, and strategy,  I offer full stack services 
-                to help your brand and business grow. Whether you’re looking for a 
+            <p>Between design, development, and strategy,  I offer full stack services 
+                to help brands and businesses grow. Whether you’re looking for a 
                 website build, redesign, or maintenance, I focus on executing tailored 
                 solutions for each project.</p>
         </div>
@@ -346,37 +356,37 @@ video {
   82% { opacity: 0}
   100% { content:"beautiful"; opacity: 1}
 }
-/* #last{
+#last{
     padding: 205px 60px!important;
-} */
+}
 
 /*Vertical Sliding*/
-/* .slidingVertical span{
-	animation: topToBottom 15s linear infinite 0s;
-	-ms-animation: topToBottom 15s linear infinite 0s;
-	-webkit-animation: topToBottom 15s linear infinite 0s;
+.slidingVertical span{
+	animation: topToBottom 6s linear infinite 0s;
+	-ms-animation: topToBottom 6s linear infinite 0s;
+	-webkit-animation: topToBottom 9s linear infinite 0s;
 	opacity: 0;
 	overflow: hidden;
 	position: absolute;
 }
 .slidingVertical span:nth-child(2){
-	animation-delay: 5s;
-	-ms-animation-delay: 5s;
-	-webkit-animation-delay: 5s;
+	animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	-webkit-animation-delay: 3s;
 }
 .slidingVertical span:nth-child(3){
-	animation-delay: 10s;
-	-ms-animation-delay: 10s;
-	-webkit-animation-delay: 10s;
-} */
+	animation-delay: 6s;
+	-ms-animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+}
 
 /*topToBottom Animation*/
-/* @-moz-keyframes topToBottom{
+@-moz-keyframes topToBottom{
 	0% { opacity: 0; }
-	5% { opacity: 0; -moz-transform: translateY(-50px); }
-	10% { opacity: 1; -moz-transform: translateY(0px); }
-	25% { opacity: 1; -moz-transform: translateY(0px); }
-	30% { opacity: 0; -moz-transform: translateY(50px); }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
 	80% { opacity: 0; }
 	100% { opacity: 0; }
 }
@@ -397,7 +407,7 @@ video {
 	30% { opacity: 0; -ms-transform: translateY(50px); }
 	80% { opacity: 0; }
 	100% { opacity: 0; }
-} */
+}
 
 #homepage-module-2{
     height: auto;

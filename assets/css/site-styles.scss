@@ -300,12 +300,16 @@ a:visited{
       font-size: 25px;
     }
     .three-column-grid{
-      display: block;
-      width: auto;
+      // display: block;
+      //width: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: calc(100vw - 120px);
+      gap: 25px 15px;
     }
     .three-column-grid .three-column-grid-item{
-      margin: 25px auto;
-      width: calc(100vw - 40px);
+      //margin: 25px auto;
+      //width: calc(100vw - 40px);
       // height: 495px;
     }
   }

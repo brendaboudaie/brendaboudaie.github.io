@@ -303,8 +303,8 @@ a:visited{
       // display: block;
       //width: auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: calc(100vw - 120px);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: calc(100vw - 45px);
       gap: 25px 15px;
     }
     .three-column-grid .three-column-grid-item{

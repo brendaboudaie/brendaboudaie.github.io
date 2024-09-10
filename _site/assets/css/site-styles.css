@@ -88,6 +88,6 @@ a:visited { color: inherit; text-decoration: none; }
 
 .timeline .in-view div p { display: block; }
 
-@media screen and (max-width: 768px) { p { font-size: 16px; } h1 { font-size: 65px !important; padding: 40px 0 0 20px; line-height: 1; } h2 { line-height: 1; } .mobile-only { display: block; } .show-on-mobile { display: block; } .hide-on-mobile { display: none; } .module-header-left { margin-left: 20px; } .module-header-left h2 { font-size: 30px; } .module-header-left p { width: 90vw; margin-top: 25px; } .module-header-right { margin-right: 20px; } .module-header-right h2 { font-size: 30px; } .module-header-right p { width: 90vw; margin-top: 25px; } h4 { font-size: 25px; } .three-column-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100vw - 45px); gap: 25px 15px; } }
+@media screen and (max-width: 768px) { p { font-size: 17px; } h1 { font-size: 65px !important; padding: 40px 0 0 20px; line-height: 1; } h2 { line-height: 1; } .mobile-only { display: block; } .show-on-mobile { display: block; } .hide-on-mobile { display: none; } .module-header-left { margin-left: 20px; } .module-header-left h2 { font-size: 30px; } .module-header-left p { width: 90vw; margin-top: 25px; } .module-header-right { margin-right: 20px; } .module-header-right h2 { font-size: 30px; } .module-header-right p { width: 90vw; margin-top: 25px; } h4 { font-size: 25px; } .three-column-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: calc(100vw - 45px); gap: 25px 15px; } }
 
 /*# sourceMappingURL=site-styles.css.map */

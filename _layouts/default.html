@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="description" content="{{page.description}}">
+    <meta name="keywords" content="Brenda, Boudaie, Brenda Boudaie, developer, web, web developer, web design, HTML, CSS, JavaScript, design, designer, web designer, web developer los angeles, los angeles, la, la developer, los angeles web">
+    <meta name="author" content="Brenda Boudaie">
+
+    <title>{{ page.title }}</title>
+    <link rel='icon' href='/assets/favicon.ico?' type='image/x-icon'/>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-181409738-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-181409738-1');
+    </script>
+
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+
+</head>
+  <body>
+    <div class = "{{page.id}}">
+      {{ content }}
+      <!-- {%if page.id != "Brenda-Boudaie-Contact"%} <input type="checkbox" id = "toggle"/> {%endif%} -->
+    </div>
+
+    {% include footer.html %}
+    {% include navigation.html %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
+<script>
+  const chk = document.getElementById('toggle');
+  const designerImage = document.getElementById('designer-portrait-image');
+  const developerImage = document.getElementById('developer-portrait-image');
+
+  chk.addEventListener('click', () => {
+    chk.checked?document.body.classList.add("dark-mode"):document.body.classList.remove("dark-mode");
+    chk.checked?designerImage.src = "assets/Designer_Portrait_Image_dark.jpg":designerImage.src = "assets/Designer_Portrait_Image.jpg"
+    chk.checked?developerImage.src = "assets/Developer_Portrait_Image_dark.jpg":developerImage.src = "assets/Developer_Portrait_Image.jpg"
+    localStorage.setItem('darkModeStatus', chk.checked);
+  });
+
+  window.addEventListener('load', (event) => {
+    if(localStorage.getItem('darkModeStatus')=="true"){
+      document.body.classList.add("dark-mode"); 
+      document.getElementById('toggle').checked = true;
+      chk.checked?designerImage.src = "assets/Designer_Portrait_Image_dark.jpg":designerImage.src = "assets/Designer_Portrait_Image.jpg"
+    chk.checked?developerImage.src = "assets/Developer_Portrait_Image_dark.jpg":developerImage.src = "assets/Developer_Portrait_Image.jpg"
+    }
+  });
+</script>
+
+<style>
+    #toggle{
+      display: block;
+    }
+  .dark-mode{
+    background-color: #020024;
+  }
+  .dark-mode p, a, h1{
+    color: #c2bab0;
+  }
+  .dark-mode a{
+    color: #c2bab0 !important;
+  }
+  .dark-mode a:visited{
+    color: #c2bab0;
+  }
+  .dark-mode .chat-button{
+    color: white !important;
+  }
+  .dark-mode .page-work{
+    background: transparent;
+  }
+  .dark-mode .left-split-about{
+    background: #020024;
+  }
+  .dark-mode h2{
+    color: #3f4c66;
+  }
+  input{
+    content: url("assets/light-mode.jpg");
+    width: 100px;
+    height: 50px;
+  }
+  input:checked{
+    content: url("assets/dark-mode.jpg");
+    width: 100px;
+    height: 50px;
+  }
+  @media screen and (max-width: 767px) {
+    #toggle{
+      display: none;
+    }
+  }
+</style>

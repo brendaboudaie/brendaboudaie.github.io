@@ -1,0 +1,413 @@
+---
+layout: boudaie
+id: "about=brenda-boudaie"
+title: "About | Brenda Boudaie"
+description: Brenda Boudaie's personal website. Brenda graduated with a degree in Computer Science and has always had a passion for design.
+---
+
+
+<div>
+    <div class = "about-module" id = "about-module-1">
+        <div class="about-hero-container">
+            <h1>A design obsessed developer</h1>
+            <img src="/assets/brenda-boudaie-headshot.png" >
+        </div> 
+    </div>
+     
+    <div class = "about-module" id = "about-module-2">
+        <div class="about-container">
+                <!-- <img src="/assets/Portrait.png" style="height: 69vh;"> -->
+                <div class = "about-copy-container">
+                    <p>Hi 👋🏼</p>
+                    <p>I'm a Computer Science graduate with a passion for design, development, and building brands. 
+                        Starting my career as a Front-End Developer, I quickly realized that my ambition extended 
+                        beyond just writing clean code, so I’ve been able to expand my skills into becoming a full-service digital partner. 
+                        I’m lucky to have had the opportunity to collaborate with incredible 
+                        brands, and doing what I love: <strong> inspiring and being inspired.</strong></p>
+                    <p style="margin-bottom: 0;"> When not online, you can find me trying new local cafes, hiking with my chocolate lab, 
+                        or rewatching Pixar movies. I always appreciate a good coffee recommendation, so if you 
+                        have any that come to mind, <a href = "/contact.html" style="text-decoration: underline;"> let me know. </a>
+                    </p>
+                </div>
+        </div> 
+    </div>
+
+    <div class = "about-module" id = "about-module-3" style="height: auto;">
+        <div class = "module-header-left">
+            <h2 >My capabilities</h2>
+        </div>
+        <div class = "cap-container">
+            <h2>STRATEGY</h2>
+            <h2>DESIGN</h2>
+            <h2>DEVELOPMENT</h2>
+            <div class = "bg"></div>
+            <div class = "bg-container bg-container-strategy">
+                <div class = "mobile-only"><h2>STRATEGY</h2></div>
+                <p>I’m here to promote and improve your business. With discovery exercises and implementing 
+                    digital tools, I can help elevate your online presence.  </p>
+                <p>This includes: email newsletters, Google Analytics, and SEO.</p>
+            </div>
+            <div class = "bg-container bg-container-design">
+                <div class = "mobile-only"><h2>DESIGN</h2></div>
+                <p>Good design intrigues users, while great design keeps them on the page. Whether it’s focusing on your brand 
+                    guidelines or designing an individual website page, I strive to bring your brand’s vision to life.   </p>
+                <p>This includes: branding + logo creation, web user experience and user interface, and full web redesigns. </p>
+            </div>
+            <div class = "bg-container bg-container-dev">
+                <div class = "mobile-only"><h2>DEVELOPMENT</h2></div>
+                <p> With my degree in Computer Science, I specialize in using up to date and best practices in order to bring designs to 
+                    life. I focus on optimizing builds between browsers and devices, while implementing the best solutions for 
+                    your brand.</p>
+                <p>This includes: responsive builds between mobile, tablet, and desktop, front end performance, and quality assurance testing.</p>
+            </div>
+        </div>
+    </div>
+    <div class = "about-module" id = "spotify-embed" style="height: auto; text-align: center; margin-top: 100px;">
+        <div class = "module-header-left">
+            <h2 >What I'm Listening To</h2>
+            <p>Between my car, office, and shower, I’m always listening to music. Here are a few songs that I’m listening to now. Have recommendations for me? <a href = "#" style="text-decoration: underline;"> Let me know. </a>
+        </div>
+        <iframe src="https://open.spotify.com/embed/playlist/41QiwxPUcVvtkcsifLe9Wp?utm_source=generator" width="90%" height="485" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+    <div class = "about-module" style="margin-top: 100px;">
+        <div class = "module-header-left">
+            <h2 >What I'm Reading</h2>
+            <p>Web development is all about staying up to date with the latest trends and best practices. These are some articles that caught my eye. </p>
+        </div>
+
+        <div class="three-column-grid">
+          {% for article in site.data.articles %}
+          <div class="item three-column-grid-item">
+            <img src = "{{article.image}}">
+            <div>
+              <h3 style="margin-bottom: 40px;">{{article.title}}</h3>
+              <a href = "{{article.url}}" target="_blank">Read More</a>
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+    </div>
+</div>
+
+<style>
+#about-module-1{ 
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#about-module-1 h1 {
+  position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 155px 0 0 60px;
+    width: 55%;
+    z-index: 10;
+}
+.about-hero-container img{
+    height: 80vh;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    right: 0px;
+    z-index: 1;
+}
+.cap-container h2{
+    position: relative;
+    display: block;
+    width: auto;
+    line-height: 3.5;
+    font-size: 45px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #242424;
+    padding-left: 100px;
+    text-align: left;
+}
+.cap-container h2:hover{
+    transition: all 0.3s linear, top 0ms linear, left 0ms ease-in-out;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #242424;
+}
+.bg {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: .25s;
+  pointer-events: none;
+}
+.bg-container{
+    position: fixed;
+    bottom: 25px;
+    /* top: 60%; */
+    right: 55px;
+    width: 28vw;
+    opacity: 0;
+    border-bottom: 1px solid #242424;
+    border-top: 1px solid #242424;
+    font-size: 20px;
+}
+.bg-container li{
+    line-height: 1.5;
+    list-style: square;
+}
+.cap-container h2:first-child:hover ~.bg{
+    background-color: #99b1c0;
+}
+.cap-container h2:first-child:hover ~.bg-container-strategy{
+    opacity: 1;
+}
+.cap-container h2:nth-child(2):hover ~.bg{
+    background-color: #a5a7c0;
+}
+.cap-container h2:nth-child(2):hover ~.bg-container-design{
+    opacity: 1;
+}
+.cap-container h2:nth-child(3):hover ~.bg{
+    background-color: #bfcf8d;
+}
+.cap-container h2:nth-child(3):hover ~.bg-container-dev{
+    opacity: 1;
+}
+
+.capabilities-container .image {
+  display: block;
+  width: 25vw;
+  height: auto;
+}
+.capabilities-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #424242;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+  border-radius: 25px;
+}
+.capabilities-container:hover .capabilities-overlay {
+  width: 100%;
+}
+#from-right{
+    left: 100%;
+}
+.capabilities-container:hover #from-right {
+  left: 0;
+}
+.capabilities-text {
+  font-size: 18px;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+
+}
+.capabilities-text:hover{
+    cursor: pointer;
+}
+.about-module{
+    position: relative;
+    height: 100vh;
+    height: auto;
+}
+#spotify-embed p{
+    width: 620px;
+    text-align: left;
+    margin: 50px 0px;
+}
+#spotify-embed a {
+    text-decoration: underline;
+}
+.about-hero-container{
+    top: calc(50%);
+}
+.item1{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.about-container{
+   padding: 50px 200px 100px 200px;
+}
+.capabilities-container{
+    position: relative;
+    width: 60vw;
+    margin: 100px 0px 0px 150px;
+    color: white;
+}
+#article-container{
+    color: white;
+    height: auto; 
+    margin: 50px auto; 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 90%;
+}
+.article-container{
+    border: 1px solid;
+    border: 1px solid #a3a3a3;
+    height: 500px;
+    display: flex;
+    margin: 0px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background: #3e3e3e;
+}
+.article-container h3{
+    font-size: 25px;
+    /* padding: 0 25px; */
+}
+/**************************** TABLET ****************************/
+
+@media screen and (max-width: 900px) {
+    #about-module-1 h1{
+        font-size: 100px;
+    }
+    #about-module-1{
+        height: 100vh;
+    }
+    .about-container {
+        padding: 50px 60px;
+    }
+    .capabilities-container .image {
+        display: none;
+    }
+    .capabilities-container{
+        width: auto;
+        margin: 55px 60px !important;
+        display: block !important;
+    }
+
+    .capabilities-overlay {
+        position: relative;
+        background-color: #424242;
+        overflow: hidden;
+        width: auto;
+        height: 400px;
+        transition: none;
+    }
+
+    #from-right{
+        left: 0%;
+    }
+
+    #from-right {
+        left: 0;
+    }
+
+    .capabilities-text {
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        right: 5%;
+    }
+
+    #article-container{
+        grid-template-columns: auto auto;
+    }
+
+    #article-container a:last-child{
+        margin-top: 45px;
+    }
+}
+
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 767px) {
+    #about-module-1 h1{
+        font-size: 55px;
+        padding: 15px 0 0 20px;
+        z-index: 1;
+    }
+    #about-module-1 img{
+        height: 55vh !important;
+        right: 0px;
+    }
+    #about-module-1 {
+        margin-bottom: 0px;
+    }
+    .about-container {
+        padding: 50px 20px;
+    }
+    .cap-container h2{
+        display: none;
+    }
+    .cap-container .bg-container{
+        display: block;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: calc(100vw - 60px);
+        opacity: 1;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 15px;
+        border-top: none;
+        border-bottom: none;
+    }
+    .cap-container .bg-container .mobile-only h2{
+        position: relative;
+        display: block;
+        width: auto;
+        line-height: 1;
+        font-size: 20px;
+        font-family: 'Verdana';
+        font-weight: 600;
+        color: #242424;
+        padding-left: 0;
+        text-align: center;
+    }
+    .bg-container-strategy{
+        background-color: #99b1c0;
+    }
+    .bg-container-design{
+        background-color: #a5a7c0;
+    }
+    .bg-container-dev{
+        background-color: #bfcf8d;
+    }
+
+    .capabilities-container {
+        margin: 55px 20px !important; 
+    }
+    .capabilities-text {
+        top: 0;
+        height: 100%;
+        display: flex;
+        /* align-items: center; */
+        flex-direction: column;
+        text-align: left;
+        justify-content: center;
+    }
+    .capabilities-text strong{
+        font-size: 35px !important;
+    }
+    .capabilities-overlay{
+        height: 380px;
+    }
+    #article-container {
+        grid-template-columns: auto;
+    }
+    #article-container a{
+     margin-bottom: 50px;
+    }
+    #article-container a:last-child{
+        margin: 0;
+    }
+    .article-container{
+        margin: 0;
+    }
+    #spotify-embed p{
+        width: 98%;
+    }
+}
+</style>
+

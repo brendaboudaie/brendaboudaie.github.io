@@ -1,0 +1,12 @@
+- platform: Shopify
+  logo: /assets/platform-logos/shopify.png
+  description: More than a million of the world's most successful brands trust Shopify to sell, ship and process payments anywhere.
+- platform: Wordpress
+  logo: /assets/platform-logos/wordpress.png
+  description: A free and open-source content management system, Wordpress puts the power of beautful design, freedom to build, and web publishing in your pocket.
+- platform: Squarespace
+  logo: /assets/platform-logos/squarespace.png
+  description: Squarespace is an all-in-one web platform and software as service. One subscription allows for web hosting, creation, and publishing. 
+- platform: Webflow
+  logo: /assets/platform-logos/webflow.png
+  description: Empowering designers to build progressional, responsive, and custom websites, Webflow offers a uniue content management system to publish beautfully visual websites. 

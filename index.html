@@ -1,0 +1,774 @@
+---
+layout: boudaie
+id: "Brenda-Boudaie"
+title: "Brenda Boudaie"
+description: Brenda Boudaie is a web designer and developer. With a degree in computer science and great passion for design, she makes beautiful, powerful, and efficient websites. Based in Los Angeles.
+---
+
+<div class="main" id = "main">
+    <div  class = "homepage-module" id = "homepage-hero">
+        <img class = "hero-container-image up-down-2" src="/assets/brenda-boudaie-web-1.jpg">
+        <img class = "hero-container-image up-down" src="/assets/brenda-boudaie-web-2.jpg">
+        <img class = "hero-container-image up-down up-down-2" src="/assets/brenda-boudaie-web-3.jpg">
+        <img class = "hero-container-image up-down" src="/assets/brenda-boudaie-web-4.jpg">
+        {%comment%}
+        <div class = "up-down">
+            <img src="/assets/hero-temp.png"> 
+        </div>
+        {%endcomment%}
+
+        <div>
+            <h1>Your</h1>
+            <h1>digital partner</h1>
+            <h1>🤝🏼</h1>
+        </div>
+    </div>
+    <div>
+        <div class="slider">
+            <div class="slide-track">
+              <div class="slide">
+                <img src="/assets/logo-bn.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-kinto.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-google.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-amazon.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-yt.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-dtf.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-bn.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-kinto.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-google.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-amazon.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-yt.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-dtf.png" alt="">
+              </div>              
+              <div class="slide">
+                <img src="/assets/logo-bn.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-kinto.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-google.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-amazon.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-yt.png" alt="">
+              </div>
+              <div class="slide">
+                <img src="/assets/logo-dtf.png" alt="">
+              </div> 
+            </div>
+          </div>
+    </div>
+    <div class = "homepage-module" id = "homepage-module-2" >
+        <div class = "module-header-left">
+            <h2>My skill sets</h2>
+            <p>Between design, development, and strategy,  I offer full stack services 
+                to help brands and businesses grow. Whether you’re looking for a 
+                website build, redesign, or maintenance, I focus on executing tailored 
+                solutions for each project.</p>
+            <a href="/logo-work.html"><button class = "site-cta" > Logo work </button> </a>
+            <a href="/web-work.html"><button class = "site-cta" > Web work </button> </a>
+
+        </div>
+        <div class="cursor"></div>
+        <div class="text-and-images">
+            <div class="single-image">
+                <a href="/web-work.html">
+                    <img src="/assets/hover-shots/Peri-Hover-Frame.png">
+                    <div class="image--inner">WEBSITE DESIGN</div>
+                </a>
+            </div>
+            <div class="single-image">
+                <a href="/web-work.html">
+                    <img src="/assets/hover-shots/DBFD-Hover-Frame.png">
+                    <div class="image--inner">WEBSITE BUILDS</div>
+                </a>
+            </div>
+            <div class="single-image">
+                <a href="/logo-work.html">
+                    <img src="/assets/hover-shots/Taban-Hover-Frame.jpg">
+                    <div class="image--inner">LOGOS AND BRANDING</div>
+                </a>
+            </div>
+            <div class="single-image">
+                <a href="/web-work.html">
+                    <img src="/assets/hover-shots/Spinergy-Hover-Frame.jpg">
+                    <div class="image--inner">DIGITAL STRATEGY</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class = "homepage-module" id = "homepage-module-3">
+        <div class = "module-header-right">
+            <h2>Systems I work with</h2>
+            <p>Every project is unique, so the website’s approach should be too. 
+                I offer fully custom solutions, but when it makes sense, I use these 
+                platforms to help meet your needs. </p>
+        </div>
+
+        <div class="platforms-container absolute-center">
+            {% for item in site.data.platforms %}
+            <div class="platform-item" id = "{{item.platform}}-item">
+                <img src = {{item.logo}}>
+                <h3>{{item.platform}}</h3>
+                <p>{{item.description}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class = "homepage-module" id = "homepage-module-4">
+        {% include contact-component.html %}
+    </div>
+</div>
+  
+
+<style>
+.hero-container-image{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  max-width: 200px;
+}
+.hero-container-image:nth-child(2){
+  left: auto;
+  right: 0px;
+  max-width: 280px;
+}
+.hero-container-image:nth-child(3){
+  left: auto;
+  right: 0px;
+  top: auto;
+  bottom: 0px;
+  max-width: 200px;
+}
+.hero-container-image:nth-child(4){
+  top: auto;
+  bottom: 60px;
+  max-width: 280px;
+}
+#homepage-hero{
+    /* background-image: url("/assets/hero-temp.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+#homepage-hero img{
+    width: 100vw;
+
+}
+
+.up-down{
+  animation: up-down linear 4.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: up-down linear 4.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: up-down linear 4.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: up-down linear 4.5s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: up-down linear 4.5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+.up-down-2{
+  animation: up-down linear 4.5s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: up-down linear 4.5s;
+  -webkit-animation-delay: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: up-down linear 4.5s;
+  -moz-animation-delay: 1.5s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: up-down linear 4.5s;
+  -o-animation-delay: 1.5s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: up-down linear 4.5s;
+  -ms-animation-delay: 1.5s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+}
+
+@keyframes up-down{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-moz-keyframes up-down{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-o-keyframes up-down {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-ms-keyframes up-down {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@keyframes up-down-2{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-moz-keyframes up-down-2{
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes up-down-2 {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-o-keyframes up-down-2 {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-ms-keyframes up-down-2 {
+  0% {
+    transform:  translate(0px,0px)  ;
+  }
+  50% {
+    transform:  translate(0px,10px)  ;
+  }
+  100% {
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+
+#homepage-hero h1{
+    font-size: 100px;
+    line-height: 1;
+    margin: 0px;
+}
+#homepage-module-1 {
+    height: 100vh;
+    margin-top: 0px !important;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+  
+#homepage-module-1 h1 {
+    /* background-color: #6d6d6d; */
+    display: inline-block;
+    margin: 0;
+    padding: 110px 0 0 60px;
+    padding-top: 110px;
+    mix-blend-mode: lighten;
+    color: white;
+    width: 100%;
+    /* text-align: center; */
+}
+
+.slide img {
+  width: 150px;
+  height: 150px;
+  animation: scroll 60s linear infinite;
+}
+
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 10em;
+  overflow: hidden;
+}
+
+.slider {
+  margin-top: 70px;
+  /* background-color: whitesmoke; */
+  padding: 1em 2em;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
+}
+
+
+
+#spin{
+    display: block;
+}
+
+#spin:after {
+  content:"";
+  animation: spin 10s linear infinite;
+}
+@keyframes spin {
+  0% { content:"beautiful"; opacity: 1}
+  17% { opacity: 0}
+  33% { content: "powerful"; opacity: 1}
+  50% { opacity: 0}
+  66% { content: "efficient"; opacity: 1}
+  82% { opacity: 0}
+  100% { content:"beautiful"; opacity: 1}
+}
+#last{
+    padding: 205px 60px!important;
+}
+
+/*Vertical Sliding*/
+.slidingVertical span{
+	animation: topToBottom 6s linear infinite 0s;
+	-ms-animation: topToBottom 6s linear infinite 0s;
+	-webkit-animation: topToBottom 9s linear infinite 0s;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+.slidingVertical span:nth-child(2){
+	animation-delay: 3s;
+	-ms-animation-delay: 3s;
+	-webkit-animation-delay: 3s;
+}
+.slidingVertical span:nth-child(3){
+	animation-delay: 6s;
+	-ms-animation-delay: 6s;
+	-webkit-animation-delay: 6s;
+}
+
+/*topToBottom Animation*/
+@-moz-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -webkit-transform: translateY(-50px); }
+	10% { opacity: 1; -webkit-transform: translateY(0px); }
+	25% { opacity: 1; -webkit-transform: translateY(0px); }
+	30% { opacity: 0; -webkit-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes topToBottom{
+	0% { opacity: 0; }
+	5% { opacity: 0; -ms-transform: translateY(-50px); }
+	10% { opacity: 1; -ms-transform: translateY(0px); }
+	25% { opacity: 1; -ms-transform: translateY(0px); }
+	30% { opacity: 0; -ms-transform: translateY(50px); }
+	80% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+#homepage-module-2{
+    height: auto;
+    margin-top: 0px;
+}
+
+.single-image a{
+    position: relative;
+    display: block;
+    width: auto;
+    line-height: 2.5;
+    font-size: 75px;
+    font-family: 'Verdana';
+    font-weight: 600;
+    color: #242424;
+    /* padding-left: 100px;*/
+    text-align: center;
+}
+
+.single-image img{
+    display: none;
+    border-radius: 15px;
+}
+
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    transition: all 0.5s linear, top 0ms linear, left 0ms ease-in-out;
+    z-index: 15;
+}
+
+.cursor-image-show {
+    width: 500px;
+    height: 265px;
+    border-radius: 25px;
+    top: auto;
+    left: auto;
+    background-size: cover;
+    border: none;
+    mix-blend-mode: normal;
+    background-size: 100;
+}
+.image--inner:hover{
+    transition: all 0.3s linear, top 0ms linear, left 0ms ease-in-out;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #242424;
+}
+.text-and-images{
+    display: flex;
+    height: calc(100vh - 67px);
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 25px;
+}
+#homepage-module-3{
+    height: 125vh;
+    margin-top: 90px;
+}
+
+.platforms-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: calc(100% - 120px);   /* 60px on each side */
+  margin-top: 35px;
+}
+.platform-item {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  height: 210px;
+  padding: 30px 40px;
+  /* padding-bottom: 0px; */
+  transition: ease-in-out 0.4s;
+  box-shadow: 0 0 5px 3px rgb(97, 97, 97);
+  -webkit-box-shadow:  0 0 5px 3px rgb(97, 97, 97);
+  -moz-box-shadow:  0 0 5px 3px rgb(97, 97, 97);
+}
+.platform-item:hover{
+    transform: translateY(-10px);
+}
+.platform-item h3{
+    margin-top: 0px;
+}
+.platform-item img{
+    width: 30px;
+}
+.platform-item p{
+    text-align: left;
+    margin-bottom: 0px;
+}
+.platform-item:nth-child(1), .platform-item:nth-child(3) {
+  margin-right: 25px;
+}
+.platform-item:nth-child(1), .platform-item:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+#homepage-module-4{
+    height: 60vh;
+    height: 400px;
+    margin-top: 0px !important;
+}
+
+
+/**************************** TABLET ****************************/
+@media screen and (max-width: 942px) {
+    .platform-item{
+        height: 230px !important;
+    }
+    .transparent-text{
+        font-size: 115px; 
+        padding: 125px 0 0 45px;
+    }
+    #homepage-module-1 h1 {
+        background-color: transparent;
+        font-size: 100px; 
+    }
+    #last {
+        padding: 125px 60px!important;
+    }
+}
+
+/**************************** MOBILE ****************************/
+@media screen and (max-width: 767px) {
+  #homepage-hero h1{
+    padding: 0px;
+  }
+.hero-container-image{
+  position: absolute;
+  top: -110px;
+  left: 0px;
+  max-width: 125px;
+}
+.hero-container-image:nth-child(2){
+  top: 50px;
+  left: auto;
+  right: 0px;
+  max-width: 180px;
+}
+.hero-container-image:nth-child(3){
+  left: auto;
+  right: 0px;
+  top: auto;
+  bottom: 0px;
+  max-width: 140px;
+}
+.hero-container-image:nth-child(4){
+  top: auto;
+  bottom: 100px;
+  max-width: 120px;
+}
+.slide-track{
+  gap: 4em;
+}
+.slide img{
+  width: 100px;
+  height: 100px;
+}
+    .transparent-text{
+        font-size: 55px; 
+        padding: 90px 0 0 15px;
+        height: calc(100% - 90px);
+    }
+    #homepage-module-1 h1{
+        font-size: 65px;
+        background-color: transparent;
+        padding: 125px 0 0 20px;
+    }
+    #last {
+        margin: 0px !important;
+        padding: 75px 20px !important;
+    }
+    #homepage-module-3 {
+        height: auto !important;
+    }       
+    .platforms-container{
+        display: block !important;
+        grid-template-columns: none !important;
+        position: relative !important;
+        transform: none !important; 
+        top: auto !important;
+        left: auto !important;
+        margin: 50px auto;
+        width: calc(100vw - 40px);
+
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(3) {
+        margin: 0px !important;
+        margin-bottom: 20px !important;
+    }
+    .platform-item:nth-child(1), .platform-item:nth-child(2) {
+        margin: 0px !important;
+        margin-bottom: 20px !important;
+    }
+    #homepage-module-4 {
+        height: auto !important;
+        margin-top: 100px !important;
+    }  
+    .contact-container{
+        position: relative !important;
+        transform: none !important;
+        top: auto !important;
+    }
+    .cursor{
+        display: none;
+    }
+    .image--inner:hover{
+        color: #242424;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+    }
+    .text-and-images{
+        display: block;
+        height: auto;
+
+    }
+    .single-image{
+        padding-left: 0;
+        line-height: 1;
+        margin-top: 135px;
+        margin-left: 20px;
+    }
+    .single-image:nth-child(1){
+        margin-top: 75px;
+    }
+    .single-image:nth-child(even) .image--inner{
+        text-align: left;
+        left: -15vw;
+    }
+    .single-image:nth-child(even){
+        margin-left: calc(25vw - 15px);
+    }
+    .single-image img{
+        filter: opacity(0.8);
+        width: 75vw !important;
+    }
+    .image--inner{
+        color: #242424;
+        position: absolute;
+        text-align: right;
+        bottom: -65px;
+        right: 20px;
+        font-size: 40px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: white;
+        line-height: 1;
+    }
+    .text-and-images img{
+        display: block;
+        width: 90vw;
+    }
+    #homepage-module-3 {
+        margin-top: 135px;
+    }
+}
+
+
+</style>
+
+<script>
+    let curs = document.querySelector(".cursor");
+document.addEventListener("mousemove", (e) => {
+    let x = e.clientX;
+    let y = e.clientY;
+    curs.style.left = x - 250 + "px";
+    curs.style.top = y - 150 + "px";
+});
+
+let images = document.querySelectorAll(".text-and-images .image--inner");
+let servicesImages = [
+    "url(/assets/hover-shots/Peri-Hover-Frame.png)",
+    "url(/assets/hover-shots/DBFD-Hover-Frame.png)",
+    "url(/assets/hover-shots/Taban-Hover-Frame.jpg)",
+    "url(/assets/hover-shots/Spinergy-Hover-Frame.jpg)"
+];
+
+images.forEach((image, i) => {
+    image.addEventListener("mouseover", (e) => {
+        curs.classList.add("cursor-image-show");
+        curs.style.backgroundImage = servicesImages[i];
+    });
+    image.addEventListener("mouseleave", (e) => {
+        curs.classList.remove("cursor-image-show");
+        curs.style.backgroundImage = "none";
+    });
+});
+
+</script>

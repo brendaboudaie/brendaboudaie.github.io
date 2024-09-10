@@ -1,0 +1,42 @@
+- title: KINTO
+  description: The official website of Japanese tableware & lifestyle brand. Coffeeware, teaware, tableware and lifestyle accessories
+  image: /assets/work/KINTO Mockup.png
+  platform: Shopify
+  tags: Front End Development, Project Management
+  url: https://kinto-usa.com/
+  id: kinto
+- title: Sāfār Design Studio
+  description: A boutique studio offering custom interior design services
+  image: /assets/work/SAFAR Mockup.png
+  platform: Squarespace
+  tags: Front End Development, UI Design, Project Management
+  url: https://www.safardesignstudio.com/
+  id: safar
+- title: Marissa Collections
+  description: A highly curated boutique for the world's most discerning shoppers of luxury clothing, accessories and fine jewelry
+  image: /assets/work/Marissa Mockup.png
+  platform: Shopify
+  tags: Front End Development
+  url: https://marissacollections.com/
+  id: marissa
+- title: Nature's Greatest Foods
+  description: Active participants in shaping the market by providing healthier options with organic and local products
+  image: /assets/work/NGF Mockup.png
+  platform: Shopify
+  tags: Front End Development, UI Design, Project Management
+  url: https://naturesgreatestfoods.com/
+  id: NGF
+- title: Dr. Daniel Boudaie Family Dentistry
+  description: Dr. Daniel Boudaie is a dentist in North Hollywood, California. He provides advice on proper brushing, flossing, cleaning, healthy gums, and other dental care
+  image: /assets/work/DBFD Mockup.png
+  platform: Jekyll
+  tags: Front End Development, UI Design, Project Management
+  url: https://drboudaie.com/
+  id: DBFD
+- title: Peri.A
+  description: Artfully curated luxury boutique, curating a world of hot designers
+  image: /assets/work/Peri Mockup.png
+  platform: Shopify
+  tags: Front End Development, Project Management
+  url: https://peri-a.com/
+  id: peri

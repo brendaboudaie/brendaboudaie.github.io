@@ -1,0 +1,68 @@
+body { position: relative; background-color: white; cursor: default; margin: 0; }
+
+h1, h2, h3, h4, h5 { font-family: Didot, serif; }
+
+p { font-family: Gill Sans, sans-serif; font-weight: 100; }
+
+.scene { position: relative; background: url(../About_Portrait.jpg); padding: 227px 160px; text-align: center; background-size: cover; }
+
+.scene:hover { cursor: none; }
+
+.scene:hover .magic { visibility: visible; }
+
+.magic { z-index: 5; position: absolute; top: 0; left: 0; width: 150px; height: 150px; background: url("../About_Portrait.jpg") no-repeat fixed; background: url("../Hi.jpg") no-repeat fixed; background-size: cover; background-origin: 0; transition: border-radius 1s ease-out; border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; animation: morph 2s ease-in-out infinite both alternate; visibility: hidden; }
+
+@keyframes morph { 0% { border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%; }
+  100% { border-radius: 40% 60%;
+    transform: rotate(10%); } }
+
+@keyframes spin { to { transform: rotate(1turn); } }
+
+@media screen and (min-width: 1500px) { .scene:hover { cursor: default; } .scene:hover .magic { visibility: hidden; } }
+
+.cocoen { cursor: default !important; }
+
+.mobile-view { display: none; }
+
+#toggle { position: fixed; top: 89vh; right: -5px; }
+
+#toggle:hover { cursor: pointer; }
+
+a { color: black; text-decoration: none; }
+
+a:hover { color: black; text-decoration: none; }
+
+a:visited { color: black; text-decoration: none; }
+
+.position-absolute-center { position: absolute; top: 41%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.flickity-viewport { height: 25vh; }
+
+.main-carousel { margin-top: 25px; }
+
+.carousel-cell { margin: 0 55px; }
+
+.carousel-cell img { width: 100px; }
+
+.flickity-page-dots { display: none; }
+
+.flickity-button { display: none; }
+
+.float-right { float: right; padding-left: 45px; text-align: right; font-size: 14px; }
+
+.float-left { float: left; font-size: 14px; }
+
+.float-right img { width: 100%; transition: ease-in-out 0.3s; }
+
+.float-left img { width: 100%; transition: ease-in-out 0.3s; }
+
+@media screen and (max-width: 1120px) { .about-text-container { width: 35%; } .about-text-container h1 { font-size: 35px; } .about-text-container p { font-size: 16px; } }
+
+.show-on-mobile { display: none; }
+
+.hide-on-mobile { float: right; }
+
+/* When the browser window is 767px wide or less */
+@media screen and (max-width: 767px) { .show-on-mobile { display: block; } .show-on-mobile img { width: 100%; } .hide-on-mobile { display: none !important; } .tablet-view { display: none !important; } .mobile-view { display: block !important; height: 100vh !important; margin-bottom: 0px !important; } .position-relative { position: relative; display: block; } .carousel-cell { margin: 0 25px; } .carousel-cell img { width: 65px; } .float-right { display: block; float: none; padding: 0; text-align: left; font-size: 14px; } .float-left { display: block; float: none; font-size: 14px; } .float-right img { width: 100%; transition: ease-in-out 0.3s; } .float-left img { width: 100%; transition: ease-in-out 0.3s; } }
+
+/*# sourceMappingURL=styles.css.map */

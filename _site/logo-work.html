@@ -53,7 +53,7 @@
 
         <div class = "logo-text">
             <h2>Feel Good Therapy</h2>
-            <p>Therapy that simply <i> feels good </i><br> <br>
+            <p>Therapy that simply <i> feels good</i>.<br> <br>
                 A practice dedicated to helping clients navigate
                 challenges and build stronger, healthier
                 relationships.</p>
@@ -64,10 +64,10 @@
 
         <div class = "logo-text">
             <h2>Spinergy Studio</h2>
-            <p>Therapy that simply <i> feels good </i><br> <br>
-                A practice dedicated to helping clients navigate
-                challenges and build stronger, healthier
-                relationships.</p>
+            <p>LA's first fully immersive cardio visual experience.<br> <br>
+                Spinergy combines LA's best Cycling and Yoga instructors with stunning 
+                cinematic visuals. The result is a multi-sensory workout that's 
+                unlike anything you've ever experienced!</p>
         </div>
         <img class = "hide-on-mobile" src="/assets/logo-work/Spinergy For Web.png" >
         <img class = "mobile-only" src="/assets/logo-work/Spinergy For Web - Mobile.png" >
@@ -75,10 +75,9 @@
 
         <div class = "logo-text">
             <h2>Pearl Dental</h2>
-            <p>Therapy that simply <i> feels good </i><br> <br>
-                A practice dedicated to helping clients navigate
-                challenges and build stronger, healthier
-                relationships.</p>
+            <p>Look Forward To The Dentist.<br> <br>
+                Experience top-tier dental care in Culver City, where patient comfort and 
+                advanced technology meet for stunning smiles.</p>
         </div>
         <img class = "hide-on-mobile" src="/assets/logo-work/Pearl For Web.png" >
         <img class = "mobile-only" src="/assets/logo-work/Pearl For Web - Mobile.png" >
@@ -155,7 +154,7 @@ hr{
     <footer id="footer" >
     <a href = "/contact.html">Contact Brenda</a>  
     <p style="margin-bottom: 0">Built By Brenda Boudaie</p>
-    <p style="margin-top: 2px">&copy 2024 all rights reserved</p>
+    <p style="margin-top: 2px">&copy 2024</p>
   </footer>
   
   <style>
@@ -169,6 +168,9 @@ hr{
     }
     footer a{
       font-weight: 600;
+    }
+    footer p{
+      font-size: 16px;
     }
   </style>
   
@@ -573,6 +575,16 @@ $(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
+
+const mobileNavCheckbox = document.querySelector('#mobile-nav input');
+  
+  mobileNavCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffe9b4'); // Menu background color
+    } else {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f2cd71'); // Default background color
+    }
+  });
 </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -378,7 +378,7 @@
     <footer id="footer" >
     <a href = "/contact.html">Contact Brenda</a>  
     <p style="margin-bottom: 0">Built By Brenda Boudaie</p>
-    <p style="margin-top: 2px">&copy 2024 all rights reserved</p>
+    <p style="margin-top: 2px">&copy 2024</p>
   </footer>
   
   <style>
@@ -392,6 +392,9 @@
     }
     footer a{
       font-weight: 600;
+    }
+    footer p{
+      font-size: 16px;
     }
   </style>
   
@@ -796,6 +799,16 @@ $(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
+
+const mobileNavCheckbox = document.querySelector('#mobile-nav input');
+  
+  mobileNavCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffe9b4'); // Menu background color
+    } else {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f2cd71'); // Default background color
+    }
+  });
 </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

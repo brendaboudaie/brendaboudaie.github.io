@@ -1,3 +1,9 @@
+- title: Golden Capital Insurance
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Golden_Capital.png
+  platform: squarespace
+  url: https://www.goldencapitalinsurance.com/
 - title: Gibson Homewares
   description: 
   role: Web development • Project Management
@@ -16,12 +22,6 @@
   image: assets/all-work/PVP_Screenshot.jpg
   platform: squarespace
   url: https://www.parkviewpasadena.com/
-- title: Rahban Development
-  description: 
-  role: Web development • Project Management
-  image: assets/all-work/Rahban_Screenshot.jpg
-  platform: squarespace
-  url: https://www.rahbandevelopment.com/
 - title: Cadman Group
   description: 
   role: Web development • Project Management
@@ -34,12 +34,6 @@
   image: assets/all-work/Parche_Screenshot.jpg
   platform: shopify
   url: https://www.parchestudio.com/
-- title: Peri-A
-  description: Artfully curated luxury boutique, curating a world of hot designers.
-  role: Web development • Project Management
-  image: assets/all-work/Peri-A_Screenshot.jpg
-  platform: shopify
-  url: https://peri-a.com/
 - title: SAFAR Design Studio
   description: A boutique studio offering custom interior design services.
   role: Web development • Project Management
@@ -70,6 +64,12 @@
   image: assets/all-work/SOS_Screenshot.jpg
   platform: shopify
   url: https://soshydration.com/
+- title: Rahban Development
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Rahban_Screenshot.jpg
+  platform: squarespace
+  url: https://www.rahbandevelopment.com/
 - title: Taban, LMFT
   description: 
   role: Web development • Project Management
@@ -112,6 +112,12 @@
   image: assets/all-work/PDC_Screenshot.png
   platform: custom build
   url: https://pearldentalla.com/
+- title: Peri-A
+  description: Artfully curated luxury boutique, curating a world of hot designers.
+  role: Web development • Project Management
+  image: assets/all-work/Peri-A_Screenshot.jpg
+  platform: shopify
+  url: https://peri-a.com/
 - title: Anousha
   description: Aromatherapy oils curated for energy healing containing fresh herbs and real crystals.
   role: Web development • Project Management

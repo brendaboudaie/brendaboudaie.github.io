@@ -4,6 +4,18 @@
   image: assets/all-work/Jess_Kimia.jpg
   platform: squarespace
   url: https://www.jesskimia.com/
+- title: De La Tombe
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/DLT_Screenshot.jpg
+  platform: squarespace
+  url: https://www.delatombe.com
+- title: Triquetra
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Triquetra_Screenshot.jpg
+  platform: shopify
+  url: https://www.triquetrahealth.com/
 - title: Golden Capital Insurance
   description: 
   role: Web development • Project Management
@@ -88,12 +100,12 @@
   image: assets/all-work/GD_Screenshot.jpeg
   platform: squarespace
   url: https://www.gdrealty.com/
-- title: H6 Ventures
-  description: Equity partners who are ready to be bold.
+- title: RunPoint LA 
+  description: Connecting creators and brands.
   role: Web development • Project Management
-  image: assets/all-work/H6_Screenshot.jpg
+  image: assets/all-work/RunPoint_Screenshot.jpg
   platform: squarespace
-  url: https://www.h6ventures.com/
+  url: https://www.runpointla.com/
 - title: B+N Industries
   description: Modern interior design services for retail, office, hospitality, healthcare, and more.
   role: Project Management
@@ -106,18 +118,6 @@
   image: assets/all-work/Marissa_Screenshot-old.png
   platform: shopify
   url: https://marissacollections.com/
-- title: Peri-A
-  description: Artfully curated luxury boutique, curating a world of hot designers.
-  role: Web development • Project Management
-  image: assets/all-work/Peri-A_Screenshot.jpg
-  platform: shopify
-  url: https://peri-a.com/
-- title: Anousha
-  description: Aromatherapy oils curated for energy healing containing fresh herbs and real crystals.
-  role: Web development • Project Management
-  image: assets/all-work/Anousha_Screenshot.png
-  platform: shopify
-  url: https://shopanousha.com/
 - title: Third Point Ventures
   description: An SEC-registered investment adviser based in New York.
   role: Technical Project Management

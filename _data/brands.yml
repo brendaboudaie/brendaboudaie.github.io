@@ -1,27 +1,33 @@
-- title: JessKimia
+- title: Atrium Sepulveda
   description: 
   role: Web development • Project Management
-  image: assets/all-work/Jess_Kimia.jpg
+  image: assets/all-work/atrium_Screenshot.jpg
   platform: squarespace
-  url: https://www.jesskimia.com/
+  url: https://www.atriumsepulveda.com/
 - title: De La Tombe
   description: 
   role: Web development • Project Management
   image: assets/all-work/DLT_Screenshot.jpg
   platform: squarespace
   url: https://www.delatombe.com
-- title: Golden Capital Insurance
-  description: 
-  role: Web development • Project Management
-  image: assets/all-work/Golden_Capital.png
-  platform: squarespace
-  url: https://www.goldencapitalinsurance.com/
 - title: Gibson Homewares
   description: 
   role: Web development • Project Management
   image: assets/all-work/Gibson_Screenshot.jpg
   platform: shopify
   url: https://www.gibsonhomewares.com/
+- title: GD Realty
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/GD_Screenshot.jpg
+  platform: squarespace
+  url: https://www.gdrealty.com/
+- title: Golden Capital Insurance
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Golden_Capital.png
+  platform: squarespace
+  url: https://www.goldencapitalinsurance.com/
 - title: Spinergy Studio
   description: LA's first fully immersive cardio visual experience.
   role: Web development • Project Management
@@ -76,6 +82,12 @@
   image: assets/all-work/SOS_Screenshot.jpg
   platform: shopify
   url: https://soshydration.com/
+- title: JessKimia
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Jess_Kimia.jpg
+  platform: squarespace
+  url: https://www.jesskimia.com/
 - title: Rahban Development
   description: 
   role: Web development • Project Management
@@ -88,12 +100,6 @@
   image: assets/all-work/Taban_Screenshot.jpg
   platform: squarespace
   url: https://www.justinataban.com/
-- title: GD Realty
-  description: Real estate that resonates.
-  role: Web development • Project Management
-  image: assets/all-work/GD_Screenshot.jpeg
-  platform: squarespace
-  url: https://www.gdrealty.com/
 - title: RunPoint LA 
   description: Connecting creators and brands.
   role: Web development • Project Management

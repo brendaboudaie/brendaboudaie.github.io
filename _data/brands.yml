@@ -8,7 +8,7 @@
   description: 
   role: Web development • Project Management
   image: assets/all-work/DLT_Screenshot.jpg
-  platform: squarespace
+  platform: shopify
   url: https://www.delatombe.com
 - title: Gibson Homewares
   description: 
@@ -16,6 +16,12 @@
   image: assets/all-work/Gibson_Screenshot.jpg
   platform: shopify
   url: https://www.gibsonhomewares.com/
+- title: Terrace Pasadena
+  description: 
+  role: Web development • Project Management
+  image: assets/all-work/Terrace_Screenshot.jpg
+  platform: squarespace
+  url: https://www.terracepasadena.com
 - title: GD Realty
   description: 
   role: Web development • Project Management
